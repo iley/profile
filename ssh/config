@@ -1,0 +1,65 @@
+GSSAPIAuthentication no
+ForwardAgent yes
+IdentityFile ~/.ssh/id_dsa
+IdentityFile ~/.ssh/id_rsa
+IdentityFile ~/.ssh/id_dsa_of_user_statbox
+
+Host amazon.iley.ru
+  User ubuntu
+  IdentityFile ~/.ssh/amazon-main.pem
+
+Host clodo.iley.ru
+  Ciphers arcfour
+
+Host 2a01:230:2::9a
+  Ciphers arcfour
+
+Host lomonosov
+  HostName lomonosov.parallel.ru
+  User vmk-stud-332
+  IdentityFile ~/.ssh/skif_mgu
+
+Host bluegene
+  HostName 10.6.7.50
+  User g524111209
+
+Host regatta
+  HostName regatta.cs.msu.su
+  User pr24_09
+
+Host 1c
+  HostName statdev1c.yandex.ru
+  AddressFamily inet
+  IdentityFile ~/.ssh/id_dsa
+  IdentityFile ~/.ssh/id_dsa_of_user_statbox
+  StrictHostKeyChecking no
+
+Host 1e
+  HostName stbx-dev01e.yandex.ru
+  AddressFamily inet
+  IdentityFile ~/.ssh/id_dsa
+  IdentityFile ~/.ssh/id_dsa_of_user_statbox
+  StrictHostKeyChecking no
+
+Host 1f
+  HostName dev01f.out.yandex.net
+
+Host dione
+  HostName dione.intelib.org
+
+Host masterhost
+  HostName u182610.ssh.masterhost.ru
+  User u182610
+
+Host iphone
+  HostName 89.249.165.18
+  User root
+
+Host gz
+  HostName gz.iley.ru
+
+Host gz6
+  HostName 2a00:f480:4:179:224:1dff:fec0:b7ec
+
+Host linode
+  HostName 176.58.99.120

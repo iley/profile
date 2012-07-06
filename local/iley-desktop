@@ -1,0 +1,2 @@
+export RAKUDO_PATH=/home/iley/playground/perl6/rakudo-star/install
+export PATH=$PATH:$RAKUDO_PATH/bin

@@ -1,0 +1,14 @@
+snippet range
+	${range ${1:2011-01-01} ${2:2011-01-31}}${3}
+snippet date
+	date = ${range ${1:2011-01-01} ${2:2011-01-31}}${3}
+snippet map
+	map ${1:./map.pl} -src ${2:access-log/$date} -dst ${3:$tmp/map} ${4:-subkey}
+snippet reduce
+	reduce ${1:./reduce.pl} -src ${2:$tmp/map} -dst ${3:$tmp/reduce} ${4:-subkey}
+snippet publish
+	publish -src ${1:$job_root/$date[0]} -report_path $report_path -report_title $report_title -report_config publish.yaml -replace_mask fielddate${2}
+snippet format
+	format -src ${1:$tmp/result} -dst ${2:result.xls} -config format.yaml${3}
+snippet server
+	publishing_server = stat${1:-beta}.yandex-team.ru${2}

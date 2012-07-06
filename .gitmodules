@@ -1,0 +1,60 @@
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/colors-solarized"]
+	path = vim/bundle/colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "vim/bundle/clang_complete"]
+	path = vim/bundle/clang_complete
+	url = git://github.com/Rip-Rip/clang_complete.git
+[submodule "contrib/extract"]
+	path = contrib/extract
+	url = git://github.com/iley/extract.git
+[submodule "contrib/gitflow"]
+	path = contrib/gitflow
+	url = git://github.com/nvie/gitflow.git
+[submodule "vim/bundle/vim-session"]
+	path = vim/bundle/vim-session
+	url = git://github.com/xolox/vim-session.git
+[submodule "vim/bundle/markdown"]
+	path = vim/bundle/markdown
+	url = git://github.com/plasticboy/vim-markdown.git
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
+[submodule "vim/bundle/pasta"]
+	path = vim/bundle/pasta
+	url = git://github.com/sickill/vim-pasta.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "vim/bundle/prolog"]
+	path = vim/bundle/prolog
+	url = git://github.com/adimit/prolog.vim.git
+[submodule "vim/bundle/xslate"]
+	path = vim/bundle/xslate
+	url = git://github.com/motemen/xslate-vim.git
+[submodule "vim/bundle/powerline"]
+	path = vim/bundle/powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "vim/bundle/perl"]
+	path = vim/bundle/perl
+	url = git://github.com/petdance/vim-perl.git
+[submodule "vim/bundle/splice"]
+	path = vim/bundle/splice
+	url = git://github.com/sjl/splice.vim.git
+[submodule "vim/bundle/mojo"]
+	path = vim/bundle/mojo
+	url = git://github.com/yko/mojo.vim.git
+[submodule "vim/bundle/snipmate"]
+	path = vim/bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
+	url = git://github.com/mileszs/ack.vim.git

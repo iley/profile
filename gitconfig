@@ -1,0 +1,30 @@
+[user]
+  name = Ilya Strukov
+  email = iley@iley.ru
+
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  w = whatchanged
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
+[diff]
+  renamelimit = 0
+
+[color]
+  diff = auto
+  interactive = auto
+  status = auto
+  branch = auto
+
+[github]
+  user  = iley
+  token = a25023792f36d82c8517601669fb2b29
+
+[merge]
+  tool = splice
+
+[mergetool "splice"]
+  cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
+  trustExitCode = true

@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+sub run($$) {
+  my $cmd = shift;
+  my $msg = shift;
+  if ($msg) {
+    print "$msg... ";
+    print system("$cmd 2>/dev/null >/dev/null") == 0 ? "ok\n" : "fail\n";
+  } else {
+    system("$cmd 2>/dev/null >/dev/null");
+  }
+  die "Error executing '$cmd'" if($? != 0);
+}
+
+&run('git add .');
+my $local_changes = (`git status -s | wc -l` > 0);
+$local_changes && &run('git stash save', 'Saving local changes');
+&run('git pull', 'Pulling remote changes');
+&run('git push --all', 'Pushing local commits');
+&run('git push --tags', 'Pushing tags');
+$local_changes && &run('git stash apply', 'Restoring local changes');

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+drop betaparser1 "$1"
+

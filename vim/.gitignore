@@ -1,0 +1,10 @@
+.netrwhist
+backup/*
+swap/*
+sessions/*
+view/*
+*~
+*.swp
+tags
+bundle/clang_complete
+spell/*
