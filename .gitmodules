@@ -1,24 +1,9 @@
-[submodule "vim/bundle/nerdcommenter"]
-	path = vim/bundle/nerdcommenter
-	url = git://github.com/scrooloose/nerdcommenter.git
-[submodule "vim/bundle/colors-solarized"]
-	path = vim/bundle/colors-solarized
+[submodule "vim/bundle/solarized"]
+	path = vim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "vim/bundle/clang_complete"]
-	path = vim/bundle/clang_complete
-	url = git://github.com/Rip-Rip/clang_complete.git
 [submodule "contrib/extract"]
 	path = contrib/extract
 	url = git://github.com/iley/extract.git
-[submodule "contrib/gitflow"]
-	path = contrib/gitflow
-	url = git://github.com/nvie/gitflow.git
-[submodule "vim/bundle/vim-session"]
-	path = vim/bundle/vim-session
-	url = git://github.com/xolox/vim-session.git
-[submodule "vim/bundle/markdown"]
-	path = vim/bundle/markdown
-	url = git://github.com/plasticboy/vim-markdown.git
 [submodule "vim/bundle/supertab"]
 	path = vim/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
@@ -46,9 +31,6 @@
 [submodule "vim/bundle/perl"]
 	path = vim/bundle/perl
 	url = git://github.com/petdance/vim-perl.git
-[submodule "vim/bundle/splice"]
-	path = vim/bundle/splice
-	url = git://github.com/sjl/splice.vim.git
 [submodule "vim/bundle/mojo"]
 	path = vim/bundle/mojo
 	url = git://github.com/yko/mojo.vim.git
@@ -58,3 +40,9 @@
 [submodule "vim/bundle/ack"]
 	path = vim/bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
+[submodule "contrib/gitflow"]
+	path = contrib/gitflow
+	url = git://github.com/nvie/gitflow.git
+[submodule "vim/bundle/nerdcommenter"]
+	path = vim/bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
