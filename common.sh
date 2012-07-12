@@ -25,12 +25,5 @@ fi
 RVM_HOME=/usr/share/ruby-rvm
 [[ -s $RVM_HOME/scripts/rvm ]] && source $RVM_HOME/scripts/rvm
 
-# python virtualenvwrapper
-VENVW="/usr/local/bin/virtualenvwrapper.sh"
-if [ -e $VENVW ]; then
-	export WORKON_HOME="~/.virtualenvs"
-	source $VENVW
-fi
-
 # load machine-specific setting at the very end
 source $PROFILE/local.sh
