@@ -24,5 +24,10 @@ fi
 RVM_HOME=/usr/share/ruby-rvm
 [[ -s $RVM_HOME/scripts/rvm ]] && source $RVM_HOME/scripts/rvm
 
+# set $TERM to make tmux work properly
+if [[ "$TERM" != 'screen-256color' ]]; then
+	export TERM=xterm-256color
+fi
+
 # load machine-specific setting at the very end
 source $PROFILE/local.sh
