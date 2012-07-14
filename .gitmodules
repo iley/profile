@@ -46,3 +46,6 @@
 [submodule "contrib/map"]
 	path = contrib/map
 	url = git://github.com/sitaramc/map.git
+[submodule "vim/bundle/python-mode"]
+	path = vim/bundle/python-mode
+	url = git://github.com/klen/python-mode.git
