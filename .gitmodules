@@ -4,9 +4,6 @@
 [submodule "contrib/extract"]
 	path = contrib/extract
 	url = git://github.com/iley/extract.git
-[submodule "vim/bundle/supertab"]
-	path = vim/bundle/supertab
-	url = git://github.com/ervandew/supertab.git
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
