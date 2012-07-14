@@ -133,7 +133,7 @@ set directory=~/.vim/swap
 set tabstop=4
 set shiftwidth=4
 set smarttab
-set noexpandtab
+set expandtab
 set autoindent
 set smartindent
 " remove extra spaces during indentation
