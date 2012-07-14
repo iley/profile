@@ -5,7 +5,8 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 if match($TERM, "screen")!=-1
-	set term=xterm
+	"commented out to avoid problems with tmux
+	"set term=xterm
 	let g:GNU_Screen_used = 1
 else
 	let g:GNU_Screen_used = 0

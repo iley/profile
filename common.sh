@@ -3,7 +3,6 @@ export PAGER=less
 export PROFILE=$HOME/profile
 CONTRIB=$PROFILE/contrib
 export PATH=$PATH:~/bin:$CONTRIB/gitflow:$CONTRIB/map
-export TERM=xterm-256color # for emacs
 
 # utilify for statadhoc tasks
 source $PROFILE/task.sh
