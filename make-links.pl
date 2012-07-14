@@ -8,7 +8,7 @@ my %files = (
     'ssh/config' => '.ssh/config',
     ( map { ( $_ => $_ ) } qw(bin lib) ),
     ( map { ( $_ => ".$_" ) }
-            qw(gitconfig screenrc vim vimrc zshrc racketrc mplayer bashrc screen perldb oh-my-zsh inputrc sbclrc scmbrc emacs emacs.d perltidyrc)
+            qw(gitconfig screenrc vim vimrc zshrc racketrc mplayer bashrc screen perldb oh-my-zsh inputrc sbclrc scmbrc emacs emacs.d perltidyrc tmux.conf)
     ),
 );
 
