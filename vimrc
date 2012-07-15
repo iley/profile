@@ -278,6 +278,7 @@ au! BufNewFile,BufRead * set vb t_vb="
 
 " NERDTree settings
 let NERDTreeWinSize=20
+let NERDTreeIgnore=['.o$', '.pyc$', '\~$']
 
 autocmd BufNewFile job exe "normal O#!/usr/bin/stbx-mrproc\n"
 
