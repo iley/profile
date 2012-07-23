@@ -39,3 +39,4 @@ function local_alias() {
 }
 
 source $HOME/profile/common.sh
+source $HOME/profile/zsh_alias.sh
