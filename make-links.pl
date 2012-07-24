@@ -10,6 +10,7 @@ my %files = (
     ( map { ( $_ => ".$_" ) }
             qw(gitconfig screenrc vim vimrc zshrc racketrc mplayer bashrc screen perldb oh-my-zsh inputrc sbclrc scmbrc emacs emacs.d perltidyrc tmux.conf)
     ),
+	'qtile' => '.config/qtile',
 );
 
 my $home = $ENV{HOME};
