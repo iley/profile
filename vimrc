@@ -10,6 +10,9 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+
+" My Bundles here:
+" original repos on github
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
 Bundle 'sickill/vim-pasta'
@@ -24,9 +27,6 @@ Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'sitaramc/map'
 Bundle 'klen/python-mode'
-
-" My Bundles here:
-" original repos on github
 
 filetype plugin indent on     " required!
 
