@@ -1,43 +1,7 @@
 runtime! indent.vim
 runtime! fvl.vim
 
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
-let g:run_cmd=''
-let g:repl_cmd='bash'
-let g:repl_filetype=''
-
-" detect OS type
-let g:uname = "Unknown"
-if has("unix")
-	let g:uname = system("echo -n \"$(uname)\"")
-elseif has("win32")
-	let g:uname = "Windows"
-endif
-
 " --- supplementary functions ---
-
-func! GenUses()
-	exec "normal o"
-	exec ".!~/.vim/genuse.pl %"
-endfunction
-
-func! CleanClose()
-	let todelbufNr = bufnr("%")
-	let newbufNr = bufnr("#")
-	if ((newbufNr != -1) && (newbufNr != todelbufNr) && buflisted(newbufNr))
-		exe "b".newbufNr
-	else
-		bnext
-	endif
-
-	if (bufnr("%") == todelbufNr)
-		new
-	endif
-	exe "bd".todelbufNr
-	"call Buftabs_show()
-endfunction
 
 func! StartRepl()
 	exec "ConqueTermSplit " . g:repl_cmd
@@ -56,43 +20,15 @@ endfunc
 "default run_cmd
 let g:run_cmd = "!./%<" 
 
-func! SetMakeProg(cmd)
-	if filereadable("Jamroot") || filereadable("Jamfile")
-		setlocal makeprg=bjam
-	elseif filereadable("Construct") || filereadable("Consfile")
-		setlocal makeprg=cons
-	elseif filereadable("Makefile")
-		setlocal makeprg=make
-	elseif filereadable("Rakefile")
-		setlocal makeprg=rake
-	else
-		exec "setlocal makeprg=" . escape(a:cmd, " ")
-	endif
-endfunc
-
-func! UpdateTags()
-	exec "!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
-endfunc
-
-func! CIMap(key, seq)
-	exec "map " . a:key . " " . a:seq
-	exec "imap " . a:key . " <ESC>" . a:seq
-endfunc
-
 " --- user commands ---
 
 command! -nargs=0 -bang WSudo :silent! w !sudo tee % &>/dev/null
 command! -nargs=0 Vimrc :tabnew $MYVIMRC
-command! -nargs=+ CIMap :call CIMap(<f-args>)
-command! -nargs=0 UpdateTags :call UpdateTags()
 command! -nargs=0 Run :call Run()
-command! -nargs=0 Repl :call StartRepl()
-command! -nargs=0 GenUses :call GenUses()
 
 " hotkeys
 noremap <C-PageDown> :Tbbn<CR>
 noremap <C-PageUp>   :Tbbp<CR>
-noremap <F10>        :call CleanClose()<CR>
 
 noremap <F2> :w<CR>
 noremap <F4> :NERDTreeToggle<CR>
@@ -106,15 +42,7 @@ map <Leader>b :FufBuffer<CR>
 " hotkey for a.vim plugin
 map <Leader>a :A<CR>
 
-map <Leader>t <Esc>:%!stbx-mtask<CR>
-
-nnoremap ; :
-
 syntax enable
-
-" status line format
-" set rulerformat=%60(%f\ %m%)%=%12\(%l,%v%)\ %P
-set laststatus=2
 
 set nocp
 filetype on
@@ -247,10 +175,6 @@ autocmd! bufwritepre * call BackupDir()
 " automatically save/load folds on buffer close/open
 au BufWinLeave * silent! mkview
 au BufWinEnter * silent! loadview
-
-let g:ConqueTerm_SendVisKey = '<F8>'
-let g:ConqueTerm_InsertOnEnter = 1
-let g:ConqueTerm_CWInsert = 1
 
 if version >= 730
 	set undodir=~/.vim/undo
