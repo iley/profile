@@ -1,6 +1,35 @@
 runtime! indent.vim
 runtime! fvl.vim
 
+set nocompatible               " be iMproved
+filetype off                   " required for vundle
+
+set rtp+=~/.vim/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'kien/ctrlp.vim'
+Bundle 'sickill/vim-pasta'
+Bundle 'scrooloose/nerdtree'
+Bundle 'adimit/prolog.vim'
+Bundle 'motemen/xslate-vim'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'petdance/vim-perl'
+Bundle 'yko/mojo.vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'sitaramc/map'
+Bundle 'klen/python-mode'
+
+" My Bundles here:
+" original repos on github
+
+filetype plugin indent on     " required!
+
 " --- supplementary functions ---
 
 func! StartRepl()
@@ -43,11 +72,6 @@ map <Leader>b :FufBuffer<CR>
 map <Leader>a :A<CR>
 
 syntax enable
-
-set nocp
-filetype on
-filetype plugin on
-filetype plugin indent on
 
 " language settings
 language en_US.UTF-8

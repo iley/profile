@@ -4,3 +4,12 @@
 [submodule "vim/vundle"]
 	path = vim/vundle
 	url = git://github.com/gmarik/vundle.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "contrib/gitflow"]
+	path = contrib/gitflow
+	url = git://github.com/nvie/gitflow.git
+[submodule "contrib/map"]
+	path = contrib/map
+	url = git://github.com/sitaramc/map.git
