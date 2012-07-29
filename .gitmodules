@@ -1,3 +1,6 @@
 [submodule "contrib/extract"]
 	path = contrib/extract
 	url = git://github.com/iley/extract.git
+[submodule "vim/vundle"]
+	path = vim/vundle
+	url = git://github.com/gmarik/vundle.git
