@@ -9,3 +9,5 @@ Installation
 
 3. Make symlinks
    ``./make-links.pl``
+
+4. Run ``:BundleInstall`` in Vim
