@@ -78,6 +78,9 @@ language en_US.UTF-8
 language messages en_US.UTF-8
 set fileencodings=utf-8,koi8-r,windows-1251,iso-8859-15
 
+" enable mouse
+set mouse=a
+
 " store swap files in a separate directory
 set directory=~/.vim/swap
 
