@@ -57,7 +57,7 @@ my $profile = abs_path( dirname($0) );
 while ( my ( $src, $dst ) = each(%files) ) {
     unless ( -e "$home/$dst" ) {
         make_path( dirname($dst) );
-        print("symlink $profile/$src => $home/$dst");
+        print("symlink $profile/$src => $home/$dst\n");
         symlink( "$profile/$src", "$home/$dst" );
     }
 
