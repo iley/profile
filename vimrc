@@ -274,3 +274,4 @@ set encoding=utf-8 " Necessary to show unicode glyphs
 "let g:Powerline_symbols="fancy"
 
 let g:pymode_lint = 0
+let g:paredit_mode = 0
