@@ -13,20 +13,21 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 " original repos on github
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'adimit/prolog.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
-Bundle 'sickill/vim-pasta'
-Bundle 'scrooloose/nerdtree'
-Bundle 'adimit/prolog.vim'
-Bundle 'motemen/xslate-vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'petdance/vim-perl'
-Bundle 'yko/mojo.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'sitaramc/map'
 Bundle 'klen/python-mode'
+Bundle 'mileszs/ack.vim'
+Bundle 'motemen/xslate-vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'petdance/vim-perl'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'sickill/vim-pasta'
+Bundle 'sitaramc/map'
+Bundle 'vim-scripts/slimv.vim'
+Bundle 'yko/mojo.vim'
 
 filetype plugin indent on     " required!
 
@@ -223,6 +224,7 @@ augroup filetypedetect
 	au! BufNewFile,BufRead *.i set filetype=swig
 	au! BufNewFile,BufRead *.xslate setfiletype xslate
 	au! BufNewFile,BufRead *.cpp setfiletype cpp11
+    au! BufNewFile,BufRead *.asd setfiletype lisp
 augroup end
 
 au! BufNewFile,BufRead * set vb t_vb="
@@ -270,3 +272,5 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 "let g:Powerline_symbols="fancy"
+
+let g:pymode_lint = 0
