@@ -11,6 +11,7 @@ my @groups = (
     {
         prefix => '.',
         files => [
+            'XCompose',
             'bashrc',
             'emacs',
             'emacs.d',
