@@ -29,6 +29,7 @@ my @groups = (
             'tmux.conf',
             'vim',
             'vimrc',
+            'xinitrc',
             'zshrc',
         ]
     },
