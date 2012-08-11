@@ -26,7 +26,10 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'sitaramc/map'
-Bundle 'klen/python-mode'
+"Bundle 'klen/python-mode'
+Bundle 'tpope/vim-git'
+Bundle 'fs111/pydoc.vim'
+Bundle 'vim-scripts/pep8'
 
 filetype plugin indent on     " required!
 
@@ -270,3 +273,5 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 "let g:Powerline_symbols="fancy"
+
+let g:pep8_map='<leader>8'
