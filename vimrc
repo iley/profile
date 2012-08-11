@@ -277,9 +277,6 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 "let g:Powerline_symbols="fancy"
 
-<<<<<<< HEAD
 let g:pep8_map='<leader>8'
-=======
 let g:pymode_lint = 0
 let g:paredit_mode = 0
->>>>>>> 7c9fe2785cf5e48f57b4230fb44f2f05276bb0d8
