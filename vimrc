@@ -56,6 +56,8 @@ command! -nargs=0 Vimrc :tabnew $MYVIMRC
 command! -nargs=0 Run :call Run()
 
 " hotkeys
+imap jk <Esc>
+
 noremap <C-PageDown> :Tbbn<CR>
 noremap <C-PageUp>   :Tbbp<CR>
 
