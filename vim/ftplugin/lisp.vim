@@ -11,3 +11,6 @@ let g:repl_cmd="sbcl --noinform"
 
 let g:repl_filetype="lisp"
 setlocal lisp
+
+setlocal sw=2
+setlocal ts=2

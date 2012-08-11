@@ -1,0 +1,10 @@
+<Multi_key> <comma>       : "«" guillemotleft
+<Multi_key> <Cyrillic_be> : "«" guillemotleft
+<Multi_key> <period>      : "»" guillemotright
+<Multi_key> <Cyrillic_yu> : "»" guillemotright
+<Multi_key> <minus>       : "—" U2014
+<Multi_key> <o>           : "°" degree
+<Multi_key> <s>           : "§" section
+<Multi_key> <c>           : "©" copyright
+<Multi_key> <apostrophe>  : "≈" U2248
+<Multi_key> <equal>       : "≠" U2260

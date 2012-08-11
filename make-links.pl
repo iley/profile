@@ -11,6 +11,7 @@ my @groups = (
     {
         prefix => '.',
         files => [
+            'XCompose',
             'bashrc',
             'emacs',
             'emacs.d',
@@ -29,6 +30,7 @@ my @groups = (
             'tmux.conf',
             'vim',
             'vimrc',
+            'xinitrc',
             'zshrc',
         ]
     },

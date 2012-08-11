@@ -13,23 +13,23 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 " original repos on github
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'kien/ctrlp.vim'
-Bundle 'sickill/vim-pasta'
-Bundle 'scrooloose/nerdtree'
-Bundle 'adimit/prolog.vim'
-Bundle 'motemen/xslate-vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'petdance/vim-perl'
-Bundle 'yko/mojo.vim'
-Bundle 'msanders/snipmate.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'sitaramc/map'
 "Bundle 'klen/python-mode'
-Bundle 'tpope/vim-git'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'adimit/prolog.vim'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'fs111/pydoc.vim'
+Bundle 'klen/python-mode'
+Bundle 'mileszs/ack.vim'
+Bundle 'motemen/xslate-vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'petdance/vim-perl'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'sickill/vim-pasta'
+Bundle 'sitaramc/map'
+Bundle 'tpope/vim-git'
 Bundle 'vim-scripts/pep8'
+Bundle 'vim-scripts/slimv.vim'
 
 filetype plugin indent on     " required!
 
@@ -59,6 +59,8 @@ command! -nargs=0 Vimrc :tabnew $MYVIMRC
 command! -nargs=0 Run :call Run()
 
 " hotkeys
+imap jk <Esc>
+
 noremap <C-PageDown> :Tbbn<CR>
 noremap <C-PageUp>   :Tbbp<CR>
 
@@ -226,6 +228,7 @@ augroup filetypedetect
 	au! BufNewFile,BufRead *.i set filetype=swig
 	au! BufNewFile,BufRead *.xslate setfiletype xslate
 	au! BufNewFile,BufRead *.cpp setfiletype cpp11
+    au! BufNewFile,BufRead *.asd setfiletype lisp
 augroup end
 
 au! BufNewFile,BufRead * set vb t_vb="
@@ -274,4 +277,9 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 "let g:Powerline_symbols="fancy"
 
+<<<<<<< HEAD
 let g:pep8_map='<leader>8'
+=======
+let g:pymode_lint = 0
+let g:paredit_mode = 0
+>>>>>>> 7c9fe2785cf5e48f57b4230fb44f2f05276bb0d8
