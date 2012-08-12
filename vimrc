@@ -12,12 +12,9 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " My Bundles here:
-" original repos on github
-"Bundle 'klen/python-mode'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'adimit/prolog.vim'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'fs111/pydoc.vim'
 Bundle 'klen/python-mode'
 Bundle 'mileszs/ack.vim'
 Bundle 'motemen/xslate-vim'
@@ -28,12 +25,11 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'sickill/vim-pasta'
 Bundle 'sitaramc/map'
 Bundle 'tpope/vim-git'
-Bundle 'vim-scripts/pep8'
 Bundle 'vim-scripts/slimv.vim'
 
 filetype plugin indent on     " required!
 
-" --- supplementary functions ---
+" supplementary functions
 
 func! StartRepl()
 	exec "ConqueTermSplit " . g:repl_cmd
@@ -52,7 +48,7 @@ endfunc
 "default run_cmd
 let g:run_cmd = "!./%<" 
 
-" --- user commands ---
+" user commands
 
 command! -nargs=0 -bang WSudo :silent! w !sudo tee % &>/dev/null
 command! -nargs=0 Vimrc :tabnew $MYVIMRC
@@ -84,7 +80,7 @@ language messages en_US.UTF-8
 set fileencodings=utf-8,koi8-r,windows-1251,iso-8859-15
 
 " enable mouse
-set mouse=a
+"set mouse=a
 
 " store swap files in a separate directory
 set directory=~/.vim/swap
@@ -239,7 +235,7 @@ let NERDTreeIgnore=['.o$', '.pyc$', '\~$']
 
 autocmd BufNewFile job exe "normal O#!/usr/bin/stbx-mrproc\n"
 
-" ---- from statbox vimrc ----
+" from statbox vimrc
 " Suffixes that get lower priority when doing tab completion for filenames.
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
 set suffixesadd=.pl,.pm,.yml,.yaml " for `gf' (open file under cursor)
@@ -254,7 +250,7 @@ set completeopt=menu,menuone,longest
 " Limit popup menu height
 set pumheight=15
 
-" SuperTab option for context aware completion
+" SuperTab option for context aware completion 
 let g:SuperTabDefaultCompletionType="context"
 
 " Disable auto popup, use <Tab> to autocomplete
@@ -262,7 +258,7 @@ let g:clang_complete_auto=0
 " Show clang errors in the quickfix window
 let g:clang_complete_copen=1
 
-" --- GUI settings ---
+" GUI settings
 if has("gui_running")
 	set guioptions-=T " do not show toolbar
 	set guioptions-=t " do not show tearoffs in menu
@@ -277,6 +273,8 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 "let g:Powerline_symbols="fancy"
 
-let g:pep8_map='<leader>8'
+" python settings
 let g:pymode_lint = 0
+
+" lisp settings
 let g:paredit_mode = 0
