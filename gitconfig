@@ -17,6 +17,7 @@
 	interactive = auto
 	status = auto
 	branch = auto
+	ui = true
 
 [github]
 	user  = iley
