@@ -9,6 +9,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+unalias sl
 unsetopt correct_all
 
 function _rollback() { }
