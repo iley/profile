@@ -23,7 +23,6 @@ my @groups = (
             'perltidyrc',
             'racketrc',
             'sbclrc',
-            'scmbrc',
             'screen',
             'screenrc',
             'ssh/config',

@@ -21,7 +21,6 @@
 
 [github]
 	user  = iley
-	token = a25023792f36d82c8517601669fb2b29
 
 [merge]
 	tool = splice
