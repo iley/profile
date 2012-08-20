@@ -55,6 +55,7 @@ my $home = $ENV{HOME};
 
 my $profile = abs_path( dirname($0) );
 
+print "Creating symlinks...\n";
 while ( my ( $src, $dst ) = each(%files) ) {
     unless ( -e "$home/$dst" ) {
         make_path( dirname($dst) );
@@ -64,3 +65,10 @@ while ( my ( $src, $dst ) = each(%files) ) {
 
     make_path("$home/.screen") unless -e "$home/.screen";
 }
+
+print "Installing vim modules...\n";
+system("vim -c ':BundleInstall' -c ':qall'");
+
+print "Installing Command-T vim plugin\n";
+system("cd $home/.vim/bundle/command-t/ruby/command-t/ && ruby extconf.rb && make") == 0
+    or print "Command-T installation failed. Perhaps you don't have ruby-dev installed.";
