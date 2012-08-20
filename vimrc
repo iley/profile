@@ -25,7 +25,9 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'sickill/vim-pasta'
 Bundle 'sitaramc/map'
 Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/slimv.vim'
+Bundle "git://git.wincent.com/command-t.git"
 
 filetype plugin indent on     " required!
 
@@ -146,7 +148,7 @@ set whichwrap=h,l,<,>,[,]
 " turn off speaker
 set vb t_vb="
 
-set wildignore+=*.o,*.bak,*/.git/*,*/.hg/*,*/.svn/*
+set wildignore+=*.o,*.bak,*.pyc,*.jpg,*.png,*/.git/*,*/.hg/*,*/.svn/*
 
 set number
 
