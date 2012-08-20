@@ -56,6 +56,7 @@ command! -nargs=0 Run :call Run()
 
 " hotkeys
 imap jk <Esc>
+map ; :
 
 noremap <C-PageDown> :Tbbn<CR>
 noremap <C-PageUp>   :Tbbp<CR>
