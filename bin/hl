@@ -1,2 +1,4 @@
 #!/bin/sh
-egrep --color "$1|$"
+pat=$1
+shift
+egrep --color "$pat|$" $@
