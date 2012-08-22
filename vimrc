@@ -60,6 +60,9 @@ command! -nargs=0 Run :call Run()
 imap jk <Esc>
 map ; :
 
+nmap <Left> <<
+nmap <Right> >>
+
 noremap <C-PageDown> :Tbbn<CR>
 noremap <C-PageUp>   :Tbbp<CR>
 
