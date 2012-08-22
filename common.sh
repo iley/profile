@@ -2,7 +2,7 @@ export EDITOR="vim"
 export PAGER=less
 export PROFILE=$HOME/profile
 CONTRIB=$PROFILE/contrib
-export PATH=$PATH:~/bin:$CONTRIB/gitflow:$CONTRIB/map
+export PATH=$PATH:~/bin:$CONTRIB/gitflow:$CONTRIB/map:$CONTRIB/willgit/bin
 
 # utilify for statadhoc tasks
 source $PROFILE/task.sh

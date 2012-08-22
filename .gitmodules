@@ -13,3 +13,6 @@
 [submodule "contrib/map"]
 	path = contrib/map
 	url = git://github.com/sitaramc/map.git
+[submodule "contrib/willgit"]
+	path = contrib/willgit
+	url = git://gitorious.org/willgit/mainline.git
