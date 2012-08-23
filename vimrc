@@ -62,6 +62,8 @@ map ; :
 
 nmap <Left> <<
 nmap <Right> >>
+vmap <Left> <gv
+vmap <Right> >gv
 
 noremap <C-PageDown> :Tbbn<CR>
 noremap <C-PageUp>   :Tbbp<CR>
