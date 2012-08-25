@@ -16,3 +16,6 @@
 [submodule "contrib/willgit"]
 	path = contrib/willgit
 	url = git://gitorious.org/willgit/mainline.git
+[submodule "contrib/lightson"]
+	path = contrib/lightson
+	url = git://github.com/iye/lightsOn.git
