@@ -71,4 +71,4 @@ system("vim -c ':BundleInstall' -c ':qall'");
 
 print "Installing Command-T vim plugin\n";
 system("cd $home/.vim/bundle/command-t/ruby/command-t/ && ruby extconf.rb && make") == 0
-    or print "Command-T installation failed. Perhaps you don't have ruby-dev installed.";
+    or print "Command-T installation failed. Perhaps you don't have ruby-dev installed.\n";
