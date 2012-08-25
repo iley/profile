@@ -20,10 +20,6 @@ if [ -e ~/perl5 ]; then
 	source ~/perl5/perlbrew/etc/bashrc
 fi
 
-# ruby rvm
-RVM_HOME=/usr/share/ruby-rvm
-[[ -s $RVM_HOME/scripts/rvm ]] && source $RVM_HOME/scripts/rvm
-
 # set $TERM to make tmux work properly
 if [[ "$TERM" != 'screen-256color' ]]; then
 	export TERM=xterm-256color
