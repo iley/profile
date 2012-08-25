@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="gentoo"
 
-plugins=(cpanm debian git git-flow perl pip screen ssh-agent virtualenvwrapper rbenv)
+plugins=(cpanm debian git git-flow perl pip screen ssh-agent virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
