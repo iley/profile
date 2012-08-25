@@ -13,8 +13,6 @@ my @groups = (
         files => [
             'XCompose',
             'bashrc',
-            'emacs',
-            'emacs.d',
             'gitconfig',
             'inputrc',
             'mplayer',
