@@ -15,6 +15,7 @@ my @groups = (
             'bashrc',
             'gitconfig',
             'i3',
+            'i3status.conf',
             'inputrc',
             'mplayer',
             'oh-my-zsh',
