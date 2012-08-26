@@ -24,6 +24,7 @@ my @groups = (
             'screen',
             'screenrc',
             'ssh/config',
+            'taskrc',
             'tmux.conf',
             'vim',
             'vimrc',
