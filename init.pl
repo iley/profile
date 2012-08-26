@@ -14,6 +14,7 @@ my @groups = (
             'XCompose',
             'bashrc',
             'gitconfig',
+            'i3',
             'inputrc',
             'mplayer',
             'oh-my-zsh',
