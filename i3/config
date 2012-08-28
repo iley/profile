@@ -155,3 +155,7 @@ bar {
 }
 
 force_xinerama yes
+
+exec dropbox start
+exec pidgin
+exec skype
