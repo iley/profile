@@ -60,10 +60,10 @@ command! -nargs=0 Run :call Run()
 imap jk <Esc>
 map ; :
 
-nmap <Left> <<
-nmap <Right> >>
-vmap <Left> <gv
-vmap <Right> >gv
+"nmap <Left> <<
+"nmap <Right> >>
+"vmap <Left> <gv
+"vmap <Right> >gv
 
 noremap <C-PageDown> :Tbbn<CR>
 noremap <C-PageUp>   :Tbbp<CR>
