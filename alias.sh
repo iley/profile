@@ -12,3 +12,5 @@ get_git_branch() {
 }
 alias gpull='git pull origin `get_git_branch`'
 alias gpush='git push origin `get_git_branch`'
+
+alias ncal='ncal -M'
