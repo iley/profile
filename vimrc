@@ -15,7 +15,7 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'adimit/prolog.vim'
 Bundle 'altercation/vim-colors-solarized'
-"Bundle 'klen/python-mode'
+Bundle 'klen/python-mode'
 Bundle 'mileszs/ack.vim'
 Bundle 'motemen/xslate-vim'
 Bundle 'msanders/snipmate.vim'
@@ -283,6 +283,7 @@ set encoding=utf-8 " Necessary to show unicode glyphs
 
 " python settings
 let g:pymode_lint = 0
+let g:pymode_lint_write = 0
 
 " lisp settings
 let g:paredit_mode = 0
