@@ -60,10 +60,10 @@ command! -nargs=0 Run :call Run()
 imap jk <Esc>
 map ; :
 
-nmap <Left> <<
-nmap <Right> >>
-vmap <Left> <gv
-vmap <Right> >gv
+"nmap <Left> <<
+"nmap <Right> >>
+"vmap <Left> <gv
+"vmap <Right> >gv
 
 noremap <C-PageDown> :Tbbn<CR>
 noremap <C-PageUp>   :Tbbp<CR>
@@ -88,7 +88,7 @@ language messages en_US.UTF-8
 set fileencodings=utf-8,koi8-r,windows-1251,iso-8859-15
 
 " enable mouse
-"set mouse=a
+set mouse=a
 
 " store swap files in a separate directory
 set directory=~/.vim/swap
@@ -283,6 +283,7 @@ set encoding=utf-8 " Necessary to show unicode glyphs
 
 " python settings
 let g:pymode_lint = 0
+let g:pymode_lint_write = 0
 
 " lisp settings
 let g:paredit_mode = 0
