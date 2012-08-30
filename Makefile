@@ -4,7 +4,7 @@ vim vimrc xinitrc zshrc
 DST=$(addprefix $(HOME)/.,$(SRC))
 COMMANDT_DIR=vim/bundle/command-t/ruby/command-t/
 
-.PHONY: default all links vim commandt
+.PHONY: default all links vundle commandt
 
 all: links vundle commandt
 
