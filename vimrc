@@ -73,10 +73,6 @@ noremap <F4> :NERDTreeToggle<CR>
 noremap <F5> :call Run()<CR>
 noremap <F9> :make<CR>
 
-" hotkey for FuzzyFinder plugin
-map <Leader>f :FufFile<CR>
-map <Leader>b :FufBuffer<CR>
-
 " hotkey for a.vim plugin
 map <Leader>a :A<CR>
 
