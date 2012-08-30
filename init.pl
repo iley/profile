@@ -35,11 +35,7 @@ my @groups = (
         ]
     },
     {
-        prefix => '.config/',
-        files => [ 'qtile' ],
-    },
-    {
-        files => [ 'bin', 'lib' ],
+        files => [ 'bin' ],
     }
 );
 
