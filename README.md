@@ -6,4 +6,4 @@ Installation
 2. Get submodules
    ``cd ~/profile; git submodule update --init --recursive``
 3. Run
-   ``./init.pl``
+   ``make``
