@@ -17,5 +17,6 @@ alias gpush='git push origin `get_git_branch`'
 alias gdiff='git diff'
 alias gcommit='git commit'
 alias gadd='git add'
+alias glog='git log'
 
 alias ncal='ncal -M'
