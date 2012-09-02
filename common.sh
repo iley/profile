@@ -22,5 +22,9 @@ if [[ "$TERM" != 'screen-256color' ]]; then
 	export TERM=xterm-256color
 fi
 
+if [ -e ~/.rvm/scripts ]; then
+    source $HOME/.rvm/scripts/rvm
+fi
+
 # load machine-specific setting at the very end
 source $PROFILE/local.sh
