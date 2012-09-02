@@ -2,7 +2,7 @@ export EDITOR="vim"
 export PAGER=less
 export PROFILE=$HOME/profile
 CONTRIB=$PROFILE/contrib
-export PATH=$PATH:~/bin:$CONTRIB/gitflow:$CONTRIB/map:$CONTRIB/willgit/bin
+export PATH=$PATH:~/bin:$CONTRIB/gitflow:$CONTRIB/map:$CONTRIB/willgit/bin:$CONTRIB/fasd
 
 # common aliases for all shells
 source $PROFILE/alias.sh
