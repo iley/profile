@@ -18,5 +18,7 @@ alias gdiff='git diff'
 alias gcommit='git commit'
 alias gadd='git add'
 alias glog='git log'
+alias gfetch='git fetch'
+alias g=git
 
 alias ncal='ncal -M'
