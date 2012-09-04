@@ -2,7 +2,7 @@ export EDITOR="vim"
 export PAGER=less
 export PROFILE=$HOME/profile
 CONTRIB=$PROFILE/contrib
-export PATH=$PATH:~/bin:$CONTRIB/gitflow:$CONTRIB/map:$CONTRIB/willgit/bin
+export PATH=$PATH:~/bin:$CONTRIB/gitflow:$CONTRIB/map:$CONTRIB/willgit/bin:$CONTRIB/fasd
 
 # common aliases for all shells
 source $PROFILE/alias.sh
@@ -20,6 +20,10 @@ fi
 # set $TERM to make tmux work properly
 if [[ "$TERM" != 'screen-256color' ]]; then
 	export TERM=xterm-256color
+fi
+
+if [ -e ~/.rvm/scripts ]; then
+    source $HOME/.rvm/scripts/rvm
 fi
 
 # load machine-specific setting at the very end

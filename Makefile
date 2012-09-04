@@ -23,3 +23,6 @@ commandt:
 	cd $(COMMANDT_DIR); \
 		ruby extconf.rb
 	make -C $(COMMANDT_DIR)
+
+rvm:
+	curl -L get.rvm.io | bash -s stable --ruby
