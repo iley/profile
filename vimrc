@@ -285,3 +285,7 @@ let g:pymode_lint_write = 0
 
 " lisp settings
 let g:paredit_mode = 0
+
+" highlight lines longer whan 80 columns
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
