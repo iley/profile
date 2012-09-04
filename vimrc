@@ -14,6 +14,7 @@ Bundle 'gmarik/vundle'
 " plugins
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'adimit/prolog.vim'
+Bundle 'corntrace/bufexplorer'
 Bundle 'klen/python-mode'
 Bundle 'mileszs/ack.vim'
 Bundle 'motemen/xslate-vim'
@@ -49,6 +50,11 @@ endfunc
 
 func! Run()
 	exec g:run_cmd
+endfunc
+
+func! HighlightLongLines()
+    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    match OverLength /\%81v.\+/
 endfunc
 
 "default run_cmd
@@ -285,7 +291,3 @@ let g:pymode_lint_write = 0
 
 " lisp settings
 let g:paredit_mode = 0
-
-" highlight lines longer whan 80 columns
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/

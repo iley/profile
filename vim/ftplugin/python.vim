@@ -13,3 +13,4 @@ let g:repl_cmd="python"
 let g:repl_filetype="python"
 compiler python
 setlocal makeprg=python\ -c\ \"import\ py_compile;\ py_compile.compile(r'%')\"
+call HighlightLongLines()
