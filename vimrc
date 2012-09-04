@@ -14,7 +14,6 @@ Bundle 'gmarik/vundle'
 " plugins
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'adimit/prolog.vim'
-Bundle 'corntrace/bufexplorer'
 Bundle 'klen/python-mode'
 Bundle 'mileszs/ack.vim'
 Bundle 'motemen/xslate-vim'
