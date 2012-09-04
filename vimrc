@@ -11,10 +11,9 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-" My Bundles here:
+" plugins
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'adimit/prolog.vim'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'klen/python-mode'
 Bundle 'mileszs/ack.vim'
 Bundle 'motemen/xslate-vim'
@@ -26,8 +25,13 @@ Bundle 'sickill/vim-pasta'
 Bundle 'sitaramc/map'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/slimv.vim'
 Bundle "git://git.wincent.com/command-t.git"
+
+" color schemes
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'nanotech/jellybeans.vim'
 
 filetype plugin indent on     " required!
 
