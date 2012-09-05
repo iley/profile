@@ -286,8 +286,8 @@ set encoding=utf-8 " Necessary to show unicode glyphs
 "let g:Powerline_symbols="fancy"
 
 " python settings
-let g:pymode_lint = 0
 let g:pymode_lint_write = 0
+let g:pymode_lint_checker = "pyflakes"
 
 " lisp settings
 let g:paredit_mode = 0
