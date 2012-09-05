@@ -9,6 +9,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+setopt hist_ignore_dups share_history inc_append_history extended_history
+
 # fasd
 if [ $commands[fasd] ]; then # check if fasd is installed
   eval "$(fasd --init auto)"
