@@ -6,6 +6,9 @@ alias xc='xclip -i -selection clipboard'
 alias xp='xclip -o -selection clipboard'
 
 alias py='ack-grep --python'
+alias ack='ack-grep'
+
+alias ncal='ncal -M'
 
 get_git_branch() {
     echo `git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
@@ -25,5 +28,3 @@ alias gfetch='git fetch'
 alias g=git
 alias gc='git commit'
 alias ga='git add'
-
-alias ncal='ncal -M'
