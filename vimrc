@@ -67,7 +67,7 @@ command! -nargs=0 Vimrc :tabnew $MYVIMRC
 command! -nargs=0 Run :call Run()
 
 " hotkeys
-imap jk <Esc>
+"imap jk <Esc>
 map ; :
 
 set keymap=russian-jcukenwin " ^6 to change
