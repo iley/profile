@@ -83,6 +83,7 @@ noremap <F9> :make<CR>
 
 " hotkey for a.vim plugin
 map <Leader>a :A<CR>
+map <Leader>l :PyLint<CR>
 
 syntax enable
 
