@@ -1,17 +1,3 @@
-#!/usr/bin/perl
-use utils;
-use strict;
-use warnings;
+#!/bin/sh
 
-exit 0;
-
-my $text = `xclip -o -selection clipboard`;
-if ($text ne '') {
-    for my $char (split //, $text) {
-        my $message =  `xdotool getactivewindow key '$char' 2>&1`;
-        if ($? != 0) {
-            utils::notify("Could not paste: $message");
-            exit 1;
-        }
-    }
-}
+sh -c 'xclip -selection clipboard -o | xvkbd -xsendevent -file - 2>/dev/null'
