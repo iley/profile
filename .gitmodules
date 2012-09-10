@@ -1,9 +1,6 @@
 [submodule "contrib/extract"]
 	path = contrib/extract
 	url = git://github.com/iley/extract.git
-[submodule "vim/vundle"]
-	path = vim/vundle
-	url = git://github.com/gmarik/vundle.git
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
