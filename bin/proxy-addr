@@ -1,8 +1,0 @@
-#!/usr/bin/perl -wl
-use URI::Escape qw(uri_escape);
-
-my $table = shift or die "usage: proxy-addr table";
-my $proxynum = int(rand(2)) + 1;
-
-#print "http://stbx-mrproxy0" . $proxynum ."e.yandex.ru:13013/table/" . uri_escape($table);
-print "http://mrproxy01e.stat.yandex.net:13013/table/" . uri_escape($table);

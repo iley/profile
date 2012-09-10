@@ -45,7 +45,6 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+minus split h
 
 # split in vertical orientation
-bindsym $mod+v split v
 bindsym $mod+backslash split v
 
 # enter fullscreen mode for the focused container
@@ -97,7 +96,7 @@ bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+E exit
+bindsym $mod+Shift+BackSpace exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -160,6 +159,7 @@ assign [class="Navigator"] 1
 assign [class="xfce4-terminal"] 2
 
 # autostart
+exec setxkbmap -layout us,ru -variant ',winkeys' -option 'grp:alt_shift_toggle,grp_led:scroll,compose:ralt'
 exec dropbox start
 exec pidgin
 exec skype
