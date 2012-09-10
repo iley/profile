@@ -3,9 +3,9 @@ perldb perltidyrc racketrc sbclrc screen screenrc ssh/config taskrc tmux.conf \
 xinitrc zshrc
 DST=$(addprefix $(HOME)/.,$(SRC))
 
-.PHONY: all links rvm vim
+.PHONY: all links rvm vim submodule
 
-all: links vundle commandt submodule
+all: links submodule vim
 
 links: $(DST) $(HOME)/bin
 
@@ -18,7 +18,7 @@ $(HOME)/bin: bin
 rvm:
 	curl -L get.rvm.io | bash -s stable --ruby
 
-vim:
+vim: submodule
 	make -C vim
 
 submodule:
