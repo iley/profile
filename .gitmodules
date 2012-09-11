@@ -13,9 +13,6 @@
 [submodule "contrib/willgit"]
 	path = contrib/willgit
 	url = git://gitorious.org/willgit/mainline.git
-[submodule "contrib/fasd"]
-	path = contrib/fasd
-	url = git://github.com/clvv/fasd.git
 [submodule "vim"]
 	path = vim
 	url = git@github.com:iley/vimrc.git
