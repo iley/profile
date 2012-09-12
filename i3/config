@@ -1,4 +1,7 @@
 set $mod Mod4
+set $terminal xfce4-terminal
+#set $terminal i3-sensible-terminal
+
 force_xinerama yes
 
 # font for window titles. ISO 10646 = Unicode
@@ -8,8 +11,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec $terminal
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -143,8 +145,6 @@ bindsym $mod+Shift+z move scratchpad
 
 # Show the first scratchpad window
 bindsym $mod+z scratchpad show
-#bindsym $mod+x [title="^scratchpad_term$"] scratchpad show
-#bindsym $mod+c [title=".* gedit$"] scratchpad show
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -152,15 +152,22 @@ bar {
     status_command i3status
 }
 
+assign [class="(?i)firefox"] → 1
+assign [class="(?i)thunderbird"] → 1
+assign [class="(?i)terminal"] → 2
+
 # default layouts
 workspace_layout tabbed
 
 # FIXME: not working yet
-assign [title="^scratchpad_term$"] scratchpad
+for_window [title="^scratchpad_term$"] move scratchpad
 
 # autostart
-exec xfce4-terminal --title scratchpad_term
+exec $terminal --title scratchpad_term
 exec setxkbmap -layout us,ru -variant ',winkeys' -option 'grp:alt_shift_toggle,grp_led:scroll,compose:ralt'
 exec dropbox start
 exec pidgin
 exec skype
+exec firefox
+exec thunderbird
+exec $terminal
