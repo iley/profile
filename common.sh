@@ -7,6 +7,9 @@ export PATH=$PATH:~/bin:$CONTRIB/gitflow:$CONTRIB/map:$CONTRIB/willgit/bin:$CONT
 # common aliases for all shells
 source $PROFILE/alias.sh
 
+# required for proper XCompose work in GTK apps
+export GTK_IM_MODULE=xim
+
 # statadhoc tools
 if [ -e ~/statbox ]; then
 	SCTL_COMPLETION=On . ~/statbox/bashrc-devel ~/statbox 
