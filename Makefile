@@ -1,6 +1,6 @@
 SRC=XCompose bashrc gitconfig i3 i3status.conf inputrc mplayer oh-my-zsh \
 perldb perltidyrc racketrc sbclrc screen screenrc ssh/config taskrc tmux.conf \
-xinitrc zshrc
+xinitrc zshrc psqlrc
 DST=$(addprefix $(HOME)/.,$(SRC))
 
 .PHONY: all links rvm vim submodule

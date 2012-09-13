@@ -1,5 +1,6 @@
 export EDITOR="vim"
 export PAGER=less
+export LESS="-iMSx4 -FX"
 export PROFILE=$HOME/profile
 CONTRIB=$PROFILE/contrib
 export PATH=$PATH:~/bin:$CONTRIB/gitflow:$CONTRIB/map:$CONTRIB/willgit/bin:$CONTRIB/fasd
