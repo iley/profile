@@ -163,11 +163,12 @@ workspace_layout tabbed
 for_window [title="^scratchpad_term$"] move scratchpad
 
 # autostart
-exec $terminal --title scratchpad_term
 exec setxkbmap -layout us,ru -variant ',winkeys' -option 'grp:alt_shift_toggle,grp_led:scroll,compose:ralt'
+exec pulseaudio --start
+
+exec $terminal --title scratchpad_term
+
 exec dropbox start
 exec pidgin
 exec skype
 exec firefox
-exec thunderbird
-exec $terminal
