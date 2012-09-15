@@ -1,5 +1,5 @@
 set $mod Mod4
-set $terminal xfce4-terminal
+set $terminal roxterm
 #set $terminal i3-sensible-terminal
 
 force_xinerama yes
