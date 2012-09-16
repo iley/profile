@@ -170,7 +170,7 @@ exec start-pulseaudio-x11
 
 exec feh --bg-scale wallpaper.jpg
 
-exec $terminal --title scratchpad_term
+exec $terminal --title=scratchpad_term
 
 exec dropbox start
 exec pidgin
