@@ -3,7 +3,7 @@ perldb perltidyrc racketrc sbclrc screen screenrc ssh/config taskrc tmux.conf \
 xinitrc zshrc psqlrc fonts.conf
 DST=$(addprefix $(HOME)/.,$(SRC))
 
-.PHONY: all links rvm vim submodule
+.PHONY: all links rvm vim submodule clone_vim
 
 all: links submodule vim
 
@@ -18,8 +18,11 @@ $(HOME)/bin: bin
 rvm:
 	curl -L get.rvm.io | bash -s stable --ruby
 
-vim: submodule
+vim: clone_vim
 	make -C vim
+
+clone_vim:
+	git clone git@github.com:iley/vim
 
 submodule:
 	git submodule update --init --recursive
