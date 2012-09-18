@@ -5,6 +5,9 @@ export PROFILE=$HOME/profile
 CONTRIB=$PROFILE/contrib
 export PATH=$PATH:~/bin:$CONTRIB/gitflow:$CONTRIB/map:$CONTRIB/willgit/bin:$CONTRIB/fasd
 
+export GDK_USE_XFT=1
+export QT_XFT=true
+
 # common aliases for all shells
 source $PROFILE/alias.sh
 
