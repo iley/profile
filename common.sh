@@ -2,8 +2,8 @@ export EDITOR="vim"
 export PAGER=less
 export LESS="-iMSx4 -FXR"
 export PROFILE=$HOME/profile
-CONTRIB=$PROFILE/contrib
-export PATH=$PATH:~/bin:$CONTRIB/gitflow:$CONTRIB/map:$CONTRIB/willgit/bin:$CONTRIB/fasd
+EXT=$PROFILE/ext
+export PATH=$PATH:~/bin:$EXT/gitflow:$EXT/map:$EXT/willgit/bin:$EXT/fasd
 
 export GDK_USE_XFT=1
 export QT_XFT=true
