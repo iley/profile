@@ -13,3 +13,6 @@
 [submodule "contrib/willgit"]
 	path = contrib/willgit
 	url = git://gitorious.org/willgit/mainline.git
+[submodule "contrib/swiftcommandline"]
+	path = contrib/swiftcommandline
+	url = git://github.com/bufordtaylor/swiftcommandline.git
