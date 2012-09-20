@@ -1,7 +1,7 @@
 alias ls='ls --color=auto'
 alias open='xdg-open'
 
-alias e='vim'
+#alias e='vim'
 alias xc='xclip -i -selection clipboard'
 alias xp='xclip -o -selection clipboard'
 
@@ -23,8 +23,3 @@ alias gcommit='git commit'
 alias gadd='git add'
 alias glog='git log'
 alias gfetch='git fetch'
-
-# even shorter git aliases
-alias g=git
-alias gc='git commit'
-alias ga='git add'
