@@ -7,11 +7,12 @@ sub is_installed {
 
 my %title_fmt = (
     xterm => "-title '%s'",
+    urxvt => "-title '%s'",
     roxterm => "--title='%s'",
     'xfce4-terminal' => "--title '%s'"
 );
 
-for $term (qw(xfce4-terminal roxterm xterm)) {
+for $term (qw(xfce4-terminal roxterm urxvt xterm)) {
     if (is_installed($term)) {
         if (@ARGV == 0) {
             system $term;
