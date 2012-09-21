@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+
+use utils qw(is_installed);
+
+my %title_fmt = (
+    xterm => "-title '%s'",
+    roxterm => "--title='%s'",
+    'xfce4-terminal' => "--title '%s'"
+);
+
+for $term (qw(xfce4-terminal roxterm xterm)) {
+    if (is_installed($term)) {
+        if (@ARGV == 0) {
+            system $term;
+        } else {
+            system "$term " . sprintf($title_fmt{$term}, join(' ', @ARGV));
+        }
+        last;
+    }
+}

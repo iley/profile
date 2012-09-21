@@ -1,8 +1,6 @@
 # vim:filetype=i3conf
 
 set $mod Mod4
-#set $terminal roxterm
-set $terminal i3-sensible-terminal
 
 force_xinerama yes
 
@@ -13,7 +11,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec $terminal
+bindsym $mod+Return exec term
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -175,7 +173,7 @@ exec start-pulseaudio-x11
 
 exec feh --bg-scale wallpaper.jpg
 
-exec $terminal --title=scratchpad_term
+exec term scratchpad_term
 
 exec dropbox start
 exec pidgin
