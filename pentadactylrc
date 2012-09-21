@@ -1,0 +1,2 @@
+command! clear emenu Tools.Clear Cache
+command! readlater emenu Tools.Instasaver.Read it later
