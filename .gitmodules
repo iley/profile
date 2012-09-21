@@ -16,3 +16,6 @@
 [submodule "ext/swiftcommandline"]
 	path = ext/swiftcommandline
 	url = git://github.com/bufordtaylor/swiftcommandline.git
+[submodule "ext/mutt-colors-solarized"]
+	path = ext/mutt-colors-solarized
+	url = git://github.com/altercation/mutt-colors-solarized.git
