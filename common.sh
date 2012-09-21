@@ -1,12 +1,13 @@
 export EDITOR="vim"
 export PAGER=less
 export LESS="-iMSx4 -FXR"
-export PROFILE=$HOME/profile
-EXT=$PROFILE/ext
 export PATH=$PATH:~/bin:$EXT/gitflow:$EXT/map:$EXT/willgit/bin:$EXT/fasd
 
 export GDK_USE_XFT=1
 export QT_XFT=true
+
+PROFILE=$HOME/profile
+EXT=$PROFILE/ext
 
 # common aliases for all shells
 source $PROFILE/alias.sh
