@@ -35,7 +35,7 @@ URxvt*font: xft:PragmataPro:pixelsize=16
 URxvt*boldFont: xft:PragmataPro:pixelsize=16
 
 ! Fix font space
-URxvt*letterSpace:          -2
+!URxvt*letterSpace:          -1
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
