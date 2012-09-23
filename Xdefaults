@@ -1,0 +1,98 @@
+!-------------------------------------------------------------------------------
+! Xft settings
+!-------------------------------------------------------------------------------
+
+Xft.dpi:                    96
+Xft.antialias:              false
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!-------------------------------------------------------------------------------
+
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            1000
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+
+URxvt*iso14755_52:          false
+
+! Fonts
+URxvt.allow_bold:           false
+/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
+URxvt*font: xft:PragmataPro:pixelsize=16
+URxvt*boldFont: xft:PragmataPro:pixelsize=16
+
+! Fix font space
+URxvt*letterSpace:          -2
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher,clipboard
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          firefox
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+URxvt.keysym.Mod4-c:   perl:clipboard:copy
+URxvt.keysym.Mod4-v:   perl:clipboard:paste
+URxvt.keysym.Mod4-C-v: perl:clipboard:paste_escaped
+
+! Tango Color Theme URxvt
+URxvt*color0:  rgb:2e2e/3434/3636
+URxvt*color1:  rgb:cccc/0000/0000
+URxvt*color2:  rgb:4e4e/9a9a/0606
+URxvt*color3:  rgb:c4c4/a0a0/0000
+URxvt*color4:  rgb:3434/6565/a4a4
+URxvt*color5:  rgb:7575/5050/7b7b
+URxvt*color6:  rgb:0606/9820/9a9a
+URxvt*color7:  rgb:d3d3/d7d7/cfcf
+URxvt*color8:  rgb:5555/5757/5353
+URxvt*color9:  rgb:efef/2929/2929
+URxvt*color10: rgb:8a8a/e2e2/3434
+URxvt*color11: rgb:fcfc/e9e9/4f4f
+URxvt*color12: rgb:7272/9f9f/cfcf
+URxvt*color13: rgb:adad/7f7f/a8a8
+URxvt*color14: rgb:3434/e2e2/e2e2
+URxvt*color15: rgb:eeee/eeee/ecec
+
+!Tango Color Theme xterm
+xterm*color0:  rgb:2e2e/3434/3636
+xterm*color1:  rgb:cccc/0000/0000
+xterm*color2:  rgb:4e4e/9a9a/0606
+xterm*color3:  rgb:c4c4/a0a0/0000
+xterm*color4:  rgb:3434/6565/a4a4
+xterm*color5:  rgb:7575/5050/7b7b
+xterm*color6:  rgb:0606/9820/9a9a
+xterm*color7:  rgb:d3d3/d7d7/cfcf
+xterm*color8:  rgb:5555/5757/5353
+xterm*color9:  rgb:efef/2929/2929
+xterm*color10: rgb:8a8a/e2e2/3434
+xterm*color11: rgb:fcfc/e9e9/4f4f
+xterm*color12: rgb:7272/9f9f/cfcf
+xterm*color13: rgb:adad/7f7f/a8a8
+xterm*color14: rgb:3434/e2e2/e2e2
+xterm*color15: rgb:eeee/eeee/ecec
+
+URxvt*background: rgb:2e2e/3434/3636
+URxvt*foreground: lightgray
