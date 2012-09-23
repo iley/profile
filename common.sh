@@ -1,7 +1,7 @@
 export EDITOR="vim"
 export PAGER=less
 export LESS="-iMSx4 -FXR"
-export PATH=$PATH:~/bin:$EXT/gitflow:$EXT/map:$EXT/willgit/bin:$EXT/fasd
+export PATH=$PATH:~/bin:$EXT/gitflow:$EXT/willgit/bin
 
 export GDK_USE_XFT=1
 export QT_XFT=true
