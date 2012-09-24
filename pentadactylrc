@@ -1,3 +1,4 @@
 command! clear emenu Tools.Clear Cache
 command! readlater emenu Tools.Instasaver.Read it later
 command! article emenu Tools.Instasaver.Reflow text
+command! bbar emenu View.Sidebar.Bookmarks
