@@ -152,18 +152,17 @@ bar {
     status_command i3status
 }
 
-assign [class="(?i)firefox"] → 1
+assign [class="(?i)chromium"] → 1
 assign [class="(?i)thunderbird"] → 1
 assign [class="(?i)terminal"] → 2
 
 # default layouts
 workspace_layout tabbed
 
-# FIXME: not working yet
 for_window [title="^scratchpad_term$"] move scratchpad
 
 # hotkeys for switching to specific windows
-bindsym $mod+F1 [class="(?i)firefox"] focus
+bindsym $mod+F1 [class="(?i)chromium"] focus
 bindsym $mod+F2 [class="(?i)thunderbird"] focus
 bindsym $mod+F3 [class="(?i)skype"] focus
 
