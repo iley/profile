@@ -161,6 +161,8 @@ workspace_layout tabbed
 
 for_window [title="^scratchpad_term$"] move scratchpad
 
+for_window [title="^Load Media$"] floating enable
+
 # hotkeys for switching to specific windows
 bindsym $mod+F1 [class="(?i)chromium"] focus
 bindsym $mod+F2 [class="(?i)thunderbird"] focus
