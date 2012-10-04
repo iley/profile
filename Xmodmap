@@ -2,5 +2,5 @@ remove Lock = Caps_Lock
 keysym Caps_Lock = Control_L
 add Control = Control_L
 
-keysym Super_R = Caps_Lock
-add Lock = Super_R
+keysym Control_R = Caps_Lock
+add Lock = Control_R
