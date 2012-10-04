@@ -168,6 +168,7 @@ bindsym $mod+F3 [class="(?i)skype"] focus
 
 # autostart
 exec setxkbmap -layout us,ru -variant ',winkeys' -option 'grp:alt_shift_toggle,grp_led:scroll,compose:ralt'
+exec kbdd
 exec xmodmap ~/.Xmodmap
 exec start-pulseaudio-x11
 
