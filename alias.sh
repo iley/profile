@@ -23,3 +23,4 @@ alias gcommit='git commit'
 alias gadd='git add'
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias gfetch='git fetch'
+alias gcheckout='git checkout'
