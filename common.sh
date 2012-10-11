@@ -3,6 +3,10 @@ export PAGER=less
 export LESS="-iMSx4 -FXR"
 export PATH=$PATH:~/bin:$EXT/gitflow:$EXT/willgit/bin
 
+if [ -e ~/.local/bin ]; then
+    export PATH=$PATH:~/.local/bin
+fi
+
 export GDK_USE_XFT=1
 export QT_XFT=true
 
