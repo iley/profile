@@ -11,7 +11,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec term
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -177,7 +177,7 @@ exec twmnd
 
 exec feh --bg-scale wallpaper.jpg
 
-exec term scratchpad_term
+exec urxvt -title scratchpad_term
 
 exec dropbox start
 exec pidgin
