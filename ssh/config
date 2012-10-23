@@ -2,12 +2,8 @@ GSSAPIAuthentication no
 ForwardAgent yes
 IdentityFile ~/.ssh/id_rsa
 
-Host amazon.iley.ru
-  User ubuntu
-  IdentityFile ~/.ssh/amazon-main.pem
-
 Host dione
   HostName dione.intelib.org
 
-Host gz
-  HostName gz.iley.ru
+Host i-shvedunov
+  User i-strukov
