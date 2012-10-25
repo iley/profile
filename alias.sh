@@ -10,6 +10,8 @@ alias ack='ack-grep'
 
 alias ncal='ncal -M'
 
+alias bell='echo -en "\a"'
+
 get_git_branch() {
     echo `git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 }
