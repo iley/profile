@@ -11,7 +11,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-setopt hist_ignore_dups share_history inc_append_history extended_history
+setopt hist_ignore_dups share_history inc_append_history extended_history no_beep
 
 unalias sl
 unsetopt correct_all
