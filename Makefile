@@ -3,15 +3,24 @@ perldb perltidyrc racketrc sbclrc screen screenrc ssh/config taskrc tmux.conf \
 xinitrc zshrc psqlrc fonts.conf pentadactylrc Xdefaults Xmodmap zsh
 DST=$(addprefix $(HOME)/.,$(SRC))
 TWMN_DIR=$(HOME)/.config/twmn
+SSH_CONN_DIR=$(HOME)/.ssh/connections
 
-.PHONY: all links rvm submodule
+.PHONY: all links rvm submodule ssh_conn
 
 all: links submodule vim
 
 links: $(DST) $(HOME)/bin $(TWMN_DIR)/twmn.conf
 
+ssh_conn: $(SSH_CONN_DIR)
+
+$(SSH_CONN_DIR):
+	mkdir -p $(SSH_CONN_DIR)
+	chmod 700 $(HOME)/.ssh $(SSH_CONN_DIR)
+
 $(DST): $(HOME)/.%: %
 	ln -sf $(abspath $<) $@
+
+$(HOME)/.ssh/config: ssh_conn
 
 $(TWMN_DIR)/twmn.conf: twmn.conf
 	mkdir -p $(TWMN_DIR)
