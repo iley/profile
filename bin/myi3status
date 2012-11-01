@@ -1,0 +1,13 @@
+#!/bin/bash
+
+i3status | while :
+do
+    if command -v campari >/dev/null 2>&1
+    then
+        pomodoro=`campari status`
+    else
+        pomodoro="no campari"
+    fi
+    read line
+    echo "$pomodoro | $line" || exit 1
+done
