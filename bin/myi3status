@@ -1,12 +1,13 @@
 #!/bin/bash
 
+campari=/home/iley/.local/bin/campari
+
 i3status | while :
 do
-    if command -v campari >/dev/null 2>&1
-    then
-        pomodoro=`campari status`
+    if [ -e $campari ] ; then
+        pomodoro=`$campari status`
     else
-        pomodoro="no campari"
+        pomodoro='no campari'
     fi
     read line
     echo "$pomodoro | $line" || exit 1
