@@ -154,10 +154,6 @@ bar {
     status_command /home/iley/bin/myi3status
 }
 
-assign [class="(?i)chromium"] → 1
-assign [class="(?i)thunderbird"] → 1
-assign [class="(?i)terminal"] → 2
-
 # default layouts
 workspace_layout tabbed
 
