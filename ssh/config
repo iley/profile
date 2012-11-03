@@ -11,3 +11,9 @@ Host dione
 
 Host i-shvedunov
   User i-strukov
+
+Host cmssync
+  Hostname cms
+  HostKeyAlias cms
+  User syncer
+  IdentityFile /home/iley/.ikey-cms-sync

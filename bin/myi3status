@@ -1,0 +1,14 @@
+#!/bin/bash
+
+campari=/home/iley/.local/bin/campari
+
+i3status | while :
+do
+    if [ -e $campari ] ; then
+        pomodoro=`$campari status`
+    else
+        pomodoro='no campari'
+    fi
+    read line
+    echo "$pomodoro | $line" || exit 1
+done
