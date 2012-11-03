@@ -174,7 +174,6 @@ bindsym $mod+F3 [class="(?i)skype"] focus
 
 # autostart
 exec setxkbmap -layout us,ru -variant ',winkeys' -option 'grp:alt_shift_toggle,grp_led:scroll,compose:ralt'
-exec xmodmap ~/.Xmodmap
 exec kbdd
 exec start-pulseaudio-x11
 exec twmnd
@@ -187,3 +186,4 @@ exec dropbox start
 exec pidgin
 exec skype
 exec camapri run
+exec xmodmap ~/.Xmodmap
