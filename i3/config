@@ -166,6 +166,7 @@ for_window [title="^scratchpad_term$"] move scratchpad
 for_window [title="^Load Media$"] floating enable
 for_window [title="^Firefox Preferences$"] floating enable
 for_window [title="^feh"] floating enable
+for_window [title="^Volume Control$"] floating enable
 
 # hotkeys for switching to specific windows
 bindsym $mod+F1 [class="(?i)chromium"] focus
