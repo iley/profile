@@ -173,17 +173,14 @@ bindsym $mod+F2 [class="(?i)thunderbird"] focus
 bindsym $mod+F3 [class="(?i)skype"] focus
 
 # autostart
-exec setxkbmap -layout us,ru -variant ',winkeys' -option 'grp:alt_shift_toggle,grp_led:scroll,compose:ralt'
-exec kbdd
-exec start-pulseaudio-x11
-exec twmnd
+exec --no-startup-id setxkbmap -layout us,ru -variant ',winkeys' -option 'grp:alt_shift_toggle,grp_led:scroll,compose:ralt' && xmodmap ~/.Xmodmap
+exec --no-startup-id kbdd
+exec --no-startup-id start-pulseaudio-x11
+exec --no-startup-id twmnd
 
-exec feh --bg-scale wallpaper.jpg
-
-exec urxvt -title scratchpad_term
-
-exec dropbox start
-exec pidgin
-exec skype
-exec camapri run
-exec xmodmap ~/.Xmodmap
+exec --no-startup-id feh --bg-scale wallpaper.jpg
+exec --no-startup-id urxvt -title scratchpad_term
+exec --no-startup-id dropbox start
+exec --no-startup-id pidgin
+exec --no-startup-id skype
+exec --no-startup-id /usr/local/bin/campari run
