@@ -1,1 +1,1 @@
-export PATH=$PATH:/home/iley/sbt/bin
+export PATH=$PATH:/home/iley/sbt/bin:/opt/cxoffice/bin
