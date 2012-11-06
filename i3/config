@@ -10,6 +10,12 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# class                 border  backgr. text    indicator
+client.focused          #2e3436 #2e3436 #dfdbd0 #2e9ef4
+client.focused_inactive #555753 #555753 #dfdbd0 #484e50
+client.unfocused        #888a85 #888a85 #dfdbd0 #292d2e
+client.urgent           #F47421 #F47421 #ffffff #F47421
+
 # start a terminal
 bindsym $mod+Return exec urxvt
 
@@ -158,6 +164,7 @@ bar {
 workspace_layout tabbed
 
 for_window [title="^scratchpad_term$"] move scratchpad
+for_window [title="^scratchpad_term$"] border none
 
 for_window [title="^Load Media$"] floating enable
 for_window [title="^Firefox Preferences$"] floating enable
@@ -177,8 +184,9 @@ exec --no-startup-id kbdd
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id twmnd
 
-exec --no-startup-id feh --bg-scale wallpaper.jpg
-exec --no-startup-id urxvt -title scratchpad_term
+# exec --no-startup-id feh --bg-scale wallpaper.jpg
+exec --no-startup-id gnome-settings-daemon
+exec --no-startup-id urxvt -title scratchpad_term -bd "#dfdbd0"
 exec --no-startup-id dropbox start
 exec --no-startup-id pidgin
 exec --no-startup-id skype
