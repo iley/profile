@@ -1,6 +1,7 @@
 # vim:filetype=i3conf
 
 set $mod Mod4
+set $custom_bin /home/iley/bin
 
 force_xinerama yes
 
@@ -159,7 +160,7 @@ bindsym $mod+n exec campari next
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    status_command /home/iley/bin/myi3status
+    status_command $custom_bin/myi3status
 }
 
 # default layouts
@@ -181,7 +182,7 @@ bindsym $mod+F2 [class="(?i)thunderbird"] focus
 bindsym $mod+F3 [class="(?i)skype"] focus
 
 # autostart
-exec --no-startup-id setxkbmap -layout us,ru -variant ',winkeys' -option 'grp:alt_shift_toggle,grp_led:scroll,compose:ralt' && xmodmap ~/.Xmodmap
+exec --no-startup-id $custom_bin/setup-keyboard
 exec --no-startup-id kbdd
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id twmnd

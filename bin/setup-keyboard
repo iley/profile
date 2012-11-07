@@ -1,0 +1,9 @@
+#!/bin/bash
+LAYOUT=
+if [[ "$1" = "dvorak" ]]
+then
+    LAYOUT=dvorak
+fi
+
+setxkbmap -layout us,ru -variant "$LAYOUT,winkeys" -option 'grp:alt_shift_toggle,grp_led:scroll,compose:ralt'
+xmodmap ~/.Xmodmap
