@@ -182,7 +182,7 @@ bindsym $mod+F2 [class="(?i)thunderbird"] focus
 bindsym $mod+F3 [class="(?i)skype"] focus
 
 # autostart
-exec --no-startup-id $custom_bin/setup-keyboard
+exec --no-startup-id $mybin/setup-keyboard
 exec --no-startup-id kbdd
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id twmnd
