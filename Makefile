@@ -1,6 +1,6 @@
 SRC=XCompose bashrc gitconfig i3 i3status.conf inputrc mplayer oh-my-zsh \
 perldb perltidyrc racketrc sbclrc screen screenrc ssh/config taskrc tmux.conf \
-xinitrc zshrc psqlrc pentadactylrc Xdefaults Xmodmap zsh fonts.conf
+xinitrc zshrc psqlrc pentadactylrc Xdefaults Xmodmap zsh fonts.conf config/redshift.conf
 DST=$(addprefix $(HOME)/.,$(SRC))
 TWMN_DIR=$(HOME)/.config/twmn
 SSH_CONN_DIR=$(HOME)/.ssh/connections
