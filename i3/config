@@ -2,6 +2,7 @@
 
 set $mod Mod4
 set $mybin /home/iley/bin
+set $wallpaper /home/iley/wallpaper.jpg
 
 force_xinerama yes
 
@@ -12,9 +13,9 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # class                 border  backgr. text    indicator
-client.focused          #dfdbd0 #888a85 #ffffff #292d2e
-client.focused_inactive #dfdbd0 #555753 #dfdbd0 #484e50
-client.unfocused        #dfdbd0 #2e3436 #dfdbd0 #2e9ef4
+client.focused          #888a85 #888a85 #ffffff #292d2e
+client.focused_inactive #888a85 #555753 #dfdbd0 #484e50
+client.unfocused        #888a85 #2e3436 #dfdbd0 #2e9ef4
 client.urgent           #F47421 #F47421 #ffffff #F47421
 
 # start a terminal
@@ -190,6 +191,7 @@ exec --no-startup-id twmnd
 
 # exec --no-startup-id feh --bg-scale wallpaper.jpg
 exec --no-startup-id gnome-settings-daemon
+exec --no-startup-id feh --bg-fill $wallpaper
 exec --no-startup-id urxvt -title scratchpad_term -bd "#dfdbd0"
 exec --no-startup-id dropbox start
 exec --no-startup-id pidgin
