@@ -13,9 +13,9 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # class                 border  backgr. text    indicator
-client.focused          #888a85 #888a85 #ffffff #292d2e
-client.focused_inactive #888a85 #555753 #dfdbd0 #484e50
-client.unfocused        #888a85 #2e3436 #dfdbd0 #2e9ef4
+client.focused          #dfdbd0 #002b36 #ffffff #292d2e
+client.focused_inactive #dfdbd0 #073542 #dfdbd0 #484e50
+client.unfocused        #dfdbd0 #586e75 #dfdbd0 #2e9ef4
 client.urgent           #F47421 #F47421 #ffffff #F47421
 
 # start a terminal
