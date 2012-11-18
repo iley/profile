@@ -17,3 +17,6 @@ Host cmssync
   HostKeyAlias cms
   User syncer
   IdentityFile /home/iley/.ikey-cms-sync
+
+Host woodstock
+  Hostname 192.168.56.101
