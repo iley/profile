@@ -19,3 +19,7 @@ Host cmssync
 
 Host woodstock
   Hostname 192.168.56.101
+
+Host home
+  Hostname router.iley.ru
+  Port 2222
