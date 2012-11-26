@@ -177,6 +177,7 @@ for_window [title="^Volume Control$"] floating enable
 for_window [title="^Options$"] floating enable
 for_window [title="^Run Command$"] floating enable
 for_window [title="^Open Database"] floating enable
+for_window [title="KeePass Password Safe"] move workspace keepass
 
 # hotkeys for switching to specific windows
 bindsym $mod+F1 [class="(?i)chromium"] focus
