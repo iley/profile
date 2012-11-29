@@ -27,10 +27,6 @@ function chpwd; {
 			source './.env.rc'
 			break
 		fi
-		if [ -f './env' ]; then
-			source './env'
-			break
-		fi
 		[ $PWD = '/' ] && break
 		cd -q ..
 	done
