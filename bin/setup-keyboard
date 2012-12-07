@@ -1,4 +1,6 @@
 #!/bin/bash
 LAYOUT=$1
-setxkbmap -layout us,ru -variant "$LAYOUT,winkeys" -option 'grp:alt_shift_toggle,grp_led:scroll,compose:ralt'
-xmodmap ~/.Xmodmap
+command -v setxkbmap 2>&1 >/dev/null && setxkbmap -layout us,ru -variant "$LAYOUT,winkeys" -option 'grp:alt_shift_toggle,grp_led:scroll,compose:ralt'
+sleep 0.1
+command -v xmodmap 2>&1 >/dev/null && xmodmap ~/.Xmodmap
+command -v xcape 2>&1 >/dev/null && xcape -e 'Control_L=Escape'
