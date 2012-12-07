@@ -3,4 +3,4 @@ LAYOUT=$1
 command -v setxkbmap 2>&1 >/dev/null && setxkbmap -layout us,ru -variant "$LAYOUT,winkeys" -option 'grp:alt_shift_toggle,grp_led:scroll,compose:ralt'
 sleep 0.1
 command -v xmodmap 2>&1 >/dev/null && xmodmap ~/.Xmodmap
-command -v xcape 2>&1 >/dev/null && xcape -e 'Shift_L=Escape'
+#command -v xcape 2>&1 >/dev/null && xcape -e 'Shift_L=Escape'
