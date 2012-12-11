@@ -23,3 +23,10 @@ Host woodstock
 Host home
   Hostname router.iley.ru
   Port 2222
+
+Host tele-git
+  Hostname igrade.ru
+  Port 21032
+  CheckHostIP no
+  User git
+  IdentityFile /home/iley/.ssh/office_id_rsa
