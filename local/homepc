@@ -1,2 +1,2 @@
 PLAN9=/opt/plan9port
-export PATH=$PATH:/home/iley/sbt/bin:/opt/cxoffice/bin:$PLAN9/bin
+export PATH=$PATH:/opt/cxoffice/bin:$PLAN9/bin:/opt/qt5/bin
