@@ -1,18 +1,6 @@
-[submodule "ext/extract"]
-	path = ext/extract
-	url = git://github.com/iley/extract.git
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
-[submodule "ext/gitflow"]
-	path = ext/gitflow
-	url = git://github.com/nvie/gitflow.git
-[submodule "ext/willgit"]
-	path = ext/willgit
-	url = git://gitorious.org/willgit/mainline.git
-[submodule "ext/swiftcommandline"]
-	path = ext/swiftcommandline
-	url = git://github.com/bufordtaylor/swiftcommandline.git
 [submodule "ext/mutt-colors-solarized"]
 	path = ext/mutt-colors-solarized
 	url = git://github.com/altercation/mutt-colors-solarized.git
