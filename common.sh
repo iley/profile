@@ -16,15 +16,8 @@ EXT=$PROFILE/ext
 # common aliases for all shells
 source $PROFILE/alias.sh
 
-source $EXT/swiftcommandline/swiftcommandline.sh
-
 # required for proper XCompose work in GTK apps
 export GTK_IM_MODULE=xim
-
-# statadhoc tools
-if [ -e ~/statbox ]; then
-	SCTL_COMPLETION=On . ~/statbox/bashrc-devel ~/statbox 
-fi
 
 # perlbrew
 if [ -e ~/perl5 ]; then
