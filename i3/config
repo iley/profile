@@ -195,7 +195,7 @@ exec --no-startup-id redshift
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id twmnd
 
-# exec --no-startup-id feh --bg-scale wallpaper.jpg
+exec --no-startup-id feh --bg-scale wallpaper.jpg
 exec --no-startup-id gnome-settings-daemon
 exec --no-startup-id feh --bg-fill $wallpaper
 exec --no-startup-id urxvt -title scratchpad_term -bd "#dfdbd0"
