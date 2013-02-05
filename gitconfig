@@ -22,8 +22,5 @@
 [github]
 	user  = iley
 
-[mergetool "splice"]
-	cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
-	trustExitCode = true
 [core]
 	pager = less -r
