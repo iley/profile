@@ -108,7 +108,7 @@ bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+BackSpace exit
 # lock session
-bindsym $mod+Pause exec i3lock
+bindsym $mod+Pause exec i3lock -t -i ~/lock.png
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
