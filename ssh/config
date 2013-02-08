@@ -37,3 +37,7 @@ Host up
   HostKeyAlias up
   CheckHostIP no
   User up
+
+Host office
+  Hostname 87.249.9.98
+  Port 2214
