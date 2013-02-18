@@ -3,12 +3,16 @@ export PAGER=less
 export LESS="-iMSx4 -FXR"
 export PATH=$PATH:~/bin:$EXT/gitflow:$EXT/willgit/bin
 
-export DEBEMAIL="iley@iley.ru"
-export DEBFULLNAME="Ilya Strukov"
+if [ -e "/usr/local/heroku" ]; then
+	export PATH="/usr/local/heroku/bin:$PATH"
+fi
 
 if [ -e ~/.local/bin ]; then
     export PATH=$PATH:~/.local/bin
 fi
+
+export DEBEMAIL="iley@iley.ru"
+export DEBFULLNAME="Ilya Strukov"
 
 export GDK_USE_XFT=1
 export QT_XFT=true
