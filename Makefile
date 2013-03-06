@@ -33,7 +33,7 @@ rvm:
 	curl -L get.rvm.io | bash -s stable --ruby
 
 vim:
-	git clone git@iley.ru:vimrc vim
+	git clone iley@iley.ru:git/vimrc vim
 	make -C vim
 
 submodule:
