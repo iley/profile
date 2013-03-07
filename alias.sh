@@ -28,3 +28,8 @@ alias gfetch='git fetch'
 alias gco='git checkout'
 alias gfl='git log -u'
 alias gg='git ls-files | grep -i'
+
+# pseudo-aliases
+function lt() { ls -ltrsa "$@" | tail; }
+function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
+function fname() { find . -iname "*$@*"; }
