@@ -2,9 +2,6 @@ GSSAPIAuthentication no
 ForwardAgent yes
 IdentityFile ~/.ssh/id_rsa
 
-ControlMaster auto
-ControlPath ~/.ssh/connections/%h_%p_%r
-
 Host dione
   HostName dione.intelib.org
 
