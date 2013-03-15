@@ -1,9 +1,8 @@
 SRC=bashrc gitconfig i3 i3status.conf inputrc mplayer oh-my-zsh \
 	perldb perltidyrc racketrc sbclrc screen screenrc ssh/config tmux.conf \
-	zshrc psqlrc Xdefaults zsh config/redshift.conf rss2email/config.py \
-	config/twmn.conf
+	zshrc psqlrc Xdefaults zsh config/redshift.conf rss2email config/twmn.conf
 DST=$(addprefix $(HOME)/.,$(SRC))
-DIRS=$(HOME)/.config $(HOME)/.rss2email $(HOME)/.ssh
+DIRS=$(HOME)/.config $(HOME)/.ssh
 
 .PHONY: all links submodule
 
