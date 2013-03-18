@@ -8,9 +8,9 @@ DIRS=$(HOME)/.config $(HOME)/.ssh
 
 all: links submodule vim
 
-links: $(DST) $(HOME)/bin
+links: $(DIRS) $(DST) $(HOME)/bin
 
-$(DST): $(HOME)/.%: % $(DIRS)
+$(DST): $(HOME)/.%: %
 	ln -sf $(abspath $<) $@
 
 $(HOME)/bin: bin
