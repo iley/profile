@@ -13,6 +13,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 setopt hist_ignore_dups share_history inc_append_history extended_history no_beep
+unsetopt autopushd
 export HISTSIZE=100000 SAVEHIST=100000 HISTFILE=~/.zhistory
 
 unalias sl
