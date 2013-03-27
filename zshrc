@@ -6,13 +6,11 @@ export DEFAULT_USER=iley
 
 fpath=(~/.zsh/completion $fpath)
 
-plugins=(cpanm debian perl pip screen ssh-agent taskwarrior virtualenvwrapper)
+plugins=(pip screen virtualenvwrapper)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-
-unalias ag
 
 setopt hist_ignore_dups share_history inc_append_history extended_history no_beep
 export HISTSIZE=100000 SAVEHIST=100000 HISTFILE=~/.zhistory
