@@ -17,7 +17,7 @@ get_git_branch() {
 }
 
 # git aliases
-alias gst='git status -s'
+alias gst='git status -sb'
 alias gpull='git pull --rebase origin `get_git_branch`'
 alias gpush='git push origin `get_git_branch`'
 alias gdiff='git diff'
@@ -27,7 +27,6 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 alias gfetch='git fetch'
 alias gco='git checkout'
 alias gfl='git log -u'
-alias gg='git ls-files | grep -i'
 
 # pseudo-aliases
 function lt() { ls -ltrsa "$@" | tail; }
