@@ -3,7 +3,7 @@
     email = iley@iley.ru
 
 [alias]
-    st = status
+    st = status -sb
     ci = commit
     co = checkout
     w = whatchanged
