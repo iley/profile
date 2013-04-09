@@ -1,26 +1,29 @@
 [user]
-	name = Ilya Strukov
-	email = iley@iley.ru
+    name = Ilya Strukov
+    email = iley@iley.ru
 
 [alias]
-	st = status
-	ci = commit
-	co = checkout
-	w = whatchanged
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    st = status
+    ci = commit
+    co = checkout
+    w = whatchanged
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    assume   = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
 
 [diff]
-	renamelimit = 0
+    renamelimit = 0
 
 [color]
-	diff = auto
-	interactive = auto
-	status = auto
-	branch = auto
-	ui = true
+    diff = auto
+    interactive = auto
+    status = auto
+    branch = auto
+    ui = true
 
 [github]
-	user  = iley
+    user  = iley
 
 [core]
-	pager = less -r
+    pager = less -r
