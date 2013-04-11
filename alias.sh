@@ -18,7 +18,7 @@ get_git_branch() {
 
 # git aliases
 alias gst='git status -sb'
-alias gpull='git pull --rebase origin `get_git_branch`'
+alias gpurr='git pull --rebase'
 alias gpush='git push origin `get_git_branch`'
 alias gdiff='git diff'
 alias gcommit='git commit'
