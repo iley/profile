@@ -14,19 +14,6 @@ Host cmssync
   User syncer
   IdentityFile /home/iley/.ikey-cms-sync
 
-Host woodstock
-  Hostname 192.168.56.101
-
-Host home
-  Hostname router.iley.ru
-  Port 2222
-
-Host git.igrade.ru
-  Hostname igrade.ru
-  Port 21032
-  CheckHostIP no
-  User git
-
 Host tele-git
   Hostname igrade.ru
   Port 21032
@@ -49,3 +36,7 @@ Host staging1
 
 Host staging2
   Hostname 192.168.1.187
+
+Host router
+  Hostname 192.168.1.1
+  User root
