@@ -179,8 +179,20 @@ workspace 8 output xinerama-1
 workspace 9 output xinerama-1
 workspace 10 output xinerama-1
 
+assign [title="Mozilla Firefox$"] 1
+assign [class="xbmc.bin"] 2
+assign [title="- Skype™$"] 10
+assign [class="Pidgin"] 10
+
 for_window [title="^scratchpad_term$"] move scratchpad
 for_window [title="^scratchpad_term$"] border none
+
+for_window [title="- Skype™$"] move down
+for_window [class="Pidgin"] move up; move up
+
+for_window [title="KeePass Password Safe"] move workspace keepass
+for_window [title="Oracle VM VirtualBox$"] move workspace vm
+for_window [class="xbmc.bin"] fullscreen
 
 for_window [title="^Load Media$"] floating enable
 for_window [title="^Firefox Preferences$"] floating enable
@@ -191,30 +203,17 @@ for_window [title="^Run Command$"] floating enable
 for_window [title="^Open Database"] floating enable
 for_window [title="^Hotot$"] floating enable
 for_window [title="^File Operations$"] floating enable
-for_window [title="KeePass Password Safe"] move workspace keepass
-for_window [title="Oracle VM VirtualBox$"] move workspace vm
-for_window [class="xbmc.bin"] fullscreen
-
-assign [title="Mozilla Firefox$"] 1
-assign [class="xbmc.bin"] 2
-assign [title="- Skype™$"] 10
 
 # hotkeys for switching to specific windows
-bindsym $mod+F1 [class="(?i)chromium"] focus
-bindsym $mod+F2 [class="(?i)thunderbird"] focus
-bindsym $mod+F3 [class="(?i)skype"] focus
+bindsym $mod+F3 [title="- Skype™$"] focus
 
 # autostart
-exec --no-startup-id nvidia-settings --load-config-only
-#exec --no-startup-id redshift
-exec --no-startup-id start-pulseaudio-x11
-exec --no-startup-id twmnd
-
-exec --no-startup-id feh --bg-scale wallpaper.jpg
-exec --no-startup-id gnome-settings-daemon
-exec --no-startup-id feh --bg-fill $wallpaper
-exec --no-startup-id urxvt -title scratchpad_term -bd "#dfdbd0"
-exec --no-startup-id dropbox start
-exec --no-startup-id pidgin
-exec --no-startup-id skype
-exec --no-startup-id /usr/local/bin/campari run
+exec gnome-settings-daemon
+exec nvidia-settings --load-config-only
+exec start-pulseaudio-x11
+exec twmnd
+exec feh --bg-scale $wallpaper
+exec urxvt -title scratchpad_term -bd "#dfdbd0"
+exec dropbox start
+exec pidgin
+exec skype
