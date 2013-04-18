@@ -2,9 +2,10 @@ export EDITOR="vim"
 export PAGER=less
 export LESS="-iMSx4 -FXR"
 export PATH=$PATH:~/bin:$EXT/gitflow:$EXT/willgit/bin
+export PIP_DOWNLOAD_CACHE=~/.pip_cache
 
 if [ -e "/usr/local/heroku" ]; then
-	export PATH="/usr/local/heroku/bin:$PATH"
+    export PATH="/usr/local/heroku/bin:$PATH"
 fi
 
 if [ -e ~/.local/bin ]; then
@@ -28,12 +29,12 @@ export GTK_IM_MODULE=xim
 
 # perlbrew
 if [ -e ~/perl5 ]; then
-	source ~/perl5/perlbrew/etc/bashrc
+    source ~/perl5/perlbrew/etc/bashrc
 fi
 
 # set $TERM to make tmux work properly
 if [[ "$TERM" != 'screen-256color' ]]; then
-	export TERM=xterm-256color
+    export TERM=xterm-256color
 fi
 
 if [ -e ~/.rvm/scripts ]; then
