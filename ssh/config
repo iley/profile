@@ -21,12 +21,17 @@ Host home
   Hostname router.iley.ru
   Port 2222
 
+Host git.igrade.ru
+  Hostname igrade.ru
+  Port 21032
+  CheckHostIP no
+  User git
+
 Host tele-git
   Hostname igrade.ru
   Port 21032
   CheckHostIP no
   User git
-  IdentityFile /home/iley/.ssh/office_id_rsa
 
 Host up
   Hostname internet-school.ru
