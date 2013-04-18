@@ -163,10 +163,21 @@ bindsym $mod+n exec campari next
 bar {
     i3bar_command i3bar
     status_command i3status
+    tray_output primary
 }
 
 # default layouts
 workspace_layout tabbed
+workspace 1 output xinerama-0
+workspace 2 output xinerama-0
+workspace 3 output xinerama-0
+workspace 4 output xinerama-0
+workspace 5 output xinerama-0
+workspace 6 output xinerama-1
+workspace 7 output xinerama-1
+workspace 8 output xinerama-1
+workspace 9 output xinerama-1
+workspace 10 output xinerama-1
 
 for_window [title="^scratchpad_term$"] move scratchpad
 for_window [title="^scratchpad_term$"] border none
@@ -184,7 +195,9 @@ for_window [title="KeePass Password Safe"] move workspace keepass
 for_window [title="Oracle VM VirtualBox$"] move workspace vm
 for_window [class="xbmc.bin"] fullscreen
 
+assign [title="Mozilla Firefox$"] 1
 assign [class="xbmc.bin"] 2
+assign [title="- Skype™$"] 10
 
 # hotkeys for switching to specific windows
 bindsym $mod+F1 [class="(?i)chromium"] focus
