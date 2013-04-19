@@ -2,7 +2,6 @@ export EDITOR="vim"
 export PAGER=less
 export LESS="-iMSx4 -FXR"
 export PATH=$PATH:~/bin:$EXT/gitflow:$EXT/willgit/bin
-export PIP_DOWNLOAD_CACHE=~/.pip_cache
 export DEBEMAIL="iley@iley.ru"
 export DEBFULLNAME="Ilya Strukov"
 export GDK_USE_XFT=1
