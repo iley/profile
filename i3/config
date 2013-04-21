@@ -166,23 +166,7 @@ bar {
     tray_output primary
 }
 
-# default layouts
 workspace_layout tabbed
-workspace 1 output xinerama-0
-workspace 2 output xinerama-0
-workspace 3 output xinerama-0
-workspace 4 output xinerama-0
-workspace 5 output xinerama-0
-workspace 6 output xinerama-1
-workspace 7 output xinerama-1
-workspace 8 output xinerama-1
-workspace 9 output xinerama-1
-workspace 10 output xinerama-1
-
-assign [title="Mozilla Firefox$"] 1
-assign [class="xbmc.bin"] 2
-assign [title="- Skype™$"] 10
-assign [class="Pidgin"] 10
 
 for_window [title="^scratchpad_term$"] move scratchpad
 for_window [title="^scratchpad_term$"] border none
@@ -206,14 +190,3 @@ for_window [title="^File Operations$"] floating enable
 
 # hotkeys for switching to specific windows
 bindsym $mod+F3 [title="- Skype™$"] focus
-
-# autostart
-exec gnome-settings-daemon
-exec nvidia-settings --load-config-only
-exec start-pulseaudio-x11
-exec twmnd
-exec feh --bg-scale $wallpaper
-exec urxvt -title scratchpad_term -bd "#dfdbd0"
-exec dropbox start
-exec pidgin
-exec skype
