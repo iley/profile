@@ -14,6 +14,8 @@ Xft.hintstyle:              hintslight
 ! More info at:
 ! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
 !-------------------------------------------------------------------------------
+!
+URxvt*loginShell: true
 
 URxvt.depth:                32
 URxvt.geometry:             90x30
@@ -30,11 +32,11 @@ URxvt*iso14755_52:          false
 
 ! Fonts
 URxvt.allow_bold:           false
-URxvt*font: xft:AnonymousPro:size=12
-URxvt*boldFont: xft:AnonymousPro:size=12
+URxvt*font: xft:PragmataPro:size=12
+URxvt*boldFont: xft:PragmataPro:size=12
 
 ! Fix font space
-!URxvt*letterSpace:          -1
+URxvt*letterSpace:          -1
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
