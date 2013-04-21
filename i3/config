@@ -162,7 +162,7 @@ bindsym $mod+n exec campari next
 # finds out, if available)
 bar {
     i3bar_command i3bar
-    status_command i3status
+    status_command i3status | ~/bin/status_wrapper.py
     tray_output primary
 }
 
