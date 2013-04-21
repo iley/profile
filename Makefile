@@ -1,6 +1,6 @@
 SRC=bashrc gitconfig i3 i3status.conf inputrc mplayer oh-my-zsh \
 	perldb perltidyrc racketrc sbclrc screen screenrc ssh/config tmux.conf \
-	zshrc psqlrc Xdefaults zsh config/redshift.conf config/twmn.conf \
+	zshrc psqlrc Xdefaults zsh config/redshift.conf \
 	atoolrc xsession config/dunst
 DST=$(addprefix $(HOME)/.,$(SRC))
 DIRS=$(HOME)/.config $(HOME)/.ssh
