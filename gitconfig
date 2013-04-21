@@ -28,3 +28,6 @@
 
 [core]
     pager = less -r
+
+[push]
+    default = current
