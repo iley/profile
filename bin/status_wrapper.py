@@ -1,16 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+import re
 import sys
 import json
 from jenkins import Jenkins
 
 JOBS = [ 'master', 'umbrella' ]
-COLOR_MAP = {
-    'blue': '#00FF00',
-    'red':  '#FF0000',
-    'yellow': '#FFFF00'
-}
+
+def get_color(name):
+    name = re.sub(r'_.*$', '', name)
+    color_map = {
+        'blue': '#00FF00',
+        'red':  '#FF0000',
+        'yellow': '#FFFF00',
+        'grey': '#999999'
+    }
+    # purple means 'WTF?'
+    return color_map.get(name, '#FF00FF')
 
 jenkins_client = Jenkins("http://ci.igrade.ru",
                          "i-strukov",
@@ -63,6 +69,6 @@ if __name__ == '__main__':
             color = jobs[name]
             j.insert(0, {'full_text' : u'• {}'.format(name),
                          'name' : 'jenkins_{}'.format(name),
-                         'color': COLOR_MAP[color]})
+                         'color': get_color(color)})
         # and echo back new encoded json
         print_line(prefix+json.dumps(j))
