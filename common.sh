@@ -3,6 +3,12 @@ export PAGER=less
 export LESS="-iMSx4 -FXR"
 export PATH=$PATH:~/bin:$EXT/gitflow:$EXT/willgit/bin
 export PIP_DOWNLOAD_CACHE=~/.pip_cache
+export DEBEMAIL="iley@iley.ru"
+export DEBFULLNAME="Ilya Strukov"
+export GDK_USE_XFT=1
+export QT_XFT=true
+# required for proper XCompose work in GTK apps
+export GTK_IM_MODULE=xim
 
 if [ -e "/usr/local/heroku" ]; then
     export PATH="/usr/local/heroku/bin:$PATH"
@@ -12,20 +18,11 @@ if [ -e ~/.local/bin ]; then
     export PATH=$PATH:~/.local/bin
 fi
 
-export DEBEMAIL="iley@iley.ru"
-export DEBFULLNAME="Ilya Strukov"
-
-export GDK_USE_XFT=1
-export QT_XFT=true
-
 PROFILE=$HOME/profile
 EXT=$PROFILE/ext
 
 # common aliases for all shells
 source $PROFILE/alias.sh
-
-# required for proper XCompose work in GTK apps
-export GTK_IM_MODULE=xim
 
 # perlbrew
 if [ -e ~/perl5 ]; then
