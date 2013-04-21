@@ -25,7 +25,7 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -fn "xft:AnonymousPro:size=11"
+bindsym $mod+d exec dmenu_run -fn "PragmataPro:size=13"
 
 # change focus
 bindsym $mod+h focus left
