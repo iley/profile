@@ -189,4 +189,4 @@ for_window [title="^Hotot$"] floating enable
 for_window [title="^File Operations$"] floating enable
 
 # hotkeys for switching to specific windows
-bindsym $mod+F3 [title="- Skype™$"] focus
+# bindsym $mod+x [title="- MAIN$"] focus # FIXME not working
