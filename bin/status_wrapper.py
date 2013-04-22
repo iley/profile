@@ -3,9 +3,12 @@
 import re
 import sys
 import json
+from itertools import cycle
 from jenkins import Jenkins
 
 JOBS = [ 'master', 'umbrella' ]
+static_char = '●'
+progress_chars = cycle([ '●', '○' ])
 
 def get_color(name):
     name = re.sub(r'_.*$', '', name)
@@ -67,7 +70,11 @@ if __name__ == '__main__':
             if name not in jobs:
                 continue
             color = jobs[name]
-            j.insert(0, {'full_text' : u'• {}'.format(name),
+            if color.endswith('_anime'):
+                char = next(progress_chars)
+            else:
+                char = static_char
+            j.insert(0, {'full_text' : u'{} {}'.format(char, name),
                          'name' : 'jenkins_{}'.format(name),
                          'color': get_color(color)})
         # and echo back new encoded json
