@@ -16,7 +16,8 @@ def get_color(name):
         'blue': '#00FF00',
         'red':  '#FF0000',
         'yellow': '#FFFF00',
-        'grey': '#999999'
+        'grey': '#999999',
+        'aborted': '#999999'
     }
     # purple means 'WTF?'
     return color_map.get(name, '#FF00FF')
