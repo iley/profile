@@ -28,6 +28,11 @@ alias gfetch='git fetch'
 alias gco='git checkout'
 alias gfl='git log -u'
 
+# vim aliases
+alias v=vim
+alias vs='vim --servername main'
+alias vr='vim --servername main --remote-tab'
+
 # pseudo-aliases
 function lt() { ls -ltrsa "$@" | tail; }
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
