@@ -7,8 +7,8 @@ from itertools import cycle
 from jenkins import Jenkins
 
 JOBS = [ 'master', 'current' ]
-static_char = '●'
-progress_chars = cycle([ '●', '○' ])
+static_char = u'●'
+progress_chars = cycle([ u'●', u'○' ])
 
 def get_color(name):
     name = re.sub(r'_.*$', '', name)
