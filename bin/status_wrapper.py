@@ -6,7 +6,7 @@ import json
 from itertools import cycle
 from jenkins import Jenkins
 
-JOBS = [ 'master', 'umbrella' ]
+JOBS = [ 'master', 'current' ]
 static_char = '●'
 progress_chars = cycle([ '●', '○' ])
 
