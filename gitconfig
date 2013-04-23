@@ -12,6 +12,7 @@
     unassume = update-index --no-assume-unchanged
     assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
     purr = pull --rebase
+    puff = pull --ff-only
 
 [diff]
     renamelimit = 0
