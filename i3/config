@@ -1,8 +1,6 @@
 # vim:filetype=i3conf
 
 set $mod Mod4
-set $mybin /home/iley/bin
-set $wallpaper /home/iley/wallpaper.jpg
 
 force_xinerama yes
 
@@ -19,13 +17,13 @@ client.unfocused        #dfdbd0 #586e75 #dfdbd0 #2e9ef4
 client.urgent           #F47421 #F47421 #ffffff #F47421
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec --no-startup-id urxvt
 
 # kill focused window
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -fn "PragmataPro:size=13"
+bindsym $mod+d exec --no-startup-id dmenu_run -fn "PragmataPro:size=13"
 
 # change focus
 bindsym $mod+h focus left
@@ -105,10 +103,9 @@ bindsym $mod+Shift+parenright move workspace 10
 bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
-# exit i3 (logs you out of your X session)
 bindsym $mod+Shift+BackSpace exit
-# lock session
 bindsym $mod+Pause exec i3lock -c 000000
+bindsym $mod+y exec --no-startup-id ~/bin/show-clipboard
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -155,8 +152,6 @@ bindsym $mod+Shift+z move scratchpad
 
 # Show the first scratchpad window
 bindsym $mod+z scratchpad show
-
-bindsym $mod+n exec campari next
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

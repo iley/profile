@@ -1,0 +1,10 @@
+#!/bin/bash
+set -u -e
+primary="$(xclip -o -selection primary 2>/dev/null)"
+if [ ! -z "$primary" ]; then
+    notify-send "Primary selection" "$primary"
+fi
+clipboard="$(xclip -o -selection clipboard 2>/dev/null)"
+if [ ! -z "$clipboard" ]; then
+    notify-send "Clipboard" "$clipboard"
+fi
