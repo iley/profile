@@ -1,0 +1,17 @@
+#!/bin/bash
+set -u -e
+
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 config" 1>&2
+    exit 1
+fi
+
+CONFIG="$1"
+LOCAL_CONFIG=~/.i3/`hostname`.config
+cp ~/.i3/config "$CONFIG"
+if [ -e "$LOCAL_CONFIG" ]; then
+    cat "$LOCAL_CONFIG" >> "$CONFIG"
+fi
+cat ~/.i3/autostart.config >> "$CONFIG"
+
+#vim: setf sh:
