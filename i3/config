@@ -171,7 +171,6 @@ for_window [class="Pidgin"] move up; move up
 
 for_window [title="KeePass Password Safe"] move workspace keepass
 for_window [title="Oracle VM VirtualBox$"] move workspace vm
-for_window [class="xbmc.bin"] fullscreen
 
 for_window [title="^Load Media$"] floating enable
 for_window [title="^Firefox Preferences$"] floating enable
