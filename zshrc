@@ -1,12 +1,13 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="agnoster"
-export DEFAULT_USER=iley
+ZSH_THEME="gentoo"
+plugins=(pip screen virtualenvwrapper)
 
 fpath=(~/.zsh/completion $fpath)
 
-plugins=(pip screen virtualenvwrapper)
+export DEFAULT_USER=iley
+export DISABLE_AUTO_UPDATE="true"
 
 source $ZSH/oh-my-zsh.sh
 
