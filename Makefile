@@ -1,4 +1,4 @@
-SRC=bashrc gitconfig i3 i3status.conf inputrc mplayer oh-my-zsh \
+SRC=bashrc gitconfig i3 i3status.conf inputrc mplayer \
 	perldb perltidyrc racketrc sbclrc screen screenrc ssh/config tmux.conf \
 	zshrc psqlrc Xdefaults zsh config/redshift.conf \
 	atoolrc xsession config/dunst config/fish
