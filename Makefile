@@ -4,12 +4,16 @@ SRC=bashrc gitconfig i3 i3status.conf inputrc mplayer \
 	atoolrc xsession config/dunst config/fish
 DST=$(addprefix $(HOME)/.,$(SRC))
 DIRS=$(HOME)/.config $(HOME)/.ssh
+OHMYZSH=~/.oh-my-zsh
 
-.PHONY: all links submodule
+.PHONY: all links
 
-all: links submodule vim
+all: links vim
 
-links: $(DIRS) $(DST) $(HOME)/bin
+links: $(DIRS) $(DST) $(OHMYZSH) $(HOME)/bin
+
+$(OHMYZSH):
+	git clone git://github.com/robbyrussell/oh-my-zsh.git $@
 
 $(DST): $(HOME)/.%: %
 	ln -sf $(abspath $<) $@
@@ -23,6 +27,3 @@ $(DIRS): %:
 vim:
 	git clone iley@iley.ru:git/vimrc vim
 	make -C vim
-
-submodule:
-	git submodule update --init --recursive
