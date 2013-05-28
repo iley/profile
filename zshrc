@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="gentoo"
-plugins=(pip screen virtualenvwrapper)
+plugins=(cp virtualenvwrapper)
 
 fpath=(~/.zsh/completion $fpath)
 
@@ -12,11 +12,10 @@ export DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 
 setopt hist_ignore_dups share_history inc_append_history extended_history no_beep
-unsetopt autopushd
-export HISTSIZE=100000 SAVEHIST=100000 HISTFILE=~/.zhistory
-
+unsetopt autopushd autonamedirs correct_all
 unalias sl
-unsetopt correct_all
+
+export HISTSIZE=100000 SAVEHIST=100000 HISTFILE=~/.zhistory
 
 function _rollback() { }
 
