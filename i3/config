@@ -157,7 +157,8 @@ bindsym $mod+z scratchpad show
 # finds out, if available)
 bar {
     i3bar_command i3bar
-    status_command i3status | ~/bin/status_wrapper.py
+    #status_command i3status | ~/bin/status_wrapper.py
+    status_command i3status
     tray_output primary
 }
 
