@@ -1,2 +1,5 @@
 [ui]
 username = Ilya Strukov <iley@iley.ru>
+
+[extensions]
+color = 
