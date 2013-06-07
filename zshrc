@@ -1,13 +1,14 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="gentoo"
+ZSH_CUSTOM=~/profile/zsh_custom
+ZSH_THEME="iley"
 plugins=(cp virtualenvwrapper)
 
 fpath=(~/.zsh/completion $fpath)
 
-export DEFAULT_USER=iley
-export DISABLE_AUTO_UPDATE="true"
+DEFAULT_USER=iley
+DISABLE_AUTO_UPDATE="true"
 
 source $ZSH/oh-my-zsh.sh
 
