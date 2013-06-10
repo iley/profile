@@ -2,7 +2,7 @@ SRC=bashrc gitconfig i3 i3status.conf inputrc mplayer \
 	perldb perltidyrc racketrc sbclrc screen screenrc ssh/config tmux.conf \
 	zshrc psqlrc Xdefaults zsh config/redshift.conf \
 	atoolrc xsession config/dunst config/fish config/ranger hgrc \
-	htoprc
+	config/htop
 DST=$(addprefix $(HOME)/.,$(SRC))
 DIRS=$(HOME)/.config $(HOME)/.ssh
 OHMYZSH=~/.oh-my-zsh
