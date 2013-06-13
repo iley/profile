@@ -7,7 +7,7 @@ DST=$(addprefix $(HOME)/.,$(SRC))
 DIRS=$(HOME)/.config $(HOME)/.ssh
 OHMYZSH=~/.oh-my-zsh
 
-.PHONY: all links
+.PHONY: all links submodules
 
 all: links vim
 
@@ -25,5 +25,8 @@ $(HOME)/bin: bin
 $(DIRS): %:
 	mkdir -p $@
 
-vim:
+submodules:
+	git submodule update --init --recursive
+
+vim: submodules
 	make -C vim
