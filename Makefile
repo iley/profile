@@ -26,5 +26,4 @@ $(DIRS): %:
 	mkdir -p $@
 
 vim:
-	git clone iley@iley.ru:git/vimrc vim
 	make -C vim
