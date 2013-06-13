@@ -1,0 +1,24 @@
+snippet call
+	<xsl:call-template "${1:name}"/>
+snippet callp
+	<xsl:call-template "${1:name}">
+		${2:...}
+	</xsl:call-template>
+snippet param
+	<xsl:with-param name="${1:name}">${2:value}</xsl:with-param>
+snippet params
+	<xsl:with-param name="${1:name}" select="${2:value}"/>
+snippet var
+	<xsl:variable name="${1:name}">
+		${2:<!--value-->}
+	</xsl:variable>
+snippet attr
+	<xsl:attribute name="${1:name}">
+		${2:<!--value-->}
+	</xsl:attribute>
+snippet if
+	<xsl:if test="${1:condition}">
+		${2:<!--then-->}
+	</xsl:if>
+snippet val
+	<xsl:value-of select="${1:query}"/>

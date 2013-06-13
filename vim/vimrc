@@ -1,0 +1,72 @@
+set nocompatible
+
+
+" user commands
+command! -nargs=0 -bang WSudo :silent! w !sudo tee % &>/dev/null
+command! -nargs=0 Vimrc :tabnew $MYVIMRC
+command! -nargs=0 Run :call Run()
+
+set keymap=russian-jcukenwin " ^6 to change
+set iminsert=0 " latin by default
+set imsearch=0 " latin by default
+
+" enable mouse
+set mouse=a
+
+" indentation settings
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+" remove extra spaces during indentation
+set shiftround
+
+set wrap
+
+" search and replace
+set ignorecase
+
+set updatetime=120000
+set hidden
+
+" folding settings
+set foldlevelstart=20
+
+" move to next line at beginning/line of the current
+set whichwrap=h,l,<,>,[,]
+
+" turn off speaker
+set vb t_vb="
+
+set wildignore+=*.o,*.bak,*.pyc,*.jpg,*.png,*/.git/*,*/.hg/*,*/.svn/*
+
+" automatically save/load folds on buffer close/open
+au BufWinLeave * silent! mkview
+au BufWinEnter * silent! loadview
+
+set clipboard=unnamedplus
+set undolevels=1000
+set undoreload=10000
+set undodir=~/.vim/undo
+
+au! BufNewFile,BufRead * set vb t_vb="
+
+" Suffixes that get lower priority when doing tab completion for filenames.
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+set suffixesadd=.pl,.pm,.yml,.yaml " for `gf' (open file under cursor)
+
+" Complete options (disable preview scratch window)
+set completeopt=menu,menuone,longest
+" Limit popup menu height
+set pumheight=15
+
+set list listchars=tab:>\ ,trail:_,extends:>
+
+source ~/.vim/bundles.vim
+
+source ~/.vim/backup.vim
+source ~/.vim/ftdetect.vim
+source ~/.vim/functions.vim
+source ~/.vim/keymap.vim
+source ~/.vim/plugins.vim
+source ~/.vim/appearance.vim

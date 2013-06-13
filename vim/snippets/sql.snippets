@@ -1,0 +1,25 @@
+snippet func
+	create or replace function ${1:func}(${2:...}) returns ${3:void} as $$
+	begin
+		${5:--- TODO}
+	end
+	$$ language plpgsql ${4:volatile};
+snippet trans
+	begin transaction;
+		${1:--- TODO}
+	commit transaction;
+snippet if
+	if ${1:condition} then
+		${2:-- TODO}
+	end if;
+snippet for
+	for ${1:var} in ${2:query} loop
+	end loop;
+snippet rn
+	raise notice '${1:it works!}'${2};
+snippet at
+	alter table ${1:name}
+snippet u
+	update ${1:table} set ${2:column} = ${3:value}
+snippet s
+	select ${1:columns} from ${2:table}
