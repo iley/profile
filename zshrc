@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_CUSTOM=~/profile/zsh_custom
 ZSH_THEME="iley"
-plugins=(cp virtualenvwrapper)
+plugins=(vagrant virtualenvwrapper)
 
 fpath=(~/.zsh/completion $fpath)
 
