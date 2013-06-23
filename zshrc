@@ -18,5 +18,5 @@ unalias sl
 
 export HISTSIZE=100000 SAVEHIST=100000 HISTFILE=~/.zhistory
 
-source $HOME/profile/common.sh
 source $HOME/profile/zsh_alias.sh
+source $HOME/profile/common.sh
