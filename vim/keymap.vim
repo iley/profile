@@ -4,6 +4,7 @@ noremap <C-PageDown> :Tbbn<CR>
 noremap <C-PageUp>   :Tbbp<CR>
 
 "noremap <F2> :w<CR>
+noremap <F3> :Errors<CR>
 noremap <F4> :NERDTreeToggle<CR>
 noremap <F9> :TagbarOpen<CR>
 
