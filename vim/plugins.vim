@@ -27,7 +27,9 @@ let g:pymode_lint_write = 1
 "let g:pymode_lint_onfly = 1
 let g:pymode_utils_whitespaces = 0
 let g:pymode_folding = 1
-let g:pymode_syntax = 0
+let g:pymode_rope = 0
+
+let g:python_highlight_all = 1
 
 " lisp settings
 let g:paredit_mode = 0
