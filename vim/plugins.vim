@@ -5,8 +5,7 @@ runtime! fvl.vim
 let NERDTreeWinSize=20
 let NERDTreeIgnore=['.o$', '.pyc$', '\~$']
 
-" SuperTab option for context aware completion 
-let g:SuperTabDefaultCompletionType="context"
+let g:SuperTabNoCompleteAfter=['^', '\s', ',']
 
 " Disable auto popup, use <Tab> to autocomplete
 let g:clang_complete_auto=0
@@ -19,17 +18,6 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 " Powerline
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
-"let g:Powerline_symbols="fancy"
-
-" python settings
-let g:pymode_lint_checker = "pyflakes"
-let g:pymode_lint_write = 1
-"let g:pymode_lint_onfly = 1
-let g:pymode_utils_whitespaces = 0
-let g:pymode_folding = 1
-let g:pymode_rope = 0
-
-let g:python_highlight_all = 1
 
 " lisp settings
 let g:paredit_mode = 0
