@@ -10,6 +10,6 @@ noremap <F9> :TagbarOpen<CR>
 
 " hotkey for a.vim plugin
 map <Leader>a :A<CR>
-map <Leader>l :PyLint<CR>
 
-map <Leader>] <Plug>MakeGreen
+map <Leader>l :PyLint<CR>
+map <Leader>T :tabnew<CR>:CommandT<CR>
