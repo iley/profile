@@ -12,4 +12,5 @@ noremap <F9> :TagbarOpen<CR>
 map <Leader>a :A<CR>
 
 map <Leader>l :PyLint<CR>
+map <Leader>t :CommandT<CR>
 map <Leader>T :tabnew<CR>:CommandT<CR>
