@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use constant WINDOWS => 3;
+use constant WINDOWS => 5;
 
 my $name = shift;
 $name or die "Usage: tmux-link name";
