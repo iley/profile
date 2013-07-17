@@ -2,8 +2,8 @@ filetype off                   " required for vundle
 
 set rtp+=~/.vim/vundle/
 call vundle#rc()
-" let Vundle manage Vundle
-" required! 
+
+" let Vundle manage Vundle (required)
 Bundle 'gmarik/vundle'
 
 " required by snipmate
@@ -19,7 +19,9 @@ Bundle 'ervandew/supertab'
 Bundle 'exu/pgsql.vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'gcmt/taboo.vim'
+Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'hdima/python-syntax'
+Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'majutsushi/tagbar'
 Bundle 'mileszs/ack.vim'
@@ -33,7 +35,6 @@ Bundle 'tpope/vim-rsi'
 Bundle 'tpope/vim-sensible'
 Bundle 'vim-scripts/slimv.vim'
 Bundle 'wting/rust.vim'
-Bundle 'git://git.wincent.com/command-t.git'
 
 " color schemes
 Bundle 'altercation/vim-colors-solarized'
