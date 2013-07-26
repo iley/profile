@@ -1,4 +1,4 @@
-augroup filetypedetect
+augroup filetype
     au! BufNewFile,BufRead *.asd              setfiletype lisp
     au! BufNewFile,BufRead *.clj              set filetype=clojure
     au! BufNewfile,BufRead Construct,Consfile set filetype=perl
