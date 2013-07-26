@@ -1,6 +1,5 @@
 set nocompatible
 
-
 " user commands
 command! -nargs=0 -bang WSudo :silent! w !sudo tee % &>/dev/null
 command! -nargs=0 Vimrc :tabnew $MYVIMRC
@@ -40,16 +39,20 @@ set vb t_vb="
 
 set wildignore+=*.o,*.bak,*.pyc,*.jpg,*.png,*/.git/*,*/.hg/*,*/.svn/*
 
-" automatically save/load folds on buffer close/open
-au BufWinLeave * silent! mkview
-au BufWinEnter * silent! loadview
+augroup misc
+    " automatically save/load folds on buffer close/open
+    au! BufWinLeave * silent! mkview
+    au! BufWinEnter * silent! loadview
+
+    au! BufNewFile,BufRead * set vb t_vb="
+
+    au! BufNewFile,BufRead *.taskpaper set nolist
+augroup end
 
 set clipboard=unnamedplus
 set undolevels=1000
 set undoreload=10000
 set undodir=~/.vim/undo
-
-au! BufNewFile,BufRead * set vb t_vb="
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
