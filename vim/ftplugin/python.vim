@@ -1,7 +1,7 @@
 let b:did_ftplugin = 1
 
 if exists('+colorcolumn')
-    setlocal colorcolumn=81 "highlight long lines
+    setlocal colorcolumn=80,100 " according to PEP8
 endif
 
 setlocal tabstop=4
