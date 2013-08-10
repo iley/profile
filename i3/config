@@ -167,9 +167,6 @@ workspace_layout tabbed
 for_window [title="^scratchpad_term$"] move scratchpad
 for_window [title="^scratchpad_term$"] border none
 
-for_window [title="- Skype™$"] move down
-for_window [class="Pidgin"] move up; move up
-
 for_window [title="KeePass Password Safe"] move workspace keepass
 for_window [title="Oracle VM VirtualBox$"] move workspace vm
 
