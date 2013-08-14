@@ -49,7 +49,7 @@ augroup misc
     au! BufNewFile,BufRead *.taskpaper set nolist
 augroup end
 
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 set undolevels=1000
 set undoreload=10000
 set undodir=~/.vim/undo
