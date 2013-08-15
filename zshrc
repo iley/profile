@@ -3,7 +3,7 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_CUSTOM=~/profile/zsh_custom
 ZSH_THEME="iley"
-plugins=(vagrant virtualenvwrapper nosetests ssh-agent)
+plugins=(vagrant virtualenvwrapper nosetests)
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities id_rsa id_vagrant
