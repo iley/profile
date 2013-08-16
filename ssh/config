@@ -60,3 +60,6 @@ Host iley.ru
 
 Host jenkins
   Hostname 192.168.1.180
+
+Host ina
+  Hostname 192.168.1.43
