@@ -1,3 +1,4 @@
+# vim: ft=gitconfig
 [user]
     name = Ilya Strukov
     email = iley@iley.ru
@@ -32,3 +33,5 @@
 
 [push]
     default = current
+[help]
+    autocorrect = 15

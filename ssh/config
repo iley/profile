@@ -1,3 +1,4 @@
+# vim: ft=sshconfig
 GSSAPIAuthentication no
 ForwardAgent yes
 IdentityFile ~/.ssh/id_rsa
