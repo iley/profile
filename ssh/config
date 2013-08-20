@@ -64,3 +64,6 @@ Host jenkins
 
 Host ina
   Hostname 192.168.1.43
+
+Host zarniwoop-unstable
+  Hostname 192.168.1.188
