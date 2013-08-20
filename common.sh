@@ -1,3 +1,4 @@
+export GPGKEY=DCC2E057
 export EDITOR="vim"
 export PAGER=less
 export LESS="-iMSx4 -FXR"
