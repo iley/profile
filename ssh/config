@@ -67,3 +67,21 @@ Host ina
 
 Host zarniwoop-unstable
   Hostname 192.168.1.188
+
+Host balancer1
+  Hostname 192.168.100.5
+
+Host balancer2
+  Hostname 192.168.100.6
+
+Host app1
+  Hostname 192.168.100.7
+
+Host app2
+  Hostname 192.168.100.8
+
+Host bd1
+  Hostname 192.168.100.9
+
+Host bd2
+  Hostname 192.168.100.10
