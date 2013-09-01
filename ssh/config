@@ -51,8 +51,8 @@ Host cms
 Host online-cms
   Hostname 192.168.1.231
 
-Host os
 # online support cms
+Host os
   Hostname 192.168.1.231
   User root
 
@@ -80,8 +80,8 @@ Host app1
 Host app2
   Hostname 192.168.100.8
 
-Host bd1
+Host db1
   Hostname 192.168.100.9
 
-Host bd2
+Host db2
   Hostname 192.168.100.10
