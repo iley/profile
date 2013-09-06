@@ -17,6 +17,7 @@
 
 [diff]
     renamelimit = 0
+    tool = meld
 
 [color]
     diff = auto
@@ -33,5 +34,6 @@
 
 [push]
     default = current
+
 [help]
     autocorrect = 15
