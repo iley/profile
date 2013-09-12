@@ -68,10 +68,10 @@ Host ina
 Host zarniwoop-unstable
   Hostname 192.168.1.188
 
-Host balancer1
+Host front1
   Hostname 192.168.100.5
 
-Host balancer2
+Host front1
   Hostname 192.168.100.6
 
 Host app1
