@@ -160,7 +160,7 @@ bindsym $mod+z scratchpad show
 bar {
     i3bar_command i3bar
     #status_command i3status
-    status_command i3pystatus
+    status_command /home/iley/bin/myi3status
     tray_output primary
 }
 
