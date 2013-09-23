@@ -104,7 +104,6 @@ bindsym $mod+Shift+C reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+R restart
 bindsym $mod+Shift+BackSpace exit
-bindsym $mod+Pause exec i3lock -c 000000
 bindsym $mod+y exec --no-startup-id ~/bin/show-clipboard
 
 # resize window (you can also use the mouse for that)
