@@ -33,6 +33,8 @@ alias v=vim
 alias vs='vim --servername main'
 alias vr='vim --servername main --remote-tab'
 
+alias e=emacsclient
+
 # pseudo-aliases
 function lt() { ls -ltrsa "$@" | tail; }
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
