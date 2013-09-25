@@ -13,7 +13,9 @@
 (setq standard-indent 4)
 (setq-default indent-tabs-mode nil)
 
-(setq x-select-enable-clipboard t)
+(global-set-key [(super x)] 'clipboard-kill-region)
+(global-set-key [(super c)] 'clipboard-kill-ring-save)
+(global-set-key [(super v)] 'clipboard-yank)
 
 (defun setup-theme ()
   (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
