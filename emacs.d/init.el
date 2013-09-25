@@ -72,11 +72,10 @@
   (interactive)
   (with-temp-buffer
     (insert-file-contents (packages-filename))
-    (let ((packages (car (read-from-string (buffer-string)))))
+    (let ((packages (car (read-from-string (buffer-string))))
+          (n 0))
       (dolist (p (remove-if 'package-installed-p packages))
         (message "Installing %s" p)
-        (package-install p))))
-  (message "Done"))
-
-(provide 'init)
-;;; init.el ends here
+        (package-install p)
+        (incf n))
+      (message "Installed %d packages" n))))
