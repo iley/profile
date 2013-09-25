@@ -48,3 +48,6 @@
 
 (when (load "yasnippet" t)
   (yas-global-mode 1))
+
+(unless (server-running-p)
+  (server-start))
