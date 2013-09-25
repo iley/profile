@@ -32,28 +32,11 @@
   (setup-theme)
   (setup-package))
 
+(when (load "flycheck" t)
+  (add-hook 'after-init-hook #'global-flycheck-mode))
+
 (add-hook 'python-mode-hook
           (lambda () (auto-complete-mode 1)))
-
-(when (load "flymake" t)
-  (defun flymake-pyflakes-init ()
-      (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                         'flymake-create-temp-inplace))
-             (local-file (file-relative-name
-                          temp-file
-                          (file-name-directory buffer-file-name))))
-        (list "pyflakes" (list local-file))))
-
-  (add-to-list 'flymake-allowed-file-name-masks
-               '("\\.py\\'" flymake-pyflakes-init))
-  (add-hook 'python-mode-hook 'flymake-mode)
-
-  (setq flymake-run-in-place nil)
-  (setq flymake-max-parallel-syntax-checks 8)
-
-  (custom-set-faces
-   '(flymake-errline ((((class color)) (:underline "red"))))
-   '(flymake-warnline ((((class color)) (:underline "yellow"))))))
 
 (when (load "git-gutter" t)
   (global-git-gutter-mode 1))
