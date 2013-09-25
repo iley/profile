@@ -52,3 +52,12 @@
 (load "server")
 (unless (server-running-p)
   (server-start))
+
+(defun save-package-list (&optional filename)
+  (let ((actual-filename
+         (or filename (locate-user-emacs-file "packages.txt"))))
+    (with-temp-buffer
+      (pp (mapcar #'car package-alist)
+          (current-buffer))
+      (write-region (point-min) (point-max) actual-filename))
+    (message "Package list is saved to %s" actual-filename)))
