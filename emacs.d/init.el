@@ -57,6 +57,8 @@
   (locate-user-emacs-file "packages.txt"))
 
 (defun save-package-list ()
+  "Save list of installed packages to packages.txt"
+  (interactive)
   (with-temp-buffer
     (pp (mapcar 'car package-alist)
         (current-buffer))
@@ -64,6 +66,8 @@
   (message "Package list is saved to %s" (packages-filename)))
 
 (defun install-missing-packages ()
+  "Install packages from packages.txt"
+  (interactive)
   (with-temp-buffer
     (insert-file-contents (packages-filename))
     (let ((packages (car (read-from-string (buffer-string)))))
