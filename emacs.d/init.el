@@ -1,6 +1,8 @@
+(eval-when-compile (load "cl"))
+
 (add-to-list 'load-path "~/.emacs.d")
 
-(set-default-font "PragmataPro 12")
+(set-frame-font "PragmataPro 12")
 (global-hl-line-mode 1)
 (line-number-mode 1)
 (column-number-mode 1)
@@ -49,7 +51,7 @@
 (when (load "yasnippet" t)
   (yas-global-mode 1))
 
-(load "server")
+(eval-when-compile (load "server"))
 (unless (server-running-p)
   (server-start))
 
@@ -75,3 +77,6 @@
         (message "Installing %s" p)
         (package-install p))))
   (message "Done"))
+
+(provide 'init)
+;;; init.el ends here
