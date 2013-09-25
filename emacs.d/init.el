@@ -53,11 +53,21 @@
 (unless (server-running-p)
   (server-start))
 
-(defun save-package-list (&optional filename)
-  (let ((actual-filename
-         (or filename (locate-user-emacs-file "packages.txt"))))
-    (with-temp-buffer
-      (pp (mapcar #'car package-alist)
-          (current-buffer))
-      (write-region (point-min) (point-max) actual-filename))
-    (message "Package list is saved to %s" actual-filename)))
+(defun packages-filename ()
+  (locate-user-emacs-file "packages.txt"))
+
+(defun save-package-list ()
+  (with-temp-buffer
+    (pp (mapcar 'car package-alist)
+        (current-buffer))
+    (write-region (point-min) (point-max) (packages-filename)))
+  (message "Package list is saved to %s" (packages-filename)))
+
+(defun install-missing-packages ()
+  (with-temp-buffer
+    (insert-file-contents (packages-filename))
+    (let ((packages (car (read-from-string (buffer-string)))))
+      (dolist (p (remove-if 'package-installed-p packages))
+        (message "Installing %s" p)
+        (package-install p))))
+  (message "Done"))
