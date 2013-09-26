@@ -1,6 +1,13 @@
-(eval-when-compile (load "cl"))
+;;; init.el --- Main Emacs configuration file
 
-(add-to-list 'load-path "~/.emacs.d")
+;;; Commentary:
+
+;;; Code:
+
+(eval-when-compile
+  (add-to-list 'load-path "~/.emacs.d"))
+
+(require 'better-defaults)
 
 (set-frame-font "PragmataPro 12")
 (global-hl-line-mode 1)
@@ -9,8 +16,6 @@
 (show-paren-mode 1)
 
 (mouse-wheel-mode t)
-(tool-bar-mode -1)
-(menu-bar-mode -1)
 
 (setq standard-indent 4)
 (setq-default indent-tabs-mode nil)
@@ -79,3 +84,7 @@
         (package-install p)
         (incf n))
       (message "Installed %d packages" n))))
+
+(provide 'init)
+
+;;; init.el ends here
