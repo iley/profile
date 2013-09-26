@@ -2,10 +2,13 @@
 
 ;;; Commentary:
 
+;; better-defaults.el is taken from https://github.com/technomancy/better-defaults/
+
 ;;; Code:
 
 (eval-when-compile
-  (add-to-list 'load-path "~/.emacs.d"))
+  (add-to-list 'load-path "~/.emacs.d")
+  (require 'cl))
 
 (require 'better-defaults)
 
@@ -43,7 +46,8 @@
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
 (add-hook 'python-mode-hook
-          (lambda () (auto-complete-mode 1)))
+          (lambda ()
+            (auto-complete-mode 1)))
 
 (when (load "git-gutter" t)
   (global-git-gutter-mode 1))
