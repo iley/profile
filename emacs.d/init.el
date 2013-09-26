@@ -8,7 +8,8 @@
 
 (eval-when-compile
   (add-to-list 'load-path "~/.emacs.d")
-  (require 'cl))
+  (require 'cl)
+  (require 'server))
 
 (require 'better-defaults)
 
@@ -60,7 +61,6 @@
 (when (load "yasnippet" t)
   (yas-global-mode 1))
 
-(eval-when-compile (load "server"))
 (unless (server-running-p)
   (server-start))
 
