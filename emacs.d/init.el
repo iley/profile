@@ -47,9 +47,14 @@
 (when (load "flycheck" t)
   (add-hook 'after-init-hook #'global-flycheck-mode))
 
+(setq whitespace-style
+      '(face tabs trailing lines space-before-tab empty
+        space-after-tab tab-mark))
+
 (add-hook 'python-mode-hook
           (lambda ()
-            (auto-complete-mode 1)))
+            (auto-complete-mode 1)
+            (whitespace-mode 1)))
 
 (when (load "git-gutter" t)
   (global-git-gutter-mode 1))
