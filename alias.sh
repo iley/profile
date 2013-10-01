@@ -1,7 +1,6 @@
 alias ls='ls --color=auto'
 alias open='xdg-open'
 
-#alias e='vim'
 alias xc='xclip -i -selection clipboard'
 alias xp='xclip -o -selection clipboard'
 
@@ -27,11 +26,6 @@ alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset
 alias gfetch='git fetch'
 alias gco='git checkout'
 alias gfl='git log -u'
-
-# vim aliases
-alias v=vim
-alias vs='vim --servername main'
-alias vr='vim --servername main --remote-tab'
 
 alias e=emacsclient
 

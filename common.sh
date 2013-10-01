@@ -1,5 +1,5 @@
 export GPGKEY=DCC2E057
-export EDITOR="vim"
+export EDITOR=emacsclient
 export PAGER=less
 export LESS="-iMSx4 -FXR"
 export PATH=$PATH:~/bin
