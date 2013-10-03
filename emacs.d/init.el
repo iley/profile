@@ -13,7 +13,7 @@
 
 (require 'better-defaults)
 
-(set-frame-font "PragmataPro 12")
+(set-default-font "PragmataPro 12")
 (make-face-italic 'font-lock-comment-face)
 (global-hl-line-mode 1)
 (line-number-mode 1)
