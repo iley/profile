@@ -16,6 +16,7 @@ get_git_branch() {
 }
 
 alias e=emacsclient
+alias en='emacsclient -n'
 
 # pseudo-aliases
 function lt() { ls -ltrsa "$@" | tail; }
