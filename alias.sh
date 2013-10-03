@@ -15,18 +15,6 @@ get_git_branch() {
     echo `git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
 }
 
-# git aliases
-alias gst='git status -sb'
-alias gpurr='git pull --rebase'
-alias gpush='git push origin `get_git_branch`'
-alias gdiff='git diff'
-alias gcommit='git commit'
-alias gadd='git add'
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-alias gfetch='git fetch'
-alias gco='git checkout'
-alias gfl='git log -u'
-
 alias e=emacsclient
 
 # pseudo-aliases
