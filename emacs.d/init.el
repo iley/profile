@@ -70,6 +70,11 @@
 
 (load "erc" t)
 
+(when (load "org-install" t)
+  (setq org-directory "~/Dropbox/org")
+  (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+  (setq org-mobile-inbox-for-pull "~/Dropbox/org/inbox.org"))
+
 (unless (server-running-p)
   (server-start))
 
