@@ -1,1 +1,1 @@
-(yasnippet s popup pkg-info magit jedi highlight-parentheses git-rebase-mode git-gutter git-commit-mode flycheck f epc deferred dash ctable concurrent cl-lib auto-complete)
+(yasnippet s python-environment popup pkg-info magit jedi highlight-parentheses git-rebase-mode git-gutter git-commit-mode flycheck f epc deferred dash ctable concurrent cl-lib auto-complete)
