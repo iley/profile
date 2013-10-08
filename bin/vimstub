@@ -1,0 +1,3 @@
+#!/bin/sh
+# -*- mode: sh -*-
+echo Use emacs, luke
