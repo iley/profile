@@ -13,7 +13,10 @@
 
 (require 'better-defaults)
 
-(set-default-font "PragmataPro 12")
+(defvar myfont "PragmataPro 12")
+(set-default-font myfont)
+(add-to-list 'default-frame-alist
+             (cons 'font myfont))
 (make-face-italic 'font-lock-comment-face)
 (global-hl-line-mode 1)
 (line-number-mode 1)
