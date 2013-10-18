@@ -162,7 +162,7 @@ bar {
     i3bar_command i3bar
     #status_command i3status
     status_command /home/iley/bin/myi3status
-    tray_output primary
+    tray_output xinerama-0
 }
 
 workspace_layout tabbed
