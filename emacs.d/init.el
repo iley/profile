@@ -78,6 +78,11 @@
   (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
   (setq org-mobile-inbox-for-pull "~/Dropbox/org/inbox.org"))
 
+(when (load "taskpaper")
+  (add-to-list 'auto-mode-alist '("\\.taskpaper\\'" . taskpaper-mode))
+  (add-hook 'taskpaper-mode-hook
+            (lambda () (setq indent-tabs-mode t))))
+
 (unless (server-running-p)
   (server-start))
 
