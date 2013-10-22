@@ -117,6 +117,15 @@
 (global-set-key [C-S-right] 'shift-right)
 (global-set-key [C-S-left] 'shift-left)
 
+(defun whack-whitespace ()
+  "Delete all white space from point to the next word."
+  (interactive nil)
+  (when (re-search-forward "[ \t\n]+" nil t)
+    (replace-match "" nil nil)))
+
+(global-set-key "\C-l" 'whack-whitespace)
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
