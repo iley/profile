@@ -89,28 +89,6 @@
 (defun packages-filename ()
   (locate-user-emacs-file "packages.txt"))
 
-(defun save-package-list ()
-  "Save list of installed packages to packages.txt"
-  (interactive)
-  (with-temp-buffer
-    (pp (mapcar 'car package-alist)
-        (current-buffer))
-    (write-region (point-min) (point-max) (packages-filename)))
-  (message "Package list is saved to %s" (packages-filename)))
-
-(defun install-missing-packages ()
-  "Install packages from packages.txt"
-  (interactive)
-  (with-temp-buffer
-    (insert-file-contents (packages-filename))
-    (let ((packages (car (read-from-string (buffer-string))))
-          (n 0))
-      (dolist (p (remove-if 'package-installed-p packages))
-        (message "Installing %s" p)
-        (package-install p)
-        (incf n))
-      (message "Installed %d packages" n))))
-
 ;; Shift the selected region right if distance is positive, left if
 ;; negative
 
