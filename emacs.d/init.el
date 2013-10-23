@@ -32,6 +32,8 @@
 (global-set-key [(super c)] 'clipboard-kill-ring-save)
 (global-set-key [(super v)] 'clipboard-yank)
 
+(recentf-mode 1)
+
 (if (display-graphic-p)
     (global-unset-key (kbd "C-z")))
 
