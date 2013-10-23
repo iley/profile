@@ -13,7 +13,7 @@
 
 (require 'better-defaults)
 
-(defvar myfont "PragmataPro 12")
+(defvar myfont "PragmataPro 13")
 (set-default-font myfont)
 (add-to-list 'default-frame-alist
              (cons 'font myfont))
