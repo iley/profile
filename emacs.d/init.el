@@ -32,6 +32,9 @@
 (global-set-key [(super c)] 'clipboard-kill-ring-save)
 (global-set-key [(super v)] 'clipboard-yank)
 
+(if (display-graphic-p)
+    (global-unset-key (kbd "C-z")))
+
 (setq solarized-termcolors 256)
 
 (defun setup-theme ()
@@ -123,8 +126,7 @@
   (when (re-search-forward "[ \t\n]+" nil t)
     (replace-match "" nil nil)))
 
-(global-set-key "\C-l" 'whack-whitespace)
-
+(global-set-key [C-left] 'whack-whitespace)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
