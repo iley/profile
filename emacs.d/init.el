@@ -88,6 +88,9 @@
   (add-hook 'taskpaper-mode-hook
             (lambda () (setq indent-tabs-mode t))))
 
+(when (load "ace-jump-mode")
+  (define-key global-map (kbd "C-c SPC") 'ace-jump-mode))
+
 (unless (server-running-p)
   (server-start))
 
