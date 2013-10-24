@@ -1,6 +1,6 @@
-(global-set-key [(super x)] 'clipboard-kill-region)
-(global-set-key [(super c)] 'clipboard-kill-ring-save)
-(global-set-key [(super v)] 'clipboard-yank)
+(global-set-key (kbd "s-x") 'clipboard-kill-region)
+(global-set-key (kbd "s-c") 'clipboard-kill-ring-save)
+(global-set-key (kbd "s-v") 'clipboard-yank)
 
 (if (display-graphic-p)
     (global-unset-key (kbd "C-z")))

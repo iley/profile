@@ -18,5 +18,5 @@
   (interactive)
   (shift-region -1))
 
-(global-set-key [C-S-right] 'shift-right)
-(global-set-key [C-S-left] 'shift-left)
+(global-set-key (kbd "C-S-<right>") 'shift-right)
+(global-set-key (kbd "C-S-<left>") 'shift-left)

@@ -4,4 +4,4 @@
   (when (re-search-forward "[ \t\n]+" nil t)
     (replace-match "" nil nil)))
 
-(global-set-key [C-left] 'whack-whitespace)
+(global-set-key (kbd "C-<left>") 'whack-whitespace)
