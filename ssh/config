@@ -85,3 +85,6 @@ Host db1
 
 Host db2
   Hostname 192.168.100.10
+
+Host leizen-sdo
+  Hostname 192.168.1.193
