@@ -1,4 +1,4 @@
-(defvar myfont "PragmataPro 13")
+(defvar myfont "PragmataPro 12")
 
 (set-default-font myfont)
 (add-to-list 'default-frame-alist
