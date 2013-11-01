@@ -1,6 +1,6 @@
 xset -b
 setxkbmap -layout "us,ru"
-setxkbmap -option "grp:menu_toggle,grp_led:scroll,compose:ralt,ctrl:nocaps,terminate:ctrl_alt_bksp"
+setxkbmap -option "grp:caps_toggle,grp_led:scroll,compose:ralt,terminate:ctrl_alt_bksp"
 
 if command -v feh >/dev/null 2>&1 && [ -e ~/wallpaper.jpg ] ; then
    feh --bg-scale ~/wallpaper.jpg
