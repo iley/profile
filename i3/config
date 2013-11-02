@@ -18,6 +18,7 @@ client.urgent           #F47421 #F47421 #ffffff #F47421
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+t exec --no-startup-id urxvt
 
 # kill focused window
 bindsym $mod+Shift+Q kill
