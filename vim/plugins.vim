@@ -28,8 +28,5 @@ let g:yankring_history_dir = '$HOME/.vim'
 " taboo
 let g:taboo_tab_format = ' %N:%f%m '
 
-" custom python highlighting options
-let g:python_highlight_all = 1
-let g:python_slow_sync = 1
-
-let g:syntastic_python_checkers=['pyflakes']
+let g:pymode_lint = 0 "FIXME
+let g:pymode_lint_checker = 'pyflakes'
