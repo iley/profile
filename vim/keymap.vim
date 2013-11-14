@@ -1,4 +1,4 @@
-map ; :
+noremap ; :
 
 noremap <C-PageDown> :Tbbn<CR>
 noremap <C-PageUp>   :Tbbp<CR>
@@ -9,8 +9,12 @@ noremap <F4> :NERDTreeToggle<CR>
 noremap <F9> :TagbarOpen<CR>
 
 " hotkey for a.vim plugin
-map <Leader>a :A<CR>
+noremap <Leader>a :A<CR>
 
-map <Leader>l :PyLint<CR>
-map <Leader>t :CommandT<CR>
-map <Leader>T :tabnew<CR>:CommandT<CR>
+noremap <Leader>l :PyLint<CR>
+noremap <Leader>t :CommandT<CR>
+noremap <Leader>T :tabnew<CR>:CommandT<CR>
+
+noremap <Leader>y "+y
+noremap <Leader>p "+p
+noremap <Leader>P "+P
