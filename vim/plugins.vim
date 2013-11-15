@@ -28,5 +28,5 @@ let g:yankring_history_dir = '$HOME/.vim'
 " taboo
 let g:taboo_tab_format = ' %N:%f%m '
 
-let g:pymode_lint = 0 "FIXME
-let g:pymode_lint_checker = 'pyflakes'
+let g:pymode_lint = 1 "FIXME
+let g:pymode_lint_ignore = 'R0201,C0110,C1001,C0301,E302,E201,E202,E301,E501,W0511'
