@@ -33,3 +33,5 @@ let g:taboo_tab_format = ' %N:%f%m '
 let g:pymode_lint = 1 "FIXME
 "let g:pymode_lint_ignore = 'R0201,C0110,C1001,C0301,E302,E201,E202,E301,E501,W0511'
 let g:pymode_lint_ignore = 'R0201,C0110,C1001,C0301,W0511'
+
+let g:syntastic_python_checkers=['flake8']
