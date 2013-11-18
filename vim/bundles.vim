@@ -32,6 +32,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-rsi'
 Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/slimv.vim'
 
 " color schemes
