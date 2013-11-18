@@ -6,7 +6,7 @@ noremap <C-PageUp>   :Tbbp<CR>
 "noremap <F2> :w<CR>
 noremap <F3> :Errors<CR>
 noremap <F4> :NERDTreeToggle<CR>
-noremap <F9> :TagbarOpen<CR>
+noremap <F9> :TagbarToggle<CR>
 
 " hotkey for a.vim plugin
 noremap <Leader>a :A<CR>
