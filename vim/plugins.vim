@@ -6,6 +6,8 @@ let NERDTreeWinSize=20
 let NERDTreeIgnore=['.o$', '.pyc$', '\~$']
 
 let g:SuperTabNoCompleteAfter=['^', '\s', ',']
+let g:SuperTabMappingForward='<s-tab>'
+let g:SuperTabMappingBackward='<tab>'
 
 " Disable auto popup, use <Tab> to autocomplete
 let g:clang_complete_auto=0
@@ -29,4 +31,5 @@ let g:yankring_history_dir = '$HOME/.vim'
 let g:taboo_tab_format = ' %N:%f%m '
 
 let g:pymode_lint = 1 "FIXME
-let g:pymode_lint_ignore = 'R0201,C0110,C1001,C0301,E302,E201,E202,E301,E501,W0511'
+"let g:pymode_lint_ignore = 'R0201,C0110,C1001,C0301,E302,E201,E202,E301,E501,W0511'
+let g:pymode_lint_ignore = 'R0201,C0110,C1001,C0301,W0511'
