@@ -36,4 +36,4 @@
     default = current
 
 [help]
-    autocorrect = 15
+    autocorrect = 20
