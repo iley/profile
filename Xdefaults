@@ -17,6 +17,9 @@ Xft.hintstyle:              hintslight
 !
 URxvt*loginShell: true
 
+Rxvt.print-pipe: "cat > /dev/null"
+URxvt.print-pipe: "cat > /dev/null"
+
 URxvt.depth:                32
 URxvt.geometry:             90x30
 URxvt.transparent:          false
