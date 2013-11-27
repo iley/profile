@@ -1,2 +1,1 @@
 export PYTHONPATH=/home/iley/work/cms
-export PIP_DOWNLOAD_CACHE=/home/iley/work/pip_cache
