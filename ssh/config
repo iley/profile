@@ -91,3 +91,7 @@ Host leizen-sdo
 
 Host pypi
   Hostname 192.168.1.220
+
+Host ecms
+  Hostname 192.168.1.235
+  User root
