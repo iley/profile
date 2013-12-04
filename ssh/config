@@ -16,10 +16,11 @@ Host cmssync
   IdentityFile /home/iley/.ikey-cms-sync
 
 Host tele-git
-  Hostname igrade.ru
-  Port 21032
   CheckHostIP no
   User git
+
+Host git.igrade.ru
+  Port 21032
 
 Host up
   Hostname internet-school.ru
@@ -34,9 +35,11 @@ Host office
 
 Host staging
   Hostname 192.168.1.186
+  User root
 
 Host unstable
   Hostname 192.168.1.187
+  User root
 
 Host router
   Hostname 192.168.1.1
