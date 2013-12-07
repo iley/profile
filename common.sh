@@ -47,5 +47,6 @@ function say() { if [[ "${1}" =~ -[a-z]{2} ]]; then local lang=${1#-}; local tex
 function gi() { curl http://gitignore.io/api/$@ ;}
 
 source $PROFILE/login.sh
+source $PROFILE/ws.sh
 # load machine-specific setting at the very end
 source $PROFILE/local.sh
