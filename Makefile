@@ -9,7 +9,7 @@ OHMYZSH=~/.oh-my-zsh
 
 .PHONY: all links submodules
 
-all: links vim
+all: links vimstuff
 
 links: $(DIRS) $(DST) $(OHMYZSH) $(HOME)/bin
 
@@ -28,5 +28,5 @@ $(DIRS): %:
 submodules:
 	git submodule update --init --recursive
 
-vim: submodules
+vimstuff: submodules
 	make -C vim
