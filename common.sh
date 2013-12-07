@@ -14,8 +14,12 @@ if [ -e "/usr/local/heroku" ]; then
     export PATH="/usr/local/heroku/bin:$PATH"
 fi
 
-if [ -e ~/.local/bin ]; then
-    export PATH=$PATH:~/.local/bin
+if [ -e "$HOME/.local/bin" ]; then
+    export PATH=$PATH:$HOME/.local/bin
+fi
+
+if [ -e "$HOME/.npm-packages/bin" ]; then
+    export PATH=$PATH:$HOME/.npm-packages/bin
 fi
 
 PROFILE=$HOME/profile
