@@ -34,6 +34,7 @@ Bundle 'tpope/vim-rsi'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/slimv.vim'
+Bundle 'vimwiki/vimwiki'
 
 " color schemes
 Bundle 'altercation/vim-colors-solarized'
