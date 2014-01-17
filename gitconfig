@@ -15,10 +15,6 @@
     purr = pull --rebase
     puff = pull --ff-only
 
-[diff]
-    renamelimit = 0
-    tool = meld
-
 [color]
     diff = auto
     interactive = auto
