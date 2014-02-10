@@ -16,5 +16,6 @@ noremap <Leader>t :CommandT<CR>
 noremap <Leader>T :tabnew<CR>:CommandT<CR>
 
 noremap <Leader>y "+y
+noremap <Leader>Y "+Y
 noremap <Leader>p "+p
 noremap <Leader>P "+P
