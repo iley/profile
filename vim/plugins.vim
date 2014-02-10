@@ -6,8 +6,9 @@ let NERDTreeWinSize=20
 let NERDTreeIgnore=['.o$', '.pyc$', '\~$']
 
 let g:SuperTabNoCompleteAfter=['^', '\s', ',']
-let g:SuperTabMappingForward='<s-tab>'
-let g:SuperTabMappingBackward='<tab>'
+"let g:SuperTabMappingForward='<s-tab>'
+"let g:SuperTabMappingBackward='<tab>'
+let g:SuperTabDefaultCompletionType = "context"
 
 " Disable auto popup, use <Tab> to autocomplete
 let g:clang_complete_auto=0
