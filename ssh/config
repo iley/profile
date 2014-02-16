@@ -98,3 +98,6 @@ Host pypi
 Host ecms
   Hostname 192.168.1.235
   User root
+
+Host ebook-preview
+  Hostname 192.168.1.181
