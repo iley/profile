@@ -11,13 +11,10 @@ alias ncal='ncal -M'
 
 alias bell='echo -en "\a"'
 
-get_git_branch() {
-    echo `git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
-}
-
-alias e=emacsclient
-alias en='emacsclient -n'
-#alias vim=vimstub
+# git
+alias g='git'
+alias gc='git commit'
+alias gcm='git commit -m'
 
 # pseudo-aliases
 function lt() { ls -ltrsa "$@" | tail; }
