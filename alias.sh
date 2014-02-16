@@ -15,6 +15,7 @@ alias bell='echo -en "\a"'
 alias g='git'
 alias gc='git commit'
 alias gcm='git commit -m'
+alias gst='git status -sb'
 
 # pseudo-aliases
 function lt() { ls -ltrsa "$@" | tail; }
