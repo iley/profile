@@ -9,6 +9,7 @@ export GDK_USE_XFT=1
 export QT_XFT=true
 # required for proper XCompose work in GTK apps
 export GTK_IM_MODULE=xim
+export ANSIBLE_NOCOWS=1
 
 if [ -e "/usr/local/heroku" ]; then
     export PATH="/usr/local/heroku/bin:$PATH"
