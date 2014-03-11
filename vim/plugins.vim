@@ -36,3 +36,6 @@ let g:pymode_lint = 1 "FIXME
 let g:pymode_lint_ignore = 'R0201,C0110,C1001,C0301,W0511'
 
 let g:syntastic_python_checkers=['flake8']
+
+" disable docstring popup window
+autocmd FileType python setlocal completeopt-=preview
