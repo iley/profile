@@ -2,9 +2,9 @@ PLAN9=/opt/plan9port
 export PATH=$PATH:/opt/cxoffice/bin:$PLAN9/bin:/opt/qt5/bin
 
 # start X11 automatically
-if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
-    while true; do
-        startx --
-        sleep 5
-    done
-fi
+#if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
+    #while true; do
+        #startx --
+        #sleep 5
+    #done
+#fi
