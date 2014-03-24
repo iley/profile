@@ -1,5 +1,4 @@
-PLAN9=/opt/plan9port
-export PATH=$PATH:/opt/cxoffice/bin:$PLAN9/bin:/opt/qt5/bin
+export PYTHONPATH=/home/iley/work/magrathea/
 
 # start X11 automatically
 #if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
