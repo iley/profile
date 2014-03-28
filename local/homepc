@@ -1,4 +1,5 @@
 export PYTHONPATH=/home/iley/work/magrathea/
+export GOPATH=/home/iley/code/go
 
 # start X11 automatically
 #if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
