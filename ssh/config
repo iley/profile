@@ -102,3 +102,7 @@ Host ecms
 
 Host ebook
   Hostname 192.168.1.181
+
+Host ebook-preview
+  Hostname 192.168.1.183
+  User root
