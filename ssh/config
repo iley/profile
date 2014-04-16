@@ -2,6 +2,7 @@
 GSSAPIAuthentication no
 ForwardAgent yes
 IdentityFile ~/.ssh/id_rsa
+IdentityFile ~/.ssh/id_rsa_office
 
 Host dione
   HostName dione.intelib.org
