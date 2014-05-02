@@ -9,7 +9,3 @@ func! StartRepl()
     exec "normal \<c-w>\<c-w>"
     stopinsert
 endfunc
-
-func! Run()
-    exec g:run_cmd
-endfunc
