@@ -45,7 +45,9 @@ augroup misc
 
     au! BufNewFile,BufRead * set vb t_vb="
 
+    " do not highlight tabs and stuff for taskpaper and golang sources
     au! BufNewFile,BufRead *.taskpaper set nolist
+    au! BufNewFile,BufRead *.go set nolist
 augroup end
 
 "set clipboard=unnamedplus
