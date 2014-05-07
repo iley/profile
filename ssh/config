@@ -31,8 +31,8 @@ Host up
   User up
 
 Host office
-  Hostname 87.249.9.98
-  Port 2214
+  Hostname usievicha.igrade.ru
+  Port 2230
 
 Host staging
   Hostname 192.168.1.186
