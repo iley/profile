@@ -1,4 +1,5 @@
-from . import Status
+#!/home/iley/.virtualenvs/i3pystatus/bin/python
+from i3pystatus import Status
 
 status = Status(standalone=True)
 

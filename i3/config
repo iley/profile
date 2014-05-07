@@ -161,8 +161,7 @@ bindsym $mod+period exec --no-startup-id amixer set Master 5%+
 # finds out, if available)
 bar {
     i3bar_command i3bar
-    #status_command i3status
-    status_command /home/iley/bin/myi3status
+    status_command /home/iley/profile/status.py
     tray_output xinerama-0
 }
 
