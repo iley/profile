@@ -1,2 +1,3 @@
 export PYTHONPATH=/home/iley/work/cms
 export PATH=$PATH:/home/iley/work/cms/bin
+export GOPATH=/home/iley/go
