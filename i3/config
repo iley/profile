@@ -185,3 +185,4 @@ for_window [title="^File Operations$"] floating enable
 
 # hotkeys for switching to specific windows
 # bindsym $mod+x [title="- MAIN$"] focus # FIXME not working
+bindsym $mod+g exec --no-startup-id ~/bin/translate-selection.sh
