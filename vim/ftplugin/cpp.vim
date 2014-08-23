@@ -10,3 +10,5 @@ setlocal cin
 setlocal tags+=~/.vim/tags/cpp
 
 setlocal expandtab
+setlocal shiftwidth=2
+setlocal tabstop=2
