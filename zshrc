@@ -17,7 +17,6 @@ source $ZSH/oh-my-zsh.sh
 
 setopt hist_ignore_dups share_history inc_append_history extended_history no_beep
 unsetopt autopushd autonamedirs correct_all
-unalias sl
 
 export HISTSIZE=100000 SAVEHIST=100000 HISTFILE=~/.zhistory
 
