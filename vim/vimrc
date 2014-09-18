@@ -74,3 +74,5 @@ source ~/.vim/functions.vim
 source ~/.vim/keymap.vim
 source ~/.vim/plugins.vim
 source ~/.vim/appearance.vim
+
+source ~/.vim/google.vim
