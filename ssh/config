@@ -1,26 +1,16 @@
 # vim: ft=sshconfig
 GSSAPIAuthentication no
 ForwardAgent yes
-IdentityFile ~/.ssh/id_rsa
+
+Host iley.ru
+  User iley
+
+Host office
+  User istrukov
+  Hostname istrukov.muc.corp.google.com
 
 Host dione
   HostName dione.intelib.org
-
-Host i-shvedunov
-  User i-strukov
-
-Host cmssync
-  Hostname cms
-  HostKeyAlias cms
-  User syncer
-  IdentityFile /home/iley/.ikey-cms-sync
-
-Host tele-git
-  CheckHostIP no
-  User git
-
-Host git.igrade.ru
-  Port 21032
 
 Host up
   Hostname internet-school.ru
@@ -28,80 +18,3 @@ Host up
   HostKeyAlias up
   CheckHostIP no
   User up
-
-Host office
-  Hostname usievicha.igrade.ru
-  Port 2230
-
-Host staging
-  Hostname 192.168.1.186
-  User root
-
-Host unstable
-  Hostname 192.168.1.187
-  User root
-
-Host router
-  Hostname 10.0.0.1
-  User root
-
-Host tele-backup
-  User ivan4th
-
-Host cms
-  Hostname 192.168.1.230
-
-Host online-cms
-  Hostname 192.168.1.231
-
-# online support cms
-Host os
-  Hostname 192.168.1.231
-  User root
-
-Host iley.ru
-  ForwardAgent yes
-
-Host jenkins
-  Hostname 192.168.1.180
-
-Host ina
-  Hostname 192.168.1.43
-
-Host zarniwoop-unstable
-  Hostname 192.168.1.188
-
-Host front1
-  Hostname 192.168.100.5
-
-Host front1
-  Hostname 192.168.100.6
-
-Host app1
-  Hostname 192.168.100.7
-
-Host app2
-  Hostname 192.168.100.8
-
-Host db1
-  Hostname 192.168.100.9
-
-Host db2
-  Hostname 192.168.100.10
-
-Host leizen-sdo
-  Hostname 192.168.1.193
-
-Host pypi
-  Hostname 192.168.1.220
-
-Host ecms
-  Hostname 192.168.1.235
-  User root
-
-Host ebook
-  Hostname 192.168.1.181
-
-Host ebook-preview
-  Hostname 192.168.1.183
-  User root
