@@ -1,7 +1,8 @@
 # vim: ft=gitconfig
 [user]
     name = Ilya Strukov
-    email = iley@iley.ru
+    email = istrukov@google.com
+    # email = iley@iley.ru
 
 [alias]
     st = status -sb
