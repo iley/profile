@@ -40,3 +40,7 @@ let g:syntastic_cpp_compiler_options = '-std=c++11'
 
 " disable docstring popup window
 autocmd FileType python setlocal completeopt-=preview
+
+let g:syntastic_mode_map = { "mode": "active",
+                           \ "active_filetypes": [],
+                           \ "passive_filetypes": ["cpp"] }
