@@ -1,5 +1,4 @@
 # vim: ft=sshconfig
-GSSAPIAuthentication no
 ForwardAgent yes
 
 Host iley.ru
