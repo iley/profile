@@ -27,3 +27,8 @@ if [ -e "$HOME/google-cloud-sdk" ]; then
     source "$HOME/google-cloud-sdk/path.zsh.inc"
     source "$HOME/google-cloud-sdk/completion.zsh.inc"
 fi
+
+# Edit command-line with ctrl-x e
+autoload edit-command-line
+zle -N edit-command-line
+bindkey '^Xe' edit-command-line
