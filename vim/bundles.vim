@@ -33,7 +33,11 @@ Bundle 'tpope/vim-rsi'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/slimv.vim'
-Bundle 'Valloric/YouCompleteMe'
+
+" YouCompleteMe requires vim 7.3.584+
+if v:version >= 736
+    Bundle 'Valloric/YouCompleteMe'
+endif
 
 " color schemes
 Bundle 'altercation/vim-colors-solarized'
