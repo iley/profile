@@ -1,7 +1,7 @@
 filetype off                   " required for vundle
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call vundle#rc()
 
 " let Vundle manage Vundle (required)
 Plugin 'gmarik/Vundle.vim'
