@@ -4,6 +4,9 @@ set nocompatible
 command! -nargs=0 -bang WSudo :silent! w !sudo tee % &>/dev/null
 command! -nargs=0 Vimrc :tabnew $MYVIMRC
 
+" workaround for vundle
+set shell=/bin/bash
+
 set keymap=russian-jcukenwin " ^6 to change
 set iminsert=0 " latin by default
 set imsearch=0 " latin by default
