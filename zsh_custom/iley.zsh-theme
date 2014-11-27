@@ -10,9 +10,10 @@ function _prompt_user {
 }
 
 function _prompt_pwd {
-  local dir=$(pwd|sed -e "s#$HOME#~#")
-  if [ ${#dir} -gt 50 ]; then
-    local cut=$(expr ${#dir} - 25)
+  local max_len=50
+  local dir=$(pwd|sed -e "s#^$HOME#~#")
+  if [ ${#dir} -gt $max_len ]; then
+    local cut=$(expr ${#dir} - $max_len + 3)
     dir="...${dir:$cut}"
   fi
   echo $dir
