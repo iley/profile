@@ -20,3 +20,5 @@ Host up
 
 Host neptr.iley.ru
   User iley
+  LocalForward 32400 127.0.0.1:32400
+  LocalForward 8080 127.0.0.1:8080
