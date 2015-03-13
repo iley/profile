@@ -1,2 +1,0 @@
-export MRJOB=~/mrjob
-export PERL5LIB=$PERL5LIB:$MRJOB/lib:$MRJOB/lib/extractors:$MRJOB/lib/alexkuk
