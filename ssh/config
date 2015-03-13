@@ -11,13 +11,6 @@ Host office
 Host dione
   HostName dione.intelib.org
 
-Host up
-  Hostname internet-school.ru
-  Port 6322
-  HostKeyAlias up
-  CheckHostIP no
-  User up
-
 Host neptr.iley.ru
   User iley
   LocalForward 32400 127.0.0.1:32400
