@@ -11,8 +11,8 @@ set keymap=russian-jcukenwin " ^6 to change
 set iminsert=0 " latin by default
 set imsearch=0 " latin by default
 
-" enable mouse
-set mouse=a
+" make sure mouse is disabled
+set mouse="
 
 " indentation settings
 set tabstop=4
