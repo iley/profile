@@ -5,9 +5,6 @@ runtime! fvl.vim
 let NERDTreeWinSize=20
 let NERDTreeIgnore=['.o$', '.pyc$', '\~$']
 
-let g:SuperTabNoCompleteAfter=['^', '\s', ',']
-let g:SuperTabDefaultCompletionType = "context"
-
 " Disable auto popup, use <Tab> to autocomplete
 let g:clang_complete_auto=0
 " Show clang errors in the quickfix window
@@ -21,16 +18,6 @@ if has("unix")
     let g:ackprg="ack-grep -H --nocolor --nogroup --column"
   endif
 endif
-
-" Powerline
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show unicode glyphs
-
-" lisp settings
-let g:paredit_mode = 0
-
-" yankring
-let g:yankring_history_dir = '$HOME/.vim'
 
 " taboo
 let g:taboo_tab_format = ' %N:%f%m '
@@ -47,3 +34,8 @@ autocmd FileType python setlocal completeopt-=preview
 let g:syntastic_mode_map = { "mode": "active",
                            \ "active_filetypes": [],
                            \ "passive_filetypes": ["cpp"] }
+
+" UltiSnips conflicts with YouCompleteMe
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-k>"

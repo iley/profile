@@ -3,6 +3,7 @@ if filereadable("/usr/share/vim/google/google.vim")
     Glug youcompleteme-google
     Glug grok
     Glug blaze plugin[mappings]='<leader>b'
+    Glug ultisnips-google
     nnoremap <leader>gd  :<c-u>GrokDef<cr><cr>:lr<cr>
     nnoremap <c-n>  :lne<cr>
     nnoremap <c-p>  :lpr<cr>

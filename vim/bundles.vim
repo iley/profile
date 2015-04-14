@@ -1,40 +1,36 @@
 filetype off                   " required for vundle
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
+call vundle#begin()
 
 " let Vundle manage Vundle (required)
 Plugin 'gmarik/Vundle.vim'
 
-" required by snipmate
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-
 " plugins
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'ervandew/supertab'
-Bundle 'exu/pgsql.vim'
-Bundle 'fatih/vim-go'
-Bundle 'honza/vim-snippets'
-Bundle 'hynek/vim-python-pep8-indent'
-Bundle 'garbas/vim-snipmate'
-Bundle 'gcmt/taboo.vim'
-Bundle 'git://git.wincent.com/command-t.git'
-Bundle 'kana/vim-fakeclip'
-Bundle 'majutsushi/tagbar'
-Bundle 'mileszs/ack.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'sickill/vim-pasta'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-rsi'
-Bundle 'tpope/vim-sensible'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'vim-scripts/slimv.vim'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'SirVer/ultisnips'
+Plugin 'exu/pgsql.vim'
+Plugin 'fatih/vim-go'
+Plugin 'honza/vim-snippets'
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'gcmt/taboo.vim'
+Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'kana/vim-fakeclip'
+Plugin 'majutsushi/tagbar'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'sickill/vim-pasta'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'tpope/vim-rsi'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'vim-scripts/slimv.vim'
 
 " color schemes
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
+call vundle#end()
 filetype plugin indent on     " required!
