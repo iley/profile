@@ -1,6 +1,7 @@
 if filereadable("/usr/share/vim/google/google.vim")
     source /usr/share/vim/google/google.vim
     Glug youcompleteme-google
+    Glug g4
     Glug grok
     Glug blaze plugin[mappings]='<leader>b'
     Glug ultisnips-google
