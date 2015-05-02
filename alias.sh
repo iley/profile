@@ -1,9 +1,9 @@
-if [ $(uname -s) = 'Linux' ]; then
+if [[ $(uname -s) = 'Linux' ]]; then
     alias ls='ls --color=auto'
-elif [ $(uname -s) = 'Darwin' ]; then
+    alias open='xdg-open'
+elif [[ $(uname -s) = 'Darwin' ]]; then
     alias ls='ls -G'
 fi
-alias open='xdg-open'
 
 alias xc='xclip -i -selection clipboard'
 alias xp='xclip -o -selection clipboard'
