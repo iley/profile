@@ -3,6 +3,9 @@ ForwardAgent yes
 
 Host iley.ru
   User iley
+  UserKnownHostsFile=/dev/null
+  CheckHostIP=no
+  StrictHostKeyChecking=no
 
 Host office
   User istrukov
