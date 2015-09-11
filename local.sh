@@ -1,7 +1,8 @@
-LOCALRC="$PROFILE/local/$(hostname)"
-if [ -e "$LOCALRC" ]; then
-    source "$LOCALRC"
+hostname="$(hostname | perl -pe 's/^([^\.]+)\..*$/$1/')"
+localrc="$PROFILE/local/$hostname"
+if [ -e "$localrc" ]; then
+    source "$localrc"
 fi
-if [ -e "$LOCALRC.secret" ]; then
-    source "$LOCALRC.secret"
+if [ -e "$localrc.secret" ]; then
+    source "$localrc.secret"
 fi
