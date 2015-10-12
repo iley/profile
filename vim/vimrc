@@ -15,8 +15,8 @@ set imsearch=0 " latin by default
 set mouse="
 
 " indentation settings
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set smartindent
 " remove extra spaces during indentation
@@ -71,13 +71,13 @@ set list listchars=tab:>\ ,trail:_,extends:>
 
 set colorcolumn=80,100,120
 
-source ~/.vim/bundles.vim
+source ~/.vim/plugins.vim
 
 source ~/.vim/backup.vim
 source ~/.vim/ftdetect.vim
 source ~/.vim/functions.vim
 source ~/.vim/keymap.vim
-source ~/.vim/plugins.vim
+source ~/.vim/variables.vim
 source ~/.vim/appearance.vim
 
 source ~/.vim/google.vim
