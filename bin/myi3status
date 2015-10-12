@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if command -v i3pystatus  >/dev/null 2>&1; then
-    exec i3pystatus
-else
-    exec i3status
-fi

@@ -1,3 +1,0 @@
-#!/bin/sh
-sleep 0.25
-sh -c 'xclip -selection clipboard -o | xvkbd -xsendevent -file - 2>/dev/null'

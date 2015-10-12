@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-colorize_key_value_log.pl $@ | less -R

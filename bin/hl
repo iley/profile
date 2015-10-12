@@ -1,4 +1,0 @@
-#!/bin/sh
-pat=$1
-shift
-egrep --color "$pat|$" $@

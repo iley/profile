@@ -1,2 +1,0 @@
-#!/bin/bash
-vim --servername MAIN --remote-tab $* && i3 '[title=" - MAIN$"]' focus > /dev/null

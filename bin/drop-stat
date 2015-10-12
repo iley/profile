@@ -1,4 +1,0 @@
-#!/bin/bash
-
-drop stbx-webface01e.yandex.ru "$1"
-
