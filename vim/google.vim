@@ -10,9 +10,9 @@ if filereadable("/usr/share/vim/google/google.vim")
     nnoremap <c-n>  :lne<cr>
     nnoremap <c-p>  :lpr<cr>
 else
-    Bundle 'klen/python-mode'
+    Plugin 'klen/python-mode'
     if v:version >= 736
-        Bundle 'Valloric/YouCompleteMe'
+        Plugin 'Valloric/YouCompleteMe'
     endif
 endif
 
