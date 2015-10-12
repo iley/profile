@@ -29,7 +29,6 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-rsi'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'vim-scripts/slimv.vim'
 
 " color schemes
 Plugin 'altercation/vim-colors-solarized'
