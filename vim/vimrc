@@ -25,6 +25,7 @@ set shiftround
 set wrap
 
 " search and replace
+set ignorecase
 set smartcase
 
 set updatetime=120000
