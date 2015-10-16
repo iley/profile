@@ -1,6 +1,8 @@
 <Multi_key> <minus> <minus> 	: "—"   U2014 # EM DASH
-<Multi_key> <less> <less>        	: "«"   guillemotleft # LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
-<Multi_key> <greater> <greater>  	: "»"   guillemotright # RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
+<Multi_key> <comma> <comma>        	: "«"   guillemotleft # LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
+<Multi_key> <Cyrillic_be> <Cyrillic_be>        	: "«"   guillemotleft # LEFT-POINTING DOUBLE ANGLE QUOTATION MARK
+<Multi_key> <period> <period>  	: "»"   guillemotright # RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
+<Multi_key> <Cyrillic_yu> <Cyrillic_yu>  	: "»"   guillemotright # RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK
 
 <Multi_key> <u> <U>       	: "Ü"   Udiaeresis # LATIN CAPITAL LETTER U WITH DIAERESIS
 <Multi_key> <u> <u>       	: "ü"   udiaeresis # LATIN SMALL LETTER U WITH DIAERESIS
