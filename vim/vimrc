@@ -53,6 +53,7 @@ augroup end
 set undolevels=1000
 set undoreload=10000
 set undodir=~/.vim/undo
+set undofile
 
 " Suffixes that get lower priority when doing tab completion for filenames.
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
