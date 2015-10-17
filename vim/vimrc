@@ -4,14 +4,11 @@ set nocompatible
 command! -nargs=0 -bang WSudo :silent! w !sudo tee % &>/dev/null
 command! -nargs=0 Vimrc :tabnew $MYVIMRC
 
-" workaround for vundle
-set shell=/bin/bash
-
 set keymap=russian-jcukenwin " ^6 to change
 set iminsert=0 " latin by default
 set imsearch=0 " latin by default
 
-" make sure mouse is disabled
+" disable mouse
 set mouse="
 
 " indentation settings
@@ -19,8 +16,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set smartindent
-" remove extra spaces during indentation
-set shiftround
+set shiftround " remove extra spaces during indentation
 
 set wrap
 
@@ -54,7 +50,6 @@ augroup misc
     au! BufNewFile,BufRead *.go set nolist
 augroup end
 
-"set clipboard=unnamedplus
 set undolevels=1000
 set undoreload=10000
 set undodir=~/.vim/undo
