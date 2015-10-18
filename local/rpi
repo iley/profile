@@ -1,4 +1,0 @@
-terminal=$(tty)
-if [[ "$terminal" == "/dev/tty1" ]]; then
-    #emulationstation
-fi
