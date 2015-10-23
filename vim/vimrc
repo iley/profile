@@ -78,3 +78,5 @@ source ~/.vim/variables.vim
 source ~/.vim/appearance.vim
 
 source ~/.vim/google.vim
+
+runtime! macros/matchit.vim
