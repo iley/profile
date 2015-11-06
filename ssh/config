@@ -19,3 +19,8 @@ Host bmo.iley.ru
   LocalForward 32400 127.0.0.1:32400
   LocalForward 8080 127.0.0.1:8080
   DynamicForward 1080
+
+Host rpi
+  Hostname 10.0.0.10
+  User iley
+  LocalForward 5000 127.0.0.1:5000
