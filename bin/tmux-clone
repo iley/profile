@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e -u -x
+
+source_session="$1"
+target_session="$2"
+
+if [[ -z "$source_session" ]] || [[ -z "$target_session" ]]; then
+  echo "Usage: $0 SOURCE_SESSION TARGET_SESSION" 2>&1
+  exit 1
+fi
+
+current_session=$(tmux display-message -p '#S')
+
+if [[ "$target_session" == "$current_session" ]]; then
+  echo "Target session cannot be the current session" 2>&1
+  exit 1
+fi
+
+while read -r line; do
+  window=$(echo "$line" | perl -pe 's/^(\d+):.*$/$1/')
+  tmux link-window -dk -s "$source_session:$window" -t "$target_session:$window"
+done < <(tmux list-windows -t "$source_session")
