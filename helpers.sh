@@ -20,8 +20,7 @@ desk () {
 }
 
 _desks () {
-  _values 'desks' $(cd "$DESK_HOME" && ls *.sh | sed 's/\.sh//')
-  return 0
+  _values desks $(cd "$DESK_HOME" && ls *.sh | sed 's/\.sh//')
 }
 
 workon () {
@@ -41,8 +40,7 @@ workon () {
 }
 
 _virtualenvs () {
-  _values 'virtualenvs' $(cd "$WORKON_HOME" && ls)
-  return 0
+  _values virtualenvs $(cd "$WORKON_HOME" && ls)
 }
 
 mkvirtualenv () {
@@ -99,7 +97,13 @@ function up() {
   fi
 }
 
+function _parent_dirs () {
+  _values parent_dirs $(cd .. && pwd | sed 's/^.//' | tr '/' "\n")
+}
+
 if [[ -n "$ZSH_VERSION" ]]; then
   compdef _desks desk
   compdef _virtualenvs workon
+  compdef _virtualenvs rmvirtualenv
+  compdef _parent_dirs up
 fi
