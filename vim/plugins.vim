@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugins
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'SirVer/ultisnips'
+Plugin 'chase/vim-ansible-yaml'
 Plugin 'fatih/vim-go'
 Plugin 'gcmt/taboo.vim'
 Plugin 'git://git.wincent.com/command-t.git'
