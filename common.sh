@@ -34,5 +34,8 @@ export P4DIFF='bash -c "meld \${@/#:/--diff}" padding-to-occupy-argv0'
 source "$PROFILE/helpers.sh"
 source "$PROFILE/alias.sh"
 source "$PROFILE/login.sh"
+if [[ $(uname -s) = 'Darwin' ]]; then
+  source "$PROFILE/osx.sh"
+fi
 # load machine-specific setting at the very end
 source "$PROFILE/local.sh"
