@@ -7,6 +7,7 @@ export PATH=$PATH:~/bin
 # required for proper XCompose work in GTK apps
 export GTK_IM_MODULE=xim
 export ANSIBLE_NOCOWS=1
+export GO15VENDOREXPERIMENT=1
 
 if [[ -e "$HOME/.local/bin" ]]; then
     export PATH=$PATH:$HOME/.local/bin
