@@ -23,6 +23,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-rsi'
 Plugin 'tpope/vim-sensible'
+Plugin 'vim-scripts/a.vim'
 
 " color schemes
 Plugin 'altercation/vim-colors-solarized'
