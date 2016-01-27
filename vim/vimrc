@@ -68,14 +68,15 @@ set list listchars=tab:>\ ,trail:_,extends:>
 
 set colorcolumn=80,100,120
 
-source ~/.vim/plugins.vim
+source ~/.vim/bundles.vim
 
 source ~/.vim/backup.vim
 source ~/.vim/ftdetect.vim
-source ~/.vim/functions.vim
 source ~/.vim/keymap.vim
 source ~/.vim/appearance.vim
 
 source ~/.vim/google.vim
 
 runtime! macros/matchit.vim
+runtime! indent.vim
+runtime! fvl.vim

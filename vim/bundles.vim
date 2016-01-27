@@ -30,9 +30,6 @@ Plugin 'altercation/vim-colors-solarized'
 call vundle#end()
 filetype plugin indent on     " required!
 
-runtime! indent.vim
-runtime! fvl.vim
-
 " NERDTree settings
 let NERDTreeWinSize=20
 let NERDTreeIgnore=['.o$', '.pyc$', '\~$']
