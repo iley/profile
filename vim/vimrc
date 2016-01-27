@@ -75,7 +75,14 @@ source ~/.vim/ftdetect.vim
 source ~/.vim/keymap.vim
 source ~/.vim/appearance.vim
 
-source ~/.vim/google.vim
+if filereadable("/google/data/ro/users/is/istrukov/google.vim")
+  source /google/data/ro/users/is/istrukov/google.vim
+else
+  Plugin 'klen/python-mode'
+  if v:version >= 736
+      Plugin 'Valloric/YouCompleteMe'
+  endif
+endif
 
 runtime! macros/matchit.vim
 runtime! indent.vim
