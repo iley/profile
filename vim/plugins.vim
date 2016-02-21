@@ -45,6 +45,7 @@ let g:taboo_tab_format = ' %N:%f%m '
 
 " python-mode
 let g:pymode_lint_on_write = 1
+let g:pymode_rope_completion = 0
 
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_cpp_compiler_options = '-std=c++11'
