@@ -22,10 +22,9 @@ if [[ "$TERM" != 'screen-256color' ]]; then
     export TERM=xterm-256color
 fi
 
-if [ -d ~/code/go ]; then
-    export GOPATH="$HOME/code/go"
-else
+if [ -d "$HOME/go" ]; then
     export GOPATH="$HOME/go"
+    export PATH="$PATH:$HOME/go/bin"
 fi
 
 # use meld for g4 diff
