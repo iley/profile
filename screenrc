@@ -1,8 +1,0 @@
-attrcolor b ".I"
-termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
-defbce "on"
-#caption always "%{-b ..}%-w%{+b ..}[[%n%f*%t]]%{-}%+w"
-#
-unsetenv SSH_AUTH_SOCK
-setenv SSH_AUTH_SOCK $HOME/.screen/ssh-auth-sock.$HOSTNAME
-vbell off
