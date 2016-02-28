@@ -1,4 +1,4 @@
-SRC=bashrc gitconfig ssh/config tmux.conf zshrc Xdefaults zsh config/htop config/flake8 npmrc XCompose ansible.cfg ansible.hosts config/pep8
+SRC=bashrc gitconfig ssh/config tmux.conf zshrc zsh config/htop config/flake8 npmrc XCompose ansible.cfg ansible.hosts config/pep8
 DST=$(addprefix $(HOME)/.,$(SRC))
 DIRS=$(HOME)/.config $(HOME)/.ssh
 OHMYZSH=~/.oh-my-zsh
