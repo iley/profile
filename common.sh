@@ -13,6 +13,10 @@ if [[ -e "$HOME/.local/bin" ]]; then
     export PATH=$PATH:$HOME/.local/bin
 fi
 
+if [[ -e "$HOME/go/bin" ]]; then
+    export PATH=$PATH:$HOME/go/bin
+fi
+
 if [[ -e "$HOME/.npm-packages/bin" ]]; then
     export PATH=$PATH:$HOME/.npm-packages/bin
 fi
