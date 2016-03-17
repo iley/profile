@@ -9,6 +9,15 @@ function _prompt_user {
   fi
 }
 
+function _prompt_host {
+  local host=`hostname`
+  if [[ "$host" =~ ^(.+)\.corp\.google\.com ]] || [[ "$host" =~ ^([^\.]+)\..+ ]]; then
+    echo $match[1]
+  else
+    echo $host
+  fi
+}
+
 function _prompt_pwd {
   local max_len=32
   local dir="$(pwd|sed -e "s#^$HOME#~#")"
@@ -27,7 +36,7 @@ function citc_prompt_info() {
  fi
 }
 
-PROMPT='%(1j.* .)%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}$(_prompt_user))%m %{$fg_bold[blue]%}$(_prompt_pwd) $(git_prompt_info)$(citc_prompt_info)%_$(_prompt_char)%{$reset_color%} '
+PROMPT='%(1j.* .)%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}$(_prompt_user))$(_prompt_host) %{$fg_bold[blue]%}$(_prompt_pwd) $(git_prompt_info)$(citc_prompt_info)%_$(_prompt_char)%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="("
 ZSH_THEME_GIT_PROMPT_SUFFIX=") "
