@@ -23,4 +23,8 @@ Host lich.iley.ru
 Host rpi
   Hostname 10.0.0.10
   User iley
-  #LocalForward 5000 127.0.0.1:5000
+  LocalForward 5000 127.0.0.1:5000
+
+Host yoshi.iley.ru
+  User iley
+  LocalForward 5000 127.0.0.1:5000
