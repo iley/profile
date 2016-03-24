@@ -13,22 +13,21 @@ if [[ -e "$HOME/.local/bin" ]]; then
     export PATH=$PATH:$HOME/.local/bin
 fi
 
-if [[ -e "$HOME/go/bin" ]]; then
-    export PATH=$PATH:$HOME/go/bin
-fi
-
 if [[ -e "$HOME/.npm-packages/bin" ]]; then
     export PATH=$PATH:$HOME/.npm-packages/bin
+fi
+
+if [ -d "$HOME/go" ]; then
+    export GOPATH="$HOME/go"
+fi
+
+if [[ -e "$HOME/go/bin" ]]; then
+    export PATH=$PATH:$HOME/go/bin
 fi
 
 # set $TERM to make tmux work properly
 if [[ "$TERM" != 'screen-256color' ]]; then
     export TERM=xterm-256color
-fi
-
-if [ -d "$HOME/go" ]; then
-    export GOPATH="$HOME/go"
-    export PATH="$PATH:$HOME/go/bin"
 fi
 
 # use meld for g4 diff
