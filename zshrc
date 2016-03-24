@@ -11,7 +11,7 @@ zstyle :omz:plugins:ssh-agent identities id_rsa id_vagrant
 fpath=(~/.zsh/completion $fpath)
 
 DEFAULT_USER=iley
-DISABLE_AUTO_UPDATE="true"
+#DISABLE_AUTO_UPDATE="true"
 
 source $ZSH/oh-my-zsh.sh
 
