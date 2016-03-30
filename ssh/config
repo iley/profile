@@ -27,4 +27,4 @@ Host rpi
 
 Host yoshi.iley.ru
   User iley
-  LocalForward 5000 127.0.0.1:5000
+  #LocalForward 5000 127.0.0.1:5000
