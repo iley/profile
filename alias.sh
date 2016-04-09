@@ -13,3 +13,4 @@ alias xc='xclip -i -selection clipboard'
 alias xp='xclip -o -selection clipboard'
 
 alias vi=vim
+alias stmux='tmux attach -d || tmux new'
