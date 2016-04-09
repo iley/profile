@@ -11,7 +11,7 @@ function _prompt_user {
 
 function _prompt_host {
   local host=`hostname`
-  if [[ "$host" =~ ^(.+)\.corp\.google\.com ]] || [[ "$host" =~ ^([^\.]+)\..+ ]]; then
+  if [[ "$host" =~ '^(.+)\.corp\.google\.com$' ]] || [[ "$host" =~ '^([^\.]+)\..+' ]]; then
     echo $match[1]
   else
     echo $host
