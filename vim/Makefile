@@ -1,9 +1,6 @@
-CACHE_PATH=$(HOME)/.local/share/vim/
-CACHE_DIRS=$(addprefix $(CACHE_PATH),swap backup undo)
-
 .PHONY: all links vundle
 
-all: links vundle $(CACHE_DIRS)
+all: links plugins
 
 links: $(HOME)/.vim $(HOME)/.vimrc
 
@@ -13,8 +10,8 @@ $(HOME)/.vim: .
 $(HOME)/.vimrc: vimrc
 	ln -sf $(abspath $<) $@
 
-vundle:
-	vim -c ':BundleInstall' -c ':qall'
+bundle/Vundle.vim:
+	git clone https://github.com/VundleVim/Vundle.vim.git bundle/Vundle.vim
 
-$(CACHE_DIRS): %:
-	mkdir -p $@
+plugins: bundle/Vundle.vim
+	vim -c ':PluginInstall' -c ':qall'
