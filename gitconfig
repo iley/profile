@@ -1,35 +1,39 @@
 # vim: ft=gitconfig
 [user]
-    name = Ilya Strukov
-    email = iley@iley.ru
+name = Ilya Strukov
+email = iley@iley.ru
 
 [alias]
-    st = status -sb
-    ci = commit
-    co = checkout
-    w = whatchanged
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-    assume   = update-index --assume-unchanged
-    unassume = update-index --no-assume-unchanged
-    assumed  = "!git ls-files -v | grep ^h | cut -c 3-"
-    purr = pull --rebase
-    puff = pull --ff-only
+st = status -sb
+lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+purr = pull --rebase
+puff = pull --ff-only
+branches = branch -a
+tags = tag
+stashes = stash list
+unstage = reset -q HEAD --
+discard = checkout --
+uncommit = reset --mixed HEAD~
+amend = commit --amend
+nevermind = !git reset --hard HEAD && git clean -d -f
+graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
+precommit = diff --cached --diff-algorithm=minimal -w
 
 [color]
-    diff = auto
-    interactive = auto
-    status = auto
-    branch = auto
-    ui = true
+diff = auto
+interactive = auto
+status = auto
+branch = auto
+ui = true
 
 [github]
-    user  = iley
+user  = iley
 
 [core]
-    pager = less -+F -+X
+pager = less -+F -+X
 
 [push]
-    default = current
+default = current
 
 [help]
-    autocorrect = 20
+autocorrect = 20
