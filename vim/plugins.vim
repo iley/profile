@@ -29,7 +29,6 @@ Plugin 'vim-scripts/a.vim'
 
 if !g:google_machine
   Plugin 'klen/python-mode'
-  Plugin 'honza/vim-snippets'
   if v:version >= 736
     Plugin 'Valloric/YouCompleteMe'
   endif
