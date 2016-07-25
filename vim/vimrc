@@ -23,6 +23,7 @@ set wrap
 " search and replace
 set ignorecase
 set smartcase
+set hlsearch
 
 set updatetime=120000
 set hidden
