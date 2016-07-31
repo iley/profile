@@ -57,6 +57,7 @@ mkvirtualenv () {
     fi
     mkdir -p "$env_path"
     virtualenv $* "$env_path"
+    workon "$name"
 }
 
 rmvirtualenv () {
