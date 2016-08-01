@@ -1,3 +1,5 @@
-if prodcertstatus >/dev/null 2>&1; then
+if prodcertstatus --nocheck_loas2 &> /dev/null; then
   source /google/data/ro/users/is/istrukov/profile.sh
+else
+  echo "It's time to run prodaccess"
 fi
