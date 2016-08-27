@@ -8,15 +8,12 @@ OHMYZSH=~/.oh-my-zsh
 
 all: links vimstuff
 
-links: $(DIRS) $(DST) $(OHMYZSH) $(HOME)/bin
+links: $(DIRS) $(DST) $(OHMYZSH)
 
 $(OHMYZSH):
 	git clone git://github.com/robbyrussell/oh-my-zsh.git $@
 
 $(DST): $(HOME)/.%: %
-	ln -sf $(abspath $<) $@
-
-$(HOME)/bin: bin
 	ln -sf $(abspath $<) $@
 
 $(DIRS): %:
