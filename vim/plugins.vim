@@ -6,15 +6,16 @@ call vundle#begin()
 " let Vundle manage Vundle (required)
 Plugin 'VundleVim/Vundle.vim'
 
+" required by vim-markdown for formatting tables
+Plugin 'godlygeek/tabular'
+
 " plugins
 Plugin 'Lokaltog/vim-powerline'
-Plugin 'SirVer/ultisnips'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'fatih/vim-go'
 Plugin 'gcmt/taboo.vim'
-Plugin 'godlygeek/tabular' " required by vim-markdown for formatting tables
 Plugin 'majutsushi/tagbar'
 Plugin 'mxw/vim-jsx'
 Plugin 'plasticboy/vim-markdown'
@@ -28,6 +29,10 @@ Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-rsi'
 Plugin 'tpope/vim-sensible'
 Plugin 'vim-scripts/a.vim'
+
+if v:version >= 704
+  Plugin 'SirVer/ultisnips'
+endif
 
 if !g:google_machine
   Plugin 'klen/python-mode'
