@@ -11,7 +11,7 @@ all: links vimstuff
 links: $(DIRS) $(DST) $(OHMYZSH)
 
 $(OHMYZSH):
-	git clone git://github.com/robbyrussell/oh-my-zsh.git $@
+	git clone https://github.com/robbyrussell/oh-my-zsh.git $@
 
 $(DST): $(HOME)/.%: %
 	ln -sf $(abspath $<) $@
