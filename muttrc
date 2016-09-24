@@ -1,0 +1,22 @@
+set imap_user = "ilya.strukov@gmail.com"
+set imap_pass = `cat ~/.secrets/gmail.txt`
+
+set folder = "imaps://imap.gmail.com/"
+set spoolfile = +INBOX
+set record = "+[Gmail]/Sent Mail"
+set postponed = "+[Gmail]/Drafts"
+
+set smtp_url = "smtps://ilya.strukov@smtp.gmail.com"
+set smtp_pass = `cat ~/.secrets/gmail.txt`
+set record = ""
+
+set from = "ilya.strukov@gmail.com"
+set realname = "Ilya Strukov"
+set use_from = yes
+set envelope_from = "yes"
+set record = "=Sent"
+set postponed = "=Drafts"
+
+set crypt_use_gpgme = no
+
+bind index G imap-fetch-mail
