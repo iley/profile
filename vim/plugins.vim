@@ -36,6 +36,7 @@ endif
 
 if !g:google_machine
   Plugin 'klen/python-mode'
+  Plugin 'rhysd/vim-clang-format'
   if v:version >= 736
     Plugin 'Valloric/YouCompleteMe'
   endif

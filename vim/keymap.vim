@@ -13,3 +13,5 @@ noremap <Leader>y "+y
 noremap <Leader>Y "+Y
 noremap <Leader>p "+p
 noremap <Leader>P "+P
+
+noremap <leader>f :ClangFormat<CR>
