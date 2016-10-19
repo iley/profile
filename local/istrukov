@@ -8,3 +8,6 @@ else
     echo "Cancelled."
   fi
 fi
+
+export P4DIFF="/usr/bin/vim -X '+so /usr/share/vim/google/p4diff.vim'"
+export G4MULTIDIFF=1
