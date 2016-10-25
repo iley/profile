@@ -1,5 +1,6 @@
 if prodcertstatus --nocheck_loas2 &> /dev/null; then
-  source /google/data/ro/users/is/istrukov/profile.sh
+  #source /google/data/ro/users/is/istrukov/profile.sh
+  source ~/profile/google.sh
 else
   read "reply?LOAS expired. Do you want to run prodaccess? (Y/n) "
   if [[ "$reply" =~ ^[Yy]?$ ]]; then
