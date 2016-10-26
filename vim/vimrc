@@ -80,7 +80,7 @@ source ~/.vim/keymap.vim
 source ~/.vim/appearance.vim
 
 if g:google_machine
-  source /google/data/ro/users/is/istrukov/google.vim
+  source ~/.vim/google.vim
 endif
 
 runtime! macros/matchit.vim
