@@ -3,8 +3,8 @@ set imap_pass = `cat ~/.secrets/gmail.txt`
 
 set folder = "imaps://imap.gmail.com/"
 set spoolfile = +INBOX
-set record = "+[Gmail]/Sent Mail"
 set postponed = "+[Gmail]/Drafts"
+set trash = "+[Gmail]/Trash"
 
 set smtp_url = "smtps://ilya.strukov@smtp.gmail.com"
 set smtp_pass = `cat ~/.secrets/gmail.txt`
@@ -20,3 +20,6 @@ set postponed = "=Drafts"
 set crypt_use_gpgme = no
 
 bind index G imap-fetch-mail
+macro index,pager y "<enter-command>unset trash\n <delete-message>" "Gmail archive message"
+macro index,pager d "<save-message>=[Gmail]/Trash<enter><enter>" "Trash"
+macro index,pager ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
