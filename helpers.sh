@@ -1,8 +1,8 @@
 if [[ -z "$DESK_HOME" ]]; then
-    export DESK_HOME="$HOME/.desks"
+  export DESK_HOME="$HOME/.desks"
 fi
 if [[ -z "$WORKON_HOME" ]]; then
-    export WORKON_HOME="$HOME/.virtualenvs"
+  export WORKON_HOME="$HOME/.virtualenvs"
 fi
 
 desk () {
@@ -24,19 +24,19 @@ _desks () {
 }
 
 workon () {
-    local virtualenv="$1"
-    if [[ -z "$virtualenv" ]]; then
-        echo "Usage: workon env_name" >&2
-        return 1
-    fi
-    if ! [[ -e "$WORKON_HOME/$virtualenv" ]]; then
-        echo "Virtualenv '$virtualenv' does not exist" >&2
-        return 1
-    fi
-    if [[ -n "$VIRTUAL_ENV" ]]; then
-        deactivate
-    fi
-    . "$WORKON_HOME/$virtualenv/bin/activate"
+  local virtualenv="$1"
+  if [[ -z "$virtualenv" ]]; then
+    echo "Usage: workon env_name" >&2
+    return 1
+  fi
+  if ! [[ -e "$WORKON_HOME/$virtualenv" ]]; then
+    echo "Virtualenv '$virtualenv' does not exist" >&2
+    return 1
+  fi
+  if [[ -n "$VIRTUAL_ENV" ]]; then
+    deactivate
+  fi
+  . "$WORKON_HOME/$virtualenv/bin/activate"
 }
 
 _virtualenvs () {
@@ -44,42 +44,61 @@ _virtualenvs () {
 }
 
 mkvirtualenv () {
-    local name="$1"
+  local python_binary="python3"
+  if [[ "$1" == "-2" ]]; then
+    echo Using Python 2 >&2
+    python_binary="python"
     shift
-    if [[ -z "$name" ]]; then
-        echo "Usage: mkvirtualenv name [args]" >&2
-        return 1
-    fi
-    local env_path="$WORKON_HOME/$name"
-    if [[ -e "$env_path" ]]; then
-        echo "virtualenv '$env_path' already exists" >&2
-        return 1
-    fi
-    mkdir -p "$env_path"
+  elif [[ "$1" == "-0" ]]; then
+    echo Using the default Python interpreter >&2
+    python_binary=""
+    shift
+  else
+    echo Using Python 3 >&2
+  fi
+  local name="$1"
+  shift
+  if [[ -z "$name" ]]; then
+    echo "Usage: mkvirtualenv [-2] name [args]" >&2
+    return 1
+  fi
+  local env_path="$WORKON_HOME/$name"
+  if [[ -e "$env_path" ]]; then
+    echo "virtualenv '$env_path' already exists" >&2
+    return 1
+  fi
+  mkdir -p "$env_path"
+  if [[ -n "$python_binary" ]]; then
+    virtualenv -p "$python_binary" $* "$env_path"
+  else
     virtualenv $* "$env_path"
-    workon "$name"
+  fi
+  workon "$name"
 }
 
 rmvirtualenv () {
-    local name="$1"
-    if [ -z "$name" ]; then
-        echo "Usage: rmvirtualenv name" >&2
-        return 1
-    fi
-    local env_path="$WORKON_HOME/$name"
-    if [ ! -e "$env_path" ]; then
-        echo "virtualenv '$env_path' does not exists" >&2
-        return 1
-    fi
+  local name="$1"
+  if [[ -z "$name" ]]; then
+    echo "Usage: rmvirtualenv name" >&2
+    return 1
+  fi
+  local env_path="$WORKON_HOME/$name"
+  if [[ ! -e "$env_path" ]]; then
+    echo "virtualenv '$env_path' does not exists" >&2
+    return 1
+  fi
+  if [[ "$env_path" == "$VIRTUAL_ENV" ]]; then
+    deactivate
+  fi
 
-    read -q "REPLY?Delete virtualenv '$env_path'? [y/N] " -c -n 1
-    echo
-    if [[ "$REPLY" =~ ^[Yy]$ ]]; then
-        rm -rf "$env_path"
-    else
-        echo "action aborted" >&2
-        return 1
-    fi
+  read -q "REPLY?Delete virtualenv '$env_path'? [y/N] " -c -n 1
+  echo
+  if [[ "$REPLY" =~ ^[Yy]$ ]]; then
+    rm -rf "$env_path"
+  else
+    echo "action aborted" >&2
+    return 1
+  fi
 }
 
 function up() {
