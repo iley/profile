@@ -46,7 +46,7 @@ _virtualenvs () {
 mkvirtualenv () {
   local python_binary="python3"
   if [[ "$1" == "-2" ]]; then
-    echo Using Python 2 >&2
+    echo "Using Python 2" >&2
     python_binary="python"
     shift
   elif [[ "$1" == "-0" ]]; then
@@ -54,7 +54,7 @@ mkvirtualenv () {
     python_binary=""
     shift
   else
-    echo Using Python 3 >&2
+    echo "Using Python 3" >&2
   fi
   local name="$1"
   shift
