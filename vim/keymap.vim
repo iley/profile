@@ -3,6 +3,7 @@ noremap ; :
 noremap <C-PageDown> :Tbbn<CR>
 noremap <C-PageUp>   :Tbbp<CR>
 
+set pastetoggle=<F2>
 noremap <F4> :NERDTreeToggle<CR>
 noremap <F9> :TagbarToggle<CR>
 
