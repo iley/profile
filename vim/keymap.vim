@@ -5,6 +5,7 @@ noremap <C-PageUp>   :Tbbp<CR>
 
 set pastetoggle=<F2>
 noremap <F4> :NERDTreeToggle<CR>
+noremap <F5> :ClangFormatBuffer<CR>
 noremap <F9> :TagbarToggle<CR>
 
 " hotkey for a.vim plugin
