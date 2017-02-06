@@ -3,7 +3,12 @@ ZSH=$HOME/.oh-my-zsh
 
 ZSH_CUSTOM=~/profile/zsh_custom
 ZSH_THEME="iley"
-plugins=(ssh-agent bgnotify docker)
+
+if [[ $(uname -s) = 'Darwin' ]]; then
+  plugins=(ssh-agent docker)
+else
+  plugins=(ssh-agent docker)
+fi
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities id_rsa id_vagrant
