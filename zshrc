@@ -4,10 +4,9 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=~/profile/zsh_custom
 ZSH_THEME="iley"
 
-if [[ $(uname -s) = 'Darwin' ]]; then
-  plugins=(ssh-agent docker)
-else
-  plugins=(ssh-agent docker)
+plugins=(ssh-agent docker golang)
+if [[ $(uname -s) != 'Darwin' ]]; then
+  plugins+=(bgnotify)
 fi
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
