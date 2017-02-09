@@ -78,3 +78,6 @@ let g:syntastic_mode_map = { "mode": "active",
 let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
+
+" vim-go settings
+let g:go_template_autocreate = 0
