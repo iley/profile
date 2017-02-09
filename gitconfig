@@ -38,3 +38,5 @@ default = current
 
 [help]
 autocorrect = 20
+[http "https://gopkg.in"]
+	followRedirects = true
