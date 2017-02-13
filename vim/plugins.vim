@@ -24,11 +24,11 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'sickill/vim-pasta'
 Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-rsi'
 Plugin 'tpope/vim-sensible'
 Plugin 'vim-scripts/a.vim'
+Plugin 'vim-scripts/spin.vim'
 
 if v:version >= 704
   Plugin 'SirVer/ultisnips'
