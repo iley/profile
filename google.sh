@@ -12,6 +12,8 @@ alias iblaze="$IBLAZE"
 alias build_cleaner='/google/data/ro/teams/social-backend/build_cleaner'
 alias cdd='/google/data/ro/buildstatic-ro/projects/chubby/cdd/cdd'
 alias sandman='/google/data/ro/projects/sandman/sandman'
+alias prodplan='/google/data/ro/projects/prodplan/prodplan'
+alias prodspec='/google/data/ro/teams/prodspec/prodspec'
 
 export X20HOME="/google/data/rw/users/${USER:0:2}/$USER"
 
