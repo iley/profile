@@ -5,3 +5,5 @@ function notify-send {
   fi
   osascript -e "display notification \"$1\" with title \"Notification\""
 }
+
+export HOMEBREW_NO_ANALYTICS=1
