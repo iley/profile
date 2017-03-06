@@ -8,6 +8,10 @@ Glug grok
 Glug blaze plugin[mappings]='<leader>b'
 Glug ultisnips-google
 
+Glug codefmt
+Glug codefmt-google
+" TODO: Consider enabling autoformat for certain file types (see http://g3doc/company/editors/vim/plugins/codefmt-google.md)
+
 if filereadable("/usr/share/vim/google/gtags.vim")
     source /usr/share/vim/google/gtags.vim
     nnoremap <C-]> :exe 'Gtlist ' . expand('<cword>')<cr>
@@ -38,8 +42,7 @@ endfunction
 nnoremap <c-n>  :lne<cr>
 nnoremap <c-p>  :lpr<cr>
 nnoremap <leader>gd  :<c-u>GrokDef<cr><cr>:lr<cr>
-nnoremap <leader>f :ClangFormat<cr>
-nnoremap <leader>cf :ClangFormat<cr>
+nnoremap <leader>f :FormatLines<cr>
 nnoremap <leader>cr :pyf /google/src/head/depot/google3/third_party/llvm/llvm/tools/clang/tools/extra/clang-rename/tool/clang-rename.py<cr>
 nnoremap <leader>xb :call g:DispatchBlazeBuild()<cr>
 nnoremap <leader>xt :call g:DispatchBlazeTest()<cr>
