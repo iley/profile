@@ -1,6 +1,6 @@
 source /etc/bash_completion.d/g4d
 source /etc/bash_completion.d/x20_cd
-source /google/data/ro/teams/x20/internal-tools/nightly/x20_tools.sh
+source ~/.x20_tools.sh  # Updated by cron.
 
 DEFAULT_USER=istrukov
 
