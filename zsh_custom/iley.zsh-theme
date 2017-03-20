@@ -29,8 +29,8 @@ function _prompt_pwd {
 }
 
 function citc_prompt_info() {
- local working_dir=`pwd`
-   if [[ $working_dir == "/google/src/cloud/$USER/"* ]]; then
+ local working_dir="$(pwd)"
+   if [[ "$working_dir" == "/google/src/cloud/$USER/"* ]]; then
    path_array=(${(ps:/:)${working_dir}})
  printf "(%s) " $path_array[5]
  fi
