@@ -24,6 +24,6 @@ vimstuff:
 	make -C vim
 
 remider:
-	@echo "************************************"
-	@echo "| Do not forget to setup cronjobs! |"
-	@echo "************************************"
+	@echo "================================"
+	@echo "Do not forget to setup cronjobs!"
+	@echo "See crontab.example"
