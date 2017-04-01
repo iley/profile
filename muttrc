@@ -14,7 +14,7 @@ set from = "ilya.strukov@gmail.com"
 set realname = "Ilya Strukov"
 set use_from = yes
 set envelope_from = "yes"
-set record = "=Sent"
+#set record = "=Sent"
 set postponed = "=Drafts"
 
 set crypt_use_gpgme = no
