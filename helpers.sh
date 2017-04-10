@@ -44,14 +44,10 @@ _virtualenvs () {
 }
 
 mkvirtualenv () {
-  local python_binary="python3"
+  local use_python3=1
   if [[ "$1" == "-2" ]]; then
     echo "Using Python 2" >&2
-    python_binary="python"
-    shift
-  elif [[ "$1" == "-0" ]]; then
-    echo Using the default Python interpreter >&2
-    python_binary=""
+    use_python3=
     shift
   else
     echo "Using Python 3" >&2
@@ -68,10 +64,10 @@ mkvirtualenv () {
     return 1
   fi
   mkdir -p "$env_path"
-  if [[ -n "$python_binary" ]]; then
-    virtualenv -p "$python_binary" $* "$env_path"
+  if [[ -n "$use_python3" ]]; then
+    python3 -m venv "$env_path"
   else
-    virtualenv $* "$env_path"
+    virtualenv "$env_path"
   fi
   workon "$name"
 }
