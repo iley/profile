@@ -14,6 +14,7 @@ alias cdd='/google/data/ro/buildstatic-ro/projects/chubby/cdd/cdd'
 alias sandman='/google/data/ro/projects/sandman/sandman'
 alias prodplan='/google/data/ro/projects/prodplan/prodplan'
 alias prodspec='/google/data/ro/teams/prodspec/prodspec'
+alias patchpanel='/google/data/ro/projects/patchpanel/patchpanel'
 
 export X20HOME="/google/data/rw/users/${USER:0:2}/$USER"
 
