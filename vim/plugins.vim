@@ -9,8 +9,8 @@ Plugin 'VundleVim/Vundle.vim'
 " required by vim-markdown for formatting tables
 Plugin 'godlygeek/tabular'
 
-" plugins
 Plugin 'Lokaltog/vim-powerline'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'gcmt/taboo.vim'
@@ -24,9 +24,9 @@ Plugin 'tpope/vim-sensible'
 Plugin 'vim-scripts/a.vim'
 
 if !g:google_machine
+  Plugin 'fatih/vim-go'
   Plugin 'klen/python-mode'
   Plugin 'rhysd/vim-clang-format'
-  Plugin 'fatih/vim-go'
   if v:version >= 736
     Plugin 'Valloric/YouCompleteMe'
   endif
@@ -34,9 +34,6 @@ if !g:google_machine
     Plugin 'SirVer/ultisnips'
   endif
 endif
-
-" color schemes
-Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on     " required!
