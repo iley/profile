@@ -11,34 +11,27 @@ Plugin 'godlygeek/tabular'
 
 " plugins
 Plugin 'Lokaltog/vim-powerline'
-Plugin 'chase/vim-ansible-yaml'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'fatih/vim-go'
 Plugin 'gcmt/taboo.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'mxw/vim-jsx'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'rstacruz/sparkup'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'sickill/vim-pasta'
 Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-rsi'
 Plugin 'tpope/vim-sensible'
 Plugin 'vim-scripts/a.vim'
-Plugin 'vim-scripts/spin.vim'
-
-if v:version >= 704
-  Plugin 'SirVer/ultisnips'
-endif
 
 if !g:google_machine
   Plugin 'klen/python-mode'
   Plugin 'rhysd/vim-clang-format'
+  Plugin 'fatih/vim-go'
   if v:version >= 736
     Plugin 'Valloric/YouCompleteMe'
+  endif
+  if v:version >= 704
+    Plugin 'SirVer/ultisnips'
   endif
 endif
 

@@ -1,21 +1,24 @@
 source /usr/share/vim/google/google.vim
-Glug youcompleteme-google
 
-let g:ycm_filetype_blacklist = {'javascript': 1}
+" TODO: Consider enabling autoformat for certain file types (see http://g3doc/company/editors/vim/plugins/codefmt-google.md)
 
 Glug g4
 Glug grok
 Glug blaze plugin[mappings]='<leader>b'
 Glug ultisnips-google
 
-Glug codefmt
+Glug codefmt gofmt_executable="goimports"
 Glug codefmt-google
-" TODO: Consider enabling autoformat for certain file types (see http://g3doc/company/editors/vim/plugins/codefmt-google.md)
+Glug youcompleteme-google
+
+let g:ycm_filetype_blacklist = {'javascript': 1}
 
 if filereadable("/usr/share/vim/google/gtags.vim")
     source /usr/share/vim/google/gtags.vim
     nnoremap <C-]> :exe 'Gtlist ' . expand('<cword>')<cr>
 endif
+
+autocmd FileType go AutoFormatBuffer gofmt
 
 " CtrlP
 let g:ctrlp_directories = map(['google3/storage/x20', 'google3/production/borg/x20', 'google3/experimental/users/istrukov'], 'piperlib#GetRootDir() . v:val')
