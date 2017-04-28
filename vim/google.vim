@@ -5,6 +5,7 @@ source /usr/share/vim/google/google.vim
 Glug g4
 Glug grok
 Glug blaze plugin[mappings]='<leader>b'
+Glug blazedeps auto_filetypes=`['go']`
 Glug ultisnips-google
 
 Glug codefmt gofmt_executable="goimports"
