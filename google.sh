@@ -17,6 +17,8 @@ alias prodplan='/google/data/ro/projects/prodplan/prodplan'
 alias prodspec='/google/data/ro/teams/prodspec/prodspec'
 alias sandman='/google/data/ro/projects/sandman/sandman'
 
+alias stmux='tmx default'
+
 export X20HOME="/google/data/rw/users/${USER:0:2}/$USER"
 
 function ui-tests {
