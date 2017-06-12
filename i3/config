@@ -178,5 +178,7 @@ for_window [title="^scratchpad_term$"] border none
 
 # Autostart
 exec --no-startup-id setxkbmap -option "" -option "grp:alt_space_toggle,grp_led:scroll,compose:ralt,terminate:ctrl_alt_bksp" -layout "us,ru"
-exec --no-startup-id /usr/share/goobuntu-indicator/goobuntu_indicator.py
 exec --no-startup-id xmodmap -e "pointer = 1 9 2 4 5 6 7 3 8 10 11 12 13"
+# For per-window keyboard layout switching.
+exec --no-startup-id kbdd
+exec --no-startup-id /usr/share/goobuntu-indicator/goobuntu_indicator.py
