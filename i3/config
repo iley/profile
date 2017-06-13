@@ -177,7 +177,10 @@ for_window [title="^scratchpad_term$"] move scratchpad
 for_window [title="^scratchpad_term$"] border none
 
 # Autostart
+# Composite manager.
+exec --no-startup-id compton -b
 exec --no-startup-id setxkbmap -option "" -option "grp:alt_space_toggle,grp_led:scroll,compose:ralt,terminate:ctrl_alt_bksp" -layout "us,ru"
+# Remap mouse buttons for Evoluent.
 exec --no-startup-id xmodmap -e "pointer = 1 9 2 4 5 6 7 3 8 10 11 12 13"
 # For per-window keyboard layout switching.
 exec --no-startup-id kbdd
