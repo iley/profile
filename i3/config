@@ -1,5 +1,6 @@
 # vim:filetype=i3conf
 
+# Use Alt for the hotkeys.
 set $mod Mod1
 
 force_xinerama yes
@@ -24,7 +25,7 @@ bindsym $mod+t exec --no-startup-id urxvt
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run -fn "PragmataPro:size=13"
+bindsym $mod+d exec --no-startup-id dmenu_run
 
 # change focus
 bindsym $mod+h focus left
@@ -161,6 +162,7 @@ bar {
     status_command i3status
 }
 
+# Assign workspaces to screens.
 workspace_layout tabbed
 workspace 1 output xinerama-0
 workspace 2 output xinerama-0
@@ -177,6 +179,7 @@ for_window [title="^scratchpad_term$"] move scratchpad
 for_window [title="^scratchpad_term$"] border none
 
 # Autostart
+
 # Composite manager.
 exec --no-startup-id compton -b
 exec --no-startup-id setxkbmap -option "" -option "grp:alt_space_toggle,grp_led:scroll,compose:ralt,terminate:ctrl_alt_bksp" -layout "us,ru"
@@ -187,3 +190,5 @@ exec --no-startup-id kbdd
 # For notifications.
 exec --no-startup-id dunst
 exec --no-startup-id /usr/share/goobuntu-indicator/goobuntu_indicator.py
+# Start a terminal which would automatically move to scratchpad.
+exec --no-startup-id urxvt -title scratchpad_term -bd "#dfdbd0"
