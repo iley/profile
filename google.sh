@@ -16,6 +16,7 @@ alias patchpanel='/google/data/ro/projects/patchpanel/patchpanel'
 alias prodplan='/google/data/ro/projects/prodplan/prodplan'
 alias prodspec='/google/data/ro/teams/prodspec/prodspec'
 alias sandman='/google/data/ro/projects/sandman/sandman'
+alias blueprint_diff='/google/src/files/head/depot/google3/devtools/blueprint/tools/blueprint_diff'
 
 alias stmux='tmx default'
 
