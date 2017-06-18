@@ -27,11 +27,6 @@ export HISTSIZE=100000 SAVEHIST=100000 HISTFILE=~/.zhistory
 source $HOME/profile/zsh_alias.sh
 source $HOME/profile/common.sh
 
-if [ -e "$HOME/google-cloud-sdk" ]; then
-    source "$HOME/google-cloud-sdk/path.zsh.inc"
-    source "$HOME/google-cloud-sdk/completion.zsh.inc"
-fi
-
 # Edit command-line with ctrl-x e
 autoload edit-command-line
 zle -N edit-command-line

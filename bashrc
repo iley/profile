@@ -49,8 +49,3 @@ fi
 alias ..='cd ..'
 
 source $HOME/profile/common.sh
-
-if [ -e "$HOME/google-cloud-sdk" ]; then
-    source '/home/iley/google-cloud-sdk/path.bash.inc'
-    source '/home/iley/google-cloud-sdk/completion.bash.inc'
-fi
