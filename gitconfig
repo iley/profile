@@ -31,12 +31,13 @@ user  = iley
 
 [core]
 pager = less -+F -+X
-	excludesfile = /Users/iley/.gitignore_global
+excludesfile = ~/.gitignore_global
 
 [push]
 default = current
 
 [help]
 autocorrect = 20
+
 [http "https://gopkg.in"]
-	followRedirects = true
+followRedirects = true
