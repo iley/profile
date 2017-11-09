@@ -22,6 +22,8 @@ alias stmux='tmx default'
 
 export X20HOME="/google/data/rw/users/${USER:0:2}/$USER"
 
+export PATH=$PATH:/google/bin/releases/x20/internal
+
 function ui-tests {
   $blaze_run //storage/x20/ui:karma_local
 }
