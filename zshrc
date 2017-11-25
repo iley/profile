@@ -10,7 +10,7 @@ if [[ $(uname -s) != 'Darwin' ]]; then
 fi
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_rsa id_vagrant
+zstyle :omz:plugins:ssh-agent identities id_rsa
 
 fpath=(~/.zsh/completion $fpath)
 
