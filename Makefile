@@ -5,9 +5,9 @@ DST=$(addprefix $(HOME)/.,$(SRC))
 DIRS=$(HOME)/.config $(HOME)/.ssh
 OHMYZSH=~/.oh-my-zsh
 
-.PHONY: all links vimstuff reminder
+.PHONY: all links vimstuff
 
-all: links vimstuff remider
+all: links vimstuff
 
 links: $(DIRS) $(DST) $(OHMYZSH)
 
@@ -22,8 +22,3 @@ $(DIRS): %:
 
 vimstuff:
 	make -C vim
-
-remider:
-	@echo "================================"
-	@echo "Do not forget to setup cronjobs!"
-	@echo "See crontab.example"

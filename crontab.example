@@ -1,3 +1,0 @@
-# m h  dom mon dow   command
-00 12 * * 1-5 /home/build/static/projects-rw/moma/badges/dremel_badge_updater.par --badge 'x20 user' --add_new_only --table_name 'gfstmp_corp_x20.tmp_x20_event_log.all' --column_name 'user_name' --batch_size 100
-43 01 * * * (cat /google/data/ro/teams/x20/internal-tools/nightly/x20_tools.sh && echo "# Copied by cron on $(date)") > ~/.x20_tools.sh
