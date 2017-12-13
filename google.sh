@@ -54,3 +54,7 @@ function ui-live-rollout {
     echo "Aborted"
   fi
 }
+
+function g4-revert-all {
+  g4 opened | perl -pe 's/^([^#]+).*/$1/' | xargs g4 revert
+}
