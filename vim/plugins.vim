@@ -24,16 +24,14 @@ Plugin 'tpope/vim-rsi'
 Plugin 'tpope/vim-sensible'
 Plugin 'vim-scripts/a.vim'
 
-if !g:google_machine
-  Plugin 'fatih/vim-go'
-  Plugin 'klen/python-mode'
-  Plugin 'rhysd/vim-clang-format'
-  if v:version >= 736
-    Plugin 'Valloric/YouCompleteMe'
-  endif
-  if v:version >= 704
-    Plugin 'SirVer/ultisnips'
-  endif
+Plugin 'fatih/vim-go'
+Plugin 'klen/python-mode'
+"Plugin 'rhysd/vim-clang-format'
+if v:version >= 736
+  Plugin 'Valloric/YouCompleteMe'
+endif
+if v:version >= 704
+  Plugin 'SirVer/ultisnips'
 endif
 
 call vundle#end()
