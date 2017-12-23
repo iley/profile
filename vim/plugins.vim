@@ -6,20 +6,13 @@ call vundle#begin()
 " let Vundle manage Vundle (required)
 Plugin 'VundleVim/Vundle.vim'
 
-" required by vim-markdown for formatting tables
-Plugin 'godlygeek/tabular'
-
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'gcmt/taboo.vim'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
 Plugin 'sickill/vim-pasta'
 Plugin 'sirtaj/vim-openscad'
-Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-rsi'
 Plugin 'tpope/vim-sensible'
 Plugin 'vim-scripts/a.vim'
