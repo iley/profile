@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/ilya/werkstatt/platform/fusion/src/core'
+let g:netrw_dirhist_2='/home/ilya/werkstatt/platform/fusion'
+let g:netrw_dirhist_3='/home/ilya/werkstatt/platform/fusion/include'
+let g:netrw_dirhist_4='/home/ilya/werkstatt/platform/fusion/include/fusion'
+let g:netrw_dirhist_5='/home/ilya/werkstatt/platform/fusion/include/fusion/core'
+let g:netrw_dirhist_6='/home/ilya/werkstatt/platform/fusion/include/fusion'
+let g:netrw_dirhist_7='/home/ilya/werkstatt/platform/fusion/include/fusion/core'
+let g:netrw_dirhist_8='/home/ilya/werkstatt/platform/fusion/include/fusion'
+let g:netrw_dirhist_9='/home/ilya/werkstatt/platform/fusion/include/fusion/core'
