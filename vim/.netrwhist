@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/ilya/werkstatt/platform/fusion/examples/cloud_uploader'
-let g:netrw_dirhist_2='/home/ilya/werkstatt/platform/fusion/examples/object_list/classes'
-let g:netrw_dirhist_3='/home/ilya/werkstatt/platform/fusion/apps'
-let g:netrw_dirhist_4='/home/ilya/werkstatt/platform/fusion/apps/fusion'
-let g:netrw_dirhist_5='/home/ilya/profile/vim/syntax'
-let g:netrw_dirhist_6='/home/ilya/profile/vim/ftdetect'
