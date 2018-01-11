@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Lokaltog/vim-powerline'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'gcmt/taboo.vim'
@@ -35,6 +36,7 @@ filetype plugin indent on     " required!
 let NERDTreeWinSize=20
 let NERDTreeIgnore=['.o$', '.pyc$', '\~$']
 
+let g:clang_library_path='/usr/lib/llvm-3.8/lib'
 " Disable auto popup, use <Tab> to autocomplete
 let g:clang_complete_auto=0
 " Show clang errors in the quickfix window
