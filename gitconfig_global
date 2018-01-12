@@ -1,8 +1,4 @@
 # vim: ft=gitconfig
-[user]
-name = Ilya Strukov
-email = iley@iley.ru
-
 [alias]
 st = status -sb
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
@@ -25,9 +21,6 @@ interactive = auto
 status = auto
 branch = auto
 ui = true
-
-[github]
-user  = iley
 
 [core]
 pager = less -+F -+X
