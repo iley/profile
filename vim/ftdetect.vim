@@ -2,7 +2,6 @@ augroup filetype
     au! BufNewFile,BufRead *.asd              set filetype=lisp
     au! BufNewFile,BufRead *.clj              set filetype=clojure
     au! BufNewfile,BufRead Construct,Consfile set filetype=perl
-    au! BufNewFile,BufRead *.cpp              set filetype=cpp11
     au! BufNewfile,BufRead *.ejs              set filetype=html
     au! BufNewFile,BufRead *.go               set filetype=go
     au! BufNewFile,BufRead *.i                set filetype=swig
