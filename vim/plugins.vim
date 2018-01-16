@@ -21,7 +21,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'vim-scripts/a.vim'
 
 Plugin 'fatih/vim-go'
-Plugin 'klen/python-mode'
+Plugin 'python-mode/python-mode'
 "Plugin 'rhysd/vim-clang-format'
 if v:version >= 736
   Plugin 'Valloric/YouCompleteMe'
@@ -67,3 +67,5 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 
 " vim-go settings
 let g:go_template_autocreate = 0
+
+let g:pymode = 0
