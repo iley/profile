@@ -31,3 +31,7 @@ source $HOME/profile/common.sh
 autoload edit-command-line
 zle -N edit-command-line
 bindkey '^Xe' edit-command-line
+
+# Completion.
+compdef _bazel bazel bzl
+setopt complete_aliases
