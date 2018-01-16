@@ -6,11 +6,16 @@ call vundle#begin()
 " let Vundle manage Vundle (required)
 Plugin 'VundleVim/Vundle.vim'
 
+" For vim-codefmt.
+Plugin 'google/vim-glaive'
+Plugin 'google/vim-maktaba'
+
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'gcmt/taboo.vim'
+Plugin 'google/vim-codefmt'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -33,8 +38,9 @@ endif
 call vundle#end()
 filetype plugin indent on     " required!
 
+call glaive#Install()
+
 " NERDTree settings
-let NERDTreeWinSize=20
 let NERDTreeIgnore=['.o$', '.pyc$', '\~$']
 
 let g:clang_library_path='/usr/lib/llvm-3.8/lib'
@@ -69,3 +75,6 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 let g:go_template_autocreate = 0
 
 let g:pymode = 0
+
+Glaive codefmt clang_format_style=file
+Glaive codefmt clang_format_executable=clang-format-5.0
