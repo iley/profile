@@ -1,5 +1,5 @@
-alias bzl=$HOME/werkstatt/tools/docker/bazel.sh
-alias b=$HOME/werkstatt/tools/docker/bazel.sh
+export BAZEL=$HOME/werkstatt/tools/docker/bazel.sh
+alias bzl=$BAZEL
 
 alias run-in-docker=$HOME/werkstatt/tools/docker/run_in_docker.sh
 alias r=$HOME/werkstatt/tools/docker/run_in_docker.sh
