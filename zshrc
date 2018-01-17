@@ -35,3 +35,6 @@ bindkey '^Xe' edit-command-line
 # Completion.
 compdef _bazel bazel bzl
 setopt complete_aliases
+
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
