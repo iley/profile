@@ -14,6 +14,7 @@ Plugin 'Lokaltog/vim-powerline'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'exclipy/clang_indexer'
 Plugin 'gcmt/taboo.vim'
 Plugin 'google/vim-codefmt'
 Plugin 'kien/ctrlp.vim'
@@ -28,9 +29,7 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'fatih/vim-go'
 Plugin 'python-mode/python-mode'
 "Plugin 'rhysd/vim-clang-format'
-if v:version >= 736
-  Plugin 'Valloric/YouCompleteMe'
-endif
+"
 if v:version >= 704
   Plugin 'SirVer/ultisnips'
 endif
