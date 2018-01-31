@@ -40,7 +40,7 @@ local curcontext="$curcontext" state line
 
 : ${BAZEL_COMPLETION_PACKAGE_PATH:=%workspace%}
 : ${BAZEL:=bazel}
-b() { ${BAZEL} --noblock_for_lock "$@" 2>/dev/null | tr -d '\r' ; }
+b() { ${BAZEL} --noblock_for_lock "$@" 2>/dev/null; }
 
 # Default cache lifetime is 1 week
 zstyle -s ":completion:${curcontext}:" cache-lifetime lifetime
@@ -93,7 +93,7 @@ _bazel_get_options() {
   if _cache_invalid BAZEL_${lcmd}_options || _cache_invalid BAZEL_${lcmd}_args \
     || ! _bazel_safe_retrieve_cache BAZEL_${lcmd}_options ${_bazel_cmd_options} \
     || ! _retrieve_cache BAZEL_${lcmd}_args ${_bazel_cmd_args}; then
-    if ! eval "$(b help completion --color=no)"; then
+    if ! eval "$(b help completion)"; then
       return
     fi
     local opts_var

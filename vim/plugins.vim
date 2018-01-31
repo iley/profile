@@ -18,6 +18,7 @@ Plugin 'exclipy/clang_indexer'
 Plugin 'gcmt/taboo.vim'
 Plugin 'google/vim-codefmt'
 Plugin 'kien/ctrlp.vim'
+Plugin 'lifepillar/pgsql.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'sickill/vim-pasta'
@@ -54,6 +55,8 @@ let g:taboo_tab_format = ' %N:%f%m '
 " python-mode
 let g:pymode_lint_on_write = 1
 let g:pymode_rope_completion = 0
+let g:pymode_options_max_line_length = 100
+
 
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_cpp_compiler_options = '-std=c++11'
@@ -73,7 +76,7 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 " vim-go settings
 let g:go_template_autocreate = 0
 
-let g:pymode = 0
+" let g:pymode = 0
 
 Glaive codefmt clang_format_style=file
 Glaive codefmt clang_format_executable=clang-format-5.0
