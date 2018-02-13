@@ -8,6 +8,9 @@ syntax on
 " use more colors
 set t_Co=256
 
+" fix background color erase (see https://sunaku.github.io/vim-256color-bce.html)
+set t_ut=
+
 function! HasColorscheme(name)
     let pat = 'colors/'.a:name.'.vim'
     return !empty(globpath(&rtp, pat))
