@@ -14,7 +14,7 @@ set expandtab
 set smartindent
 set shiftround " remove extra spaces during indentation
 
-set wrap
+set nowrap
 
 " search and replace
 set ignorecase
