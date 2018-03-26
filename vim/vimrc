@@ -66,6 +66,16 @@ set colorcolumn=80,100,120
 
 set viminfo='0,:500,<0,@100,f0
 
+call system("command -v docker-bazel >/dev/null 2>&1")
+if v:shell_error == 0
+    set makeprg=docker-bazel
+else
+    call system("command -v bazel >/dev/null 2>&1")
+    if v:shell_error == 0
+        set makeprg=bazel
+    endif
+endif
+
 source ~/.vim/plugins.vim
 
 source ~/.vim/backup.vim
