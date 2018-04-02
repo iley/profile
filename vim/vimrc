@@ -4,6 +4,8 @@ set nocompatible
 command! -nargs=0 -bang WSudo :silent! w !sudo tee % &>/dev/null
 command! -nargs=0 Vimrc :tabnew $MYVIMRC
 
+set encoding=utf-8
+
 " disable mouse
 set mouse="
 
