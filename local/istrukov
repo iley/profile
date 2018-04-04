@@ -13,3 +13,5 @@ alias g=$HOME/werkstatt/tools/docker/gdb.sh
 
 export GNOME_KEYRING_CONTROL=/run/user/1000/keyring
 export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
+
+export RTI_LICENSE_FILE=$HOME/rti_license.dat
