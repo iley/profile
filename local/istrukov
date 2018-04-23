@@ -1,5 +1,4 @@
-export BAZEL=$HOME/werkstatt/tools/docker/bazel.sh
-alias bzl=$BAZEL
+alias bzl=$HOME/werkstatt/tools/docker/bazel.sh
 
 alias run-in-docker=$HOME/werkstatt/tools/docker/run_in_docker.sh
 alias r=$HOME/werkstatt/tools/docker/run_in_docker.sh
@@ -15,3 +14,5 @@ export GNOME_KEYRING_CONTROL=/run/user/1000/keyring
 export SSH_AUTH_SOCK=/run/user/1000/keyring/ssh
 
 export RTI_LICENSE_FILE=$HOME/rti_license.dat
+
+export AWS_PROFILE=personal
