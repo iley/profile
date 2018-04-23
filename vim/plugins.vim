@@ -45,7 +45,7 @@ filetype plugin indent on     " required!
 call glaive#Install()
 
 " NERDTree settings
-let NERDTreeIgnore=['.o$', '.pyc$', '\~$']
+let NERDTreeIgnore=['\.o$', '\.pyc$', '\~$']
 
 let g:clang_library_path='/usr/lib/llvm-3.8/lib'
 " Disable auto popup, use <Tab> to autocomplete
@@ -84,3 +84,5 @@ let g:go_template_autocreate = 0
 
 Glaive codefmt clang_format_style=file
 Glaive codefmt clang_format_executable=clang-format-5.0
+
+let g:ycm_filetype_blacklist = { 'python': 1 }
