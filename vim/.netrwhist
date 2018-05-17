@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/ilya/werkstatt/platform/fusion/examples/driving_generator/classes'
 let g:netrw_dirhist_2='/home/ilya/werkstatt/platform/fusion/examples/object_list'
 let g:netrw_dirhist_3='/home/ilya/werkstatt/platform/fusion/examples'
 let g:netrw_dirhist_4='/home/ilya/werkstatt/platform/fusion/examples/driving_generator'
 let g:netrw_dirhist_5='/home/ilya/profile/vim'
+let g:netrw_dirhist_6='/home/ilya/profile/vim/plugged'

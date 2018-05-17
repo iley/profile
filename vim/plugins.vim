@@ -1,48 +1,38 @@
-filetype off                   " required for vundle
+call plug#begin('~/.vim/plugged')
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" apt-get install build-essential python3-dev cmake
+Plug 'Lokaltog/vim-powerline'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'altercation/vim-colors-solarized'
+Plug 'davidoc/taskpaper.vim'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'gcmt/taboo.vim'
+Plug 'honza/vim-snippets'
+Plug 'kien/ctrlp.vim'
+Plug 'lifepillar/pgsql.vim'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'sickill/vim-pasta'
+Plug 'sirtaj/vim-openscad'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rsi'
+Plug 'tpope/vim-sensible'
+Plug 'vim-scripts/a.vim'
 
-" let Vundle manage Vundle (required)
-Plugin 'VundleVim/Vundle.vim'
+Plug 'fatih/vim-go'
+Plug 'python-mode/python-mode'
 
-" For vim-codefmt.
-Plugin 'google/vim-glaive'
-Plugin 'google/vim-maktaba'
+" for faster ctrl-p
+Plug 'nixprime/cpsm', { 'do': './install.sh' }
+let g:ctrlp_match_func = { 'match': 'cpsm#CtrlPMatch' }
 
-Plugin 'Lokaltog/vim-powerline'
-"Plugin 'Valloric/YouCompleteMe'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'davidoc/taskpaper.vim'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'gcmt/taboo.vim'
-Plugin 'google/vim-codefmt'
-Plugin 'honza/vim-snippets'
-Plugin 'kien/ctrlp.vim'
-Plugin 'lifepillar/pgsql.vim'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'sickill/vim-pasta'
-Plugin 'sirtaj/vim-openscad'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rsi'
-Plugin 'tpope/vim-sensible'
-Plugin 'vim-scripts/a.vim'
-
-Plugin 'fatih/vim-go'
-Plugin 'python-mode/python-mode'
-"Plugin 'rhysd/vim-clang-format'
-"
 if v:version >= 704
-  Plugin 'SirVer/ultisnips'
+  Plug 'SirVer/ultisnips'
 endif
 
-call vundle#end()
-filetype plugin indent on     " required!
-
-call glaive#Install()
+call plug#end()
 
 " NERDTree settings
 let NERDTreeIgnore=['\.o$', '\.pyc$', '\~$']
@@ -81,8 +71,5 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
 let g:go_template_autocreate = 0
 
 " let g:pymode = 0
-
-Glaive codefmt clang_format_style=file
-Glaive codefmt clang_format_executable=clang-format-5.0
 
 let g:ycm_filetype_blacklist = { 'python': 1 }
