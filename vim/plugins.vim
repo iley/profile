@@ -12,7 +12,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'lifepillar/pgsql.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sickill/vim-pasta'
 Plug 'sirtaj/vim-openscad'
 Plug 'tpope/vim-dispatch'
@@ -21,8 +21,8 @@ Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-sensible'
 Plug 'vim-scripts/a.vim'
 
-Plug 'fatih/vim-go'
-Plug 'python-mode/python-mode'
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'python-mode/python-mode', { 'for': 'python' }
 
 " for faster ctrl-p
 Plug 'nixprime/cpsm', { 'do': './install.sh' }
