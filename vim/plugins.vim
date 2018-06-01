@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
 " apt-get install build-essential python3-dev cmake
-Plug 'Lokaltog/vim-powerline'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'davidoc/taskpaper.vim'
@@ -19,6 +18,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-sensible'
+Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/a.vim'
 
 Plug 'fatih/vim-go', { 'for': 'go' }
