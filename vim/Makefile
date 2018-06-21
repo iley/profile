@@ -14,4 +14,4 @@ bundle/Vundle.vim:
 	git clone https://github.com/VundleVim/Vundle.vim.git bundle/Vundle.vim
 
 plugins: bundle/Vundle.vim
-	vim -c ':PluginInstall' -c ':qall'
+	vim -c ':PlugInstall' -c ':qall'
