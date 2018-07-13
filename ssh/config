@@ -1,20 +1,14 @@
 # vim: ft=sshconfig
 ForwardAgent yes
 
-Host lich.iley.ru
-  User iley
-  #LocalForward 32400 127.0.0.1:32400
-  #LocalForward 8080 127.0.0.1:8080
-  #DynamicForward 1080
+Host storage0
+   Hostname s0.cloud.aid-driving.eu
+   User ceph-deploy
 
-Host rpi.local
-  User iley
+Host storage1
+   Hostname s1.cloud.aid-driving.eu
+   User ceph-deploy
 
-Host yoshi.iley.ru
-  User iley
-
-Host dobby.local
-  User iley
-
-Host mario.local
-  User iley
+Host storage2
+   Hostname s2.cloud.aid-driving.eu
+   User ceph-deploy
