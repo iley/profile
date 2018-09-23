@@ -14,3 +14,6 @@ alias xp='xclip -o -selection clipboard'
 
 alias vi=vim
 alias stmux='tmux attach -d -t default || tmux new'
+
+alias k=kubectl
+compdef k=kubectl
