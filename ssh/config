@@ -1,14 +1,8 @@
 # vim: ft=sshconfig
 ForwardAgent yes
 
-Host storage0
-   Hostname s0.cloud.aid-driving.eu
-   User ceph-deploy
-
-Host storage1
-   Hostname s1.cloud.aid-driving.eu
-   User ceph-deploy
-
-Host storage2
-   Hostname s2.cloud.aid-driving.eu
-   User ceph-deploy
+Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_rsa
+    IdentityFile ~/.ssh/aid_rsa
