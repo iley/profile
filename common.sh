@@ -9,20 +9,14 @@ export GTK_IM_MODULE=xim
 export ANSIBLE_NOCOWS=1
 export GO15VENDOREXPERIMENT=1
 
-if [[ -e "$HOME/.local/bin" ]]; then
-    export PATH=$PATH:$HOME/.local/bin
-fi
-
-if [[ -e "$HOME/.npm-packages/bin" ]]; then
-    export PATH=$PATH:$HOME/.npm-packages/bin
-fi
+for extra_path in "$HOME/.local/bin" "$HOME/.npm-packages/bin" "$HOME/go/bin" "$HOME/.local/bin"; do
+    if [[ -e "$extra_path" ]]; then
+        export PATH=$PATH:$HOME/.local/bin
+    fi
+done
 
 if [ -d "$HOME/go" ]; then
     export GOPATH="$HOME/go"
-fi
-
-if [[ -e "$HOME/go/bin" ]]; then
-    export PATH=$PATH:$HOME/go/bin
 fi
 
 # set $TERM to make tmux work properly
