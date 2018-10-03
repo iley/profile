@@ -6,3 +6,8 @@ Host *
     UseKeychain yes
     IdentityFile ~/.ssh/id_rsa
     IdentityFile ~/.ssh/aid_rsa
+
+Host jumpbox.staging
+    Hostname jumpbox.staging.cloud.aid-driving.eu.
+    IdentityFile ~/.ssh/aid-staging.pem
+    User ubuntu
