@@ -21,6 +21,7 @@ Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/a.vim'
 Plug 'samsaga2/vim-z80'
+Plug 'hashivim/vim-terraform'
 
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'python-mode/python-mode', { 'for': 'python' }
