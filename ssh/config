@@ -3,7 +3,6 @@ ForwardAgent yes
 
 Host *
     AddKeysToAgent yes
-    UseKeychain yes
     IdentityFile ~/.ssh/id_rsa
     IdentityFile ~/.ssh/aid_rsa
 
