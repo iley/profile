@@ -3,13 +3,16 @@ call plug#begin('~/.vim/plugged')
 " apt-get install build-essential python3-dev cmake
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'altercation/vim-colors-solarized'
+Plug 'dag/vim-fish'
 Plug 'davidoc/taskpaper.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'gcmt/taboo.vim'
+Plug 'hashivim/vim-terraform'
 Plug 'honza/vim-snippets'
 Plug 'kien/ctrlp.vim'
 Plug 'lifepillar/pgsql.vim'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'samsaga2/vim-z80'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sickill/vim-pasta'
@@ -20,8 +23,6 @@ Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/a.vim'
-Plug 'samsaga2/vim-z80'
-Plug 'hashivim/vim-terraform'
 
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'python-mode/python-mode', { 'for': 'python' }
