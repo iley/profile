@@ -17,3 +17,5 @@ alias stmux='tmux attach -d -t default || tmux new'
 
 alias k=kubectl
 compdef k=kubectl
+
+alias hi='helmfile --interactive'
