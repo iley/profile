@@ -10,7 +10,9 @@ set encoding=utf-8
 set shell=/bin/bash
 
 " workaround for deprecation warning in python
-silent! py3 pass
+if has('python3') && !has('patch-8.1.201')
+  silent! python3 1
+endif
 
 " disable mouse
 set mouse="
