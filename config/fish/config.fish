@@ -47,5 +47,5 @@ end
 
 switch (hostname)
 case 'ilya-zbook'
-    alias bzl="$werkstatt/tools/docker/bazel.sh"
+    alias bzl="$HOME/werkstatt/tools/docker/bazel.sh"
 end
