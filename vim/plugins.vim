@@ -8,7 +8,6 @@ Plug 'davidoc/taskpaper.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'gcmt/taboo.vim'
 Plug 'hashivim/vim-terraform'
-Plug 'honza/vim-snippets'
 Plug 'kien/ctrlp.vim'
 Plug 'lifepillar/pgsql.vim'
 Plug 'mustache/vim-mustache-handlebars'
@@ -31,9 +30,6 @@ Plug 'python-mode/python-mode', { 'for': 'python' }
 Plug 'nixprime/cpsm', { 'do': './install.sh' }
 let g:ctrlp_match_func = { 'match': 'cpsm#CtrlPMatch' }
 
-if v:version >= 704
-  Plug 'SirVer/ultisnips'
-endif
 
 call plug#end()
 
