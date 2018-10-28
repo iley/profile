@@ -6,6 +6,9 @@ command! -nargs=0 Vimrc :tabnew $MYVIMRC
 
 set encoding=utf-8
 
+" workaround for fish shell
+set shell=/bin/bash
+
 " disable mouse
 set mouse="
 
