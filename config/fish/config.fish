@@ -40,3 +40,12 @@ function fish_prompt --description 'Write out the prompt'
 
     end
 end
+
+if command -v ack-grep >/dev/null 2>&1
+    alias ack="ack-grep"
+end
+
+switch (hostname)
+case 'ilya-zbook'
+    alias bzl="$werkstatt/tools/docker/bazel.sh"
+end
