@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " apt-get install build-essential python3-dev cmake
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'altercation/vim-colors-solarized'
 Plug 'dag/vim-fish'
 Plug 'davidoc/taskpaper.vim'
