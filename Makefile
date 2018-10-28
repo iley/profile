@@ -1,6 +1,6 @@
 SRC=bashrc gitignore_global ssh/config ssh/rc tmux.conf zshrc zsh \
-	config/flake8 config/pep8 config/dunst npmrc XCompose muttrc Xdefaults \
-	i3status.conf gitconfig_global gdbinit
+	config/flake8 config/pep8 config/dunst config/fish npmrc XCompose muttrc \
+	Xdefaults i3status.conf gitconfig_global gdbinit
 DST=$(addprefix $(HOME)/.,$(SRC))
 DIRS=$(HOME)/.config $(HOME)/.ssh
 OHMYZSH=~/.oh-my-zsh
