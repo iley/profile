@@ -2,43 +2,27 @@ set -U EDITOR vim
 
 set fish_greeting
 
-function fish_prompt --description 'Write out the prompt'
-    # Just calculate these once, to save a few cycles when displaying the prompt
-    if not set -q __fish_prompt_hostname
-    set -g __fish_prompt_hostname (hostname|cut -d . -f 1)
-    end
+set normal (set_color normal)
+set magenta (set_color magenta)
+set yellow (set_color yellow)
+set green (set_color green)
+set red (set_color red)
+set gray (set_color -o black)
 
-    if not set -q __fish_prompt_normal
-    set -g __fish_prompt_normal (set_color normal)
-    end
+# Fish git prompt
+set __fish_git_prompt_showdirtystate 'yes'
+set __fish_git_prompt_showuntrackedfiles 'yes'
 
-    if not set -q __git_cb
-    set __git_cb ":"(set_color brown)(git branch ^/dev/null | grep \* | sed 's/* //')(set_color normal)""
-    end
+function fish_prompt
+  set last_status $status
 
-    switch $USER
+  set_color $fish_color_cwd
+  printf '%s' (prompt_pwd)
+  set_color normal
 
-    case root
+  printf '%s ' (__fish_git_prompt)
 
-    if not set -q __fish_prompt_cwd
-        if set -q fish_color_cwd_root
-            set -g __fish_prompt_cwd (set_color $fish_color_cwd_root)
-        else
-            set -g __fish_prompt_cwd (set_color $fish_color_cwd)
-        end
-    end
-
-    printf '%s@%s:%s%s%s%s# ' $USER $__fish_prompt_hostname "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal" $__git_cb
-
-    case '*'
-
-    if not set -q __fish_prompt_cwd
-        set -g __fish_prompt_cwd (set_color $fish_color_cwd)
-    end
-
-    printf '%s@%s:%s%s%s%s$ ' $USER $__fish_prompt_hostname "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal" $__git_cb
-
-    end
+  set_color normal
 end
 
 if command -v ack-grep >/dev/null 2>&1
