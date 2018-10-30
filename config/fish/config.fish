@@ -1,4 +1,5 @@
-set -U EDITOR vim
+export EDITOR=vim
+export ANSIBLE_NOCOWS=1
 
 set fish_greeting
 
