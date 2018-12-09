@@ -11,7 +11,7 @@ export GO15VENDOREXPERIMENT=1
 
 for extra_path in "$HOME/.local/bin" "$HOME/.npm-packages/bin" "$HOME/go/bin" "$HOME/.local/bin"; do
     if [[ -e "$extra_path" ]]; then
-        export PATH=$PATH:$HOME/.local/bin
+        export PATH=$PATH:$extra_path
     fi
 done
 
