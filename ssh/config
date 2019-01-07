@@ -5,7 +5,11 @@ Host *
     AddKeysToAgent yes
     IdentityFile ~/.ssh/id_rsa
 
-Host jumpbox.staging
-    Hostname jumpbox.staging.cloud.aid-driving.eu.
-    IdentityFile ~/.ssh/aid-staging.pem
-    User ubuntu
+Host v0.cloud.aid-driving.eu
+    User ilya
+
+Host v1.cloud.aid-driving.eu
+    User ilya
+
+Host v2.cloud.aid-driving.eu
+    User ilya
