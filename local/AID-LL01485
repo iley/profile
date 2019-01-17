@@ -1,4 +1,9 @@
-alias bzl=$HOME/werkstatt/tools/docker/bazel.sh
+#alias bzl=$HOME/werkstatt/tools/docker/bazel.sh
+
+bzl() {
+  "$HOME/werkstatt/tools/docker/bazel.sh" "$@"
+  export BAZEL_BIN=$("$HOME/werkstatt/tools/docker/bazel.sh" info bazel-bin --color no | tail -n 1 | tr -d "[:space:]")
+}
 
 alias run-in-docker=$HOME/werkstatt/tools/docker/run_in_docker.sh
 alias r=$HOME/werkstatt/tools/docker/run_in_docker.sh
