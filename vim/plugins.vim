@@ -2,31 +2,24 @@ call plug#begin('~/.vim/plugged')
 
 " apt-get install build-essential python3-dev cmake
 Plug 'altercation/vim-colors-solarized'
-Plug 'dag/vim-fish'
-Plug 'davidoc/taskpaper.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'gcmt/taboo.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'kien/ctrlp.vim'
 Plug 'lifepillar/pgsql.vim'
-Plug 'mustache/vim-mustache-handlebars'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'sickill/vim-pasta'
-Plug 'sirtaj/vim-openscad'
-Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rsi'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/a.vim'
-
-Plug 'fatih/vim-go', { 'for': 'go' }
 
 " for faster ctrl-p
 Plug 'nixprime/cpsm', { 'do': './install.sh' }
 let g:ctrlp_match_func = { 'match': 'cpsm#CtrlPMatch' }
 
+Plug 'fatih/vim-go', { 'for': 'go' }
 
 call plug#end()
 
