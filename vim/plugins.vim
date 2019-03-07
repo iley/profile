@@ -14,6 +14,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/a.vim'
+Plug 'Quramy/tsuquyomi'
 
 " for faster ctrl-p
 Plug 'nixprime/cpsm', { 'do': './install.sh' }
