@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " apt-get install build-essential python3-dev cmake
+Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'gcmt/taboo.vim'
@@ -14,7 +15,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/a.vim'
-Plug 'Quramy/tsuquyomi'
 
 " for faster ctrl-p
 Plug 'nixprime/cpsm', { 'do': './install.sh' }
