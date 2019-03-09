@@ -51,6 +51,7 @@ augroup misc
     " do not highlight tabs and stuff for taskpaper and golang sources
     au! BufNewFile,BufRead *.taskpaper setlocal nolist
     au! BufNewFile,BufRead *.go setlocal nolist
+    au! BufNewFile,BufRead *.html setlocal ts=2 | setlocal sw=2
 augroup end
 
 set undolevels=1000
