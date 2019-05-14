@@ -13,3 +13,22 @@ Host v1.cloud.aid-driving.eu
 
 Host v2.cloud.aid-driving.eu
     User ilya
+
+Host nsu-storage
+  User root
+  HostName 192.168.42.10
+  ProxyJump gateway-wireguard
+
+Host nsu-dss
+  User root
+  HostName 192.168.42.11
+  ProxyJump gateway-wireguard
+
+Host nsu-compute
+  User root
+  HostName 192.168.42.12
+  ProxyJump gateway-wireguard
+
+Host gateway-wireguard gateway-wireguard.cloud.aid-driving.eu
+  User ubuntu
+  HostName gateway-wireguard.cloud.aid-driving.eu
