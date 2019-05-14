@@ -9,13 +9,12 @@ if command -v ack-grep >/dev/null 2>&1; then
     alias ack='ack-grep'
 fi
 
+alias vi='vim'
+alias k='kubectl'
+
 alias xc='xclip -i -selection clipboard'
 alias xp='xclip -o -selection clipboard'
 
-alias vi=vim
 alias stmux='tmux attach -d -t default || tmux new'
-
-alias k=kubectl
-compdef k=kubectl
 
 alias hi='helmfile --interactive'
