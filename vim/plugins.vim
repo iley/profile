@@ -7,6 +7,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'gcmt/taboo.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'kien/ctrlp.vim'
+Plug 'leafgarland/typescript-vim'
 Plug 'lifepillar/pgsql.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -43,3 +44,8 @@ let g:go_template_autocreate = 0
 " let g:pymode = 0
 
 let g:ycm_filetype_blacklist = { 'python': 1 }
+
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
+au FileType go nmap <leader>t <Plug>(go-test)
