@@ -27,7 +27,6 @@ unsetopt autopushd autonamedirs correct_all
 
 export HISTSIZE=100000 SAVEHIST=100000 HISTFILE=~/.zhistory
 
-source $HOME/profile/zsh_alias.sh
 source $HOME/profile/common.sh
 
 # Edit command-line with ctrl-x e
@@ -35,9 +34,13 @@ autoload edit-command-line
 zle -N edit-command-line
 bindkey '^Xe' edit-command-line
 
-# Completion.
 compdef _bazel bazel bzl
+compdef k=kubectl
 setopt complete_aliases
 
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
+
+if command -v jira >/dev/null 2>&1; then
+    eval "$(jira --completion-script-zsh)"
+fi
