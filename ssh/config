@@ -32,3 +32,8 @@ Host nsu-compute
 Host gateway-wireguard gateway-wireguard.cloud.aid-driving.eu
   User ubuntu
   HostName gateway-wireguard.cloud.aid-driving.eu
+
+Host hdp
+  User maria_dev
+  Hostname 127.0.0.1
+  Port 2222
