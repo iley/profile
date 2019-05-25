@@ -34,5 +34,13 @@ source "$PROFILE/login.sh"
 if [[ $(uname -s) = 'Darwin' ]]; then
   source "$PROFILE/osx.sh"
 fi
-# load machine-specific setting at the very end
-source "$PROFILE/local.sh"
+
+# load machine-specific settings
+hostname="$(hostname | perl -pe 's/^([^\.]+)\..*$/$1/')"
+localrc="$PROFILE/local/$hostname"
+if [ -e "$localrc" ]; then
+    source "$localrc"
+fi
+if [ -e "$localrc.secret" ]; then
+    source "$localrc.secret"
+fi

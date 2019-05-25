@@ -34,13 +34,13 @@ autoload edit-command-line
 zle -N edit-command-line
 bindkey '^Xe' edit-command-line
 
-compdef _bazel bazel bzl
-compdef k=kubectl
-setopt complete_aliases
-
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
 if command -v jira >/dev/null 2>&1; then
     eval "$(jira --completion-script-zsh)"
 fi
+
+compdef _bazel bazel bzl
+compdef k=kubectl
+setopt complete_aliases

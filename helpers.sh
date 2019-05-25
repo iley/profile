@@ -97,7 +97,7 @@ rmvirtualenv () {
   fi
 }
 
-function up() {
+up() {
   local start="$(pwd)"
   local target="$1"
   if [[ -z "$target" ]]; then
@@ -113,7 +113,7 @@ function up() {
   fi
 }
 
-function _parent_dirs () {
+_parent_dirs () {
   _values parent_dirs $(cd .. && pwd | sed 's/^.//' | tr '/' "\n")
 }
 
