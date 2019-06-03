@@ -44,3 +44,5 @@ fi
 compdef _bazel bazel bzl
 compdef k=kubectl
 setopt complete_aliases
+
+unalias '...'
