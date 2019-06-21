@@ -17,6 +17,8 @@ Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/a.vim'
 Plug 'mustache/vim-mustache-handlebars'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " for faster ctrl-p
 Plug 'nixprime/cpsm', { 'do': './install.sh' }
@@ -40,8 +42,6 @@ let g:taboo_tab_format = ' %N:%f%m '
 
 " vim-go settings
 let g:go_template_autocreate = 0
-
-" let g:pymode = 0
 
 let g:ycm_filetype_blacklist = { 'python': 1 }
 
