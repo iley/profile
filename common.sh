@@ -8,6 +8,7 @@ export PATH=$PATH:~/bin
 export GTK_IM_MODULE=xim
 export ANSIBLE_NOCOWS=1
 export GO15VENDOREXPERIMENT=1
+export PYSPARK_PYTHON=python3
 
 for extra_path in "$HOME/.local/bin" "$HOME/.npm-packages/bin" "$HOME/go/bin" "$HOME/.local/bin"; do
     if [[ -e "$extra_path" ]]; then
