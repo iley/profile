@@ -117,9 +117,23 @@ _parent_dirs () {
   _values parent_dirs $(cd .. && pwd | sed 's/^.//' | tr '/' "\n")
 }
 
+kubekick () {
+    local deployment="$1"
+    if [[ -z "$deployment" ]]; then
+        echo "Usage: kubekick DEPLOYMENT" >&2
+        return
+    fi
+    kubectl patch deployment "$deployment" -p "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"`date +'%s'`\"}}}}}"
+}
+
+_deployments () {
+    _values deployments $(kubectl get deployments -o name | sed 's/deployment.extensions\///')
+}
+
 if [[ -n "$ZSH_VERSION" ]]; then
   compdef _desks desk
   compdef _virtualenvs workon
   compdef _virtualenvs rmvirtualenv
   compdef _parent_dirs up
+  compdef _deployments kubekick
 fi
