@@ -29,7 +29,6 @@ fi
 if [ -n "$DISPLAY" ] ; then export G4MULTIDIFF=1 ; fi
 export P4DIFF='bash -c "meld \${@/#:/--diff}" padding-to-occupy-argv0'
 
-source "$PROFILE/helpers.sh"
 source "$PROFILE/alias.sh"
 source "$PROFILE/login.sh"
 if [[ $(uname -s) = 'Darwin' ]]; then

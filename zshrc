@@ -46,3 +46,5 @@ compdef k=kubectl
 setopt complete_aliases
 
 unalias '...'
+
+source ~/profile/helpers.sh
