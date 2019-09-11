@@ -6,7 +6,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'gcmt/taboo.vim'
 Plug 'hashivim/vim-terraform'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'lifepillar/pgsql.vim'
 Plug 'scrooloose/nerdcommenter'
@@ -19,10 +19,13 @@ Plug 'vim-scripts/a.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'derekwyatt/vim-scala'
+Plug 'Chiel92/vim-autoformat'
 
 " for faster ctrl-p
 Plug 'nixprime/cpsm', { 'do': './install.sh' }
 let g:ctrlp_match_func = { 'match': 'cpsm#CtrlPMatch' }
+let g:ctrlp_max_files=0
 
 Plug 'fatih/vim-go', { 'for': 'go' }
 
@@ -45,7 +48,5 @@ let g:go_template_autocreate = 0
 
 let g:ycm_filetype_blacklist = { 'python': 1 }
 
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>c <Plug>(go-coverage-toggle)
-au FileType go nmap <leader>t <Plug>(go-test)
+let g:formatdef_scalafmt = "'scalafmt --stdin'"
+let g:formatters_scala = ['scalafmt']
