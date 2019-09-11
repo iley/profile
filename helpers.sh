@@ -130,10 +130,15 @@ _deployments () {
     _values deployments $(kubectl get deployments -o name | sed 's/deployment.extensions\///')
 }
 
+_aws_environments () {
+    _values aws_environments $(awsp -q)
+}
+
 if [[ -n "$ZSH_VERSION" ]]; then
   compdef _desks desk
   compdef _virtualenvs workon
   compdef _virtualenvs rmvirtualenv
   compdef _parent_dirs up
   compdef _deployments kubekick
+  compdef _aws_environments awsp
 fi
