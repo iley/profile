@@ -18,9 +18,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/a.vim'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'derekwyatt/vim-scala'
 Plug 'Chiel92/vim-autoformat'
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 " for faster ctrl-p
 Plug 'nixprime/cpsm', { 'do': './install.sh' }

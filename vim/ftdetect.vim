@@ -14,4 +14,5 @@ augroup filetype
     au! BufNewFile,BufRead *.tex,*.ltx        set filetype=tex
     au! BufNewFile,BufRead *.tt2              set filetype=tt2html
     au! BufNewFile,BufRead *.xslate           set filetype=xslate
+    au! BufRead,BufNewFile *.sbt              set filetype=scala
 augroup end
