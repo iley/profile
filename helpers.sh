@@ -1,27 +1,6 @@
-if [[ -z "$DESK_HOME" ]]; then
-  export DESK_HOME="$HOME/.desks"
-fi
 if [[ -z "$WORKON_HOME" ]]; then
   export WORKON_HOME="$HOME/.virtualenvs"
 fi
-
-desk () {
-  local desk_name="$1"
-  if [[ -z "$desk_name" ]]; then
-    echo "Usage: desk desk_name" >&2
-    return 1
-  fi
-  local desk_file="$DESK_HOME/$desk_name.sh"
-  if ! [[ -e "$desk_file" ]]; then
-    echo "Desk file '$desk_file' not found" >&2
-    return 1
-  fi
-  . "$desk_file"
-}
-
-_desks () {
-  _values desks $(cd "$DESK_HOME" && ls *.sh | sed 's/\.sh//')
-}
 
 workon () {
   local virtualenv="$1"
@@ -135,7 +114,6 @@ _aws_environments () {
 }
 
 if [[ -n "$ZSH_VERSION" ]]; then
-  compdef _desks desk
   compdef _virtualenvs workon
   compdef _virtualenvs rmvirtualenv
   compdef _parent_dirs up
