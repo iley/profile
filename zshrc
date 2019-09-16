@@ -45,6 +45,8 @@ compdef _bazel bazel bzl
 compdef k=kubectl
 setopt complete_aliases
 
+# export FZF_TMUX=1
+
 unalias '...'
 
 source ~/profile/helpers.sh
