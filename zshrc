@@ -42,7 +42,9 @@ if command -v jira >/dev/null 2>&1; then
 fi
 
 compdef _bazel bazel bzl
-compdef k=kubectl
+if command -v kubectl 2>&1 >/dev/null; then
+    compdef k=kubectl
+fi
 setopt complete_aliases
 
 # export FZF_TMUX=1
