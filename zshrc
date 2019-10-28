@@ -48,6 +48,8 @@ fi
 setopt complete_aliases
 
 # export FZF_TMUX=1
+export FZF_DEFAULT_COMMAND="ag -l --nocolor"
+export FZF_CTRL_T_COMMAND="ag -l --nocolor"
 
 unalias '...'
 
