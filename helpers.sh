@@ -109,6 +109,11 @@ _deployments () {
     _values deployments $(kubectl get deployments -o name | sed 's/deployment.extensions\///')
 }
 
+kubeshell () {
+    local name="$USER-$(cat /dev/urandom | tr -dc 'a-z0-9' | fold -w 6 | head -n 1)"
+    kubectl run $name --rm -i --tty --image ubuntu -- bash
+}
+
 _aws_environments () {
     _values aws_environments $(awsp -q)
 }
