@@ -7,7 +7,6 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'gcmt/taboo.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'leafgarland/typescript-vim'
 Plug 'lifepillar/pgsql.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -16,11 +15,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-scripts/a.vim'
-Plug 'mustache/vim-mustache-handlebars'
 Plug 'SirVer/ultisnips'
 Plug 'derekwyatt/vim-scala'
 Plug 'Chiel92/vim-autoformat'
-Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+"Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+Plug 'dense-analysis/ale'
 
 " for faster ctrl-p
 Plug 'nixprime/cpsm', { 'do': './install.sh' }
