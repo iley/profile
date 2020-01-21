@@ -114,6 +114,18 @@ kubeshell () {
     kubectl run $name --rm -i --tty --image ubuntu -- bash
 }
 
+kctx () {
+    if [[ -z "$1" ]]; then
+        kubectl config get-contexts
+    else
+        kubectl config use-context "$1"
+    fi
+}
+
+_kube_contexts () {
+    _values contexts $(kubectl config get-contexts -o name)
+}
+
 _aws_environments () {
     _values aws_environments $(awsp -q)
 }
@@ -123,5 +135,6 @@ if [[ -n "$ZSH_VERSION" ]]; then
   compdef _virtualenvs rmvirtualenv
   compdef _parent_dirs up
   compdef _deployments kubekick
+  compdef _kube_contexts kctx
   compdef _aws_environments awsp
 fi
