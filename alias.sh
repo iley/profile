@@ -18,3 +18,5 @@ alias xp='xclip -o -selection clipboard'
 alias stmux='tmux attach -d -t default || tmux new'
 
 alias hi='helmfile --interactive'
+
+alias cwatch='watch --color -n1'
