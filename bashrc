@@ -48,4 +48,7 @@ fi
 # bash-specific aliases
 alias ..='cd ..'
 
+# preserve history across multiple sessions
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
 source $HOME/profile/common.sh
