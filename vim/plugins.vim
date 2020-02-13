@@ -20,6 +20,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'Chiel92/vim-autoformat'
 "Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 Plug 'dense-analysis/ale'
+Plug 'psf/black'
 
 " for faster ctrl-p
 Plug 'nixprime/cpsm', { 'do': './install.sh' }
