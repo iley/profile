@@ -7,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=~/profile/zsh_custom
 ZSH_THEME="iley"
 
-plugins=(ssh-agent docker golang kubectl autojump helm aws taskwarrior npm nvm fzf)
+plugins=(ssh-agent docker golang kubectl autojump helm aws fzf)
 if [[ $(uname -s) != 'Darwin' ]]; then
   plugins+=(bgnotify)
 fi
@@ -36,10 +36,6 @@ bindkey '^Xe' edit-command-line
 
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
-
-if command -v jira >/dev/null 2>&1; then
-    eval "$(jira --completion-script-zsh)"
-fi
 
 compdef _bazel bazel bzl
 if command -v kubectl 2>&1 >/dev/null; then

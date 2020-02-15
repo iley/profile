@@ -3,14 +3,10 @@ PROFILE=$HOME/profile
 export EDITOR=vim
 export PAGER=less
 export LESS="-iMSx4 -FXR"
-export PATH=$PATH:~/bin
-# required for proper XCompose work in GTK apps
-export GTK_IM_MODULE=xim
 export ANSIBLE_NOCOWS=1
-export GO15VENDOREXPERIMENT=1
 export PYSPARK_PYTHON=python3
 
-for extra_path in "$HOME/.local/bin" "$HOME/.npm-packages/bin" "$HOME/go/bin" "$HOME/.local/bin"; do
+for extra_path in "$HOME/bin" "$HOME/.local/bin" "$HOME/.npm-packages/bin" "$HOME/go/bin" "$HOME/.local/bin"; do
     if [[ -e "$extra_path" ]]; then
         export PATH=$PATH:$extra_path
     fi
@@ -25,10 +21,6 @@ if [[ "$TERM" != 'screen-256color' ]]; then
     export TERM=xterm-256color
 fi
 
-# use meld for g4 diff
-if [ -n "$DISPLAY" ] ; then export G4MULTIDIFF=1 ; fi
-export P4DIFF='bash -c "meld \${@/#:/--diff}" padding-to-occupy-argv0'
-
 source "$PROFILE/alias.sh"
 source "$PROFILE/login.sh"
 if [[ $(uname -s) = 'Darwin' ]]; then
@@ -36,7 +28,7 @@ if [[ $(uname -s) = 'Darwin' ]]; then
 fi
 
 # load machine-specific settings
-hostname="$(hostname | perl -pe 's/^([^\.]+)\..*$/$1/')"
+hostname="$(hostname | sed 's/\..*$//')"
 localrc="$PROFILE/local/$hostname"
 if [ -e "$localrc" ]; then
     source "$localrc"
