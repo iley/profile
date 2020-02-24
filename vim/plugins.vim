@@ -20,6 +20,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'Chiel92/vim-autoformat'
 Plug 'dense-analysis/ale'
 Plug 'psf/black'
+Plug 'towolf/vim-helm'
 
 " for faster ctrl-p
 Plug 'nixprime/cpsm', { 'do': './install.sh' }
@@ -49,3 +50,5 @@ let g:ycm_filetype_blacklist = { 'python': 1 }
 
 let g:formatdef_scalafmt = "'scalafmt --stdin'"
 let g:formatters_scala = ['scalafmt']
+
+autocmd BufWritePre *.py execute ':Black'
