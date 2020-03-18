@@ -20,3 +20,8 @@ alias stmux='tmux attach -d -t default || tmux new'
 alias hi='helmfile --interactive'
 
 alias cwatch='watch --color -n1'
+
+alias tf=terraform
+alias tfa='terraform apply'
+alias tfp='terraform plan'
+alias tfi='terraform init'
