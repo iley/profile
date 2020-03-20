@@ -51,4 +51,4 @@ let g:ycm_filetype_blacklist = { 'python': 1 }
 let g:formatdef_scalafmt = "'scalafmt --stdin'"
 let g:formatters_scala = ['scalafmt']
 
-autocmd BufWritePre *.py execute ':Black'
+" autocmd BufWritePre *.py execute ':Black'
