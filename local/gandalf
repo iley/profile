@@ -1,3 +1,0 @@
-alias bzl=$HOME/work/werkstatt/tools/docker/bazel.sh
-export LC_ALL=en_US.UTF-8
-export PATH="/usr/local/opt/helm@2/bin:$PATH"
