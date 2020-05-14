@@ -21,6 +21,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'dense-analysis/ale'
 Plug 'psf/black'
 Plug 'towolf/vim-helm'
+Plug 'google/vim-jsonnet'
 
 " for faster ctrl-p
 Plug 'nixprime/cpsm', { 'do': './install.sh' }
