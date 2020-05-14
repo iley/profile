@@ -52,3 +52,4 @@ let g:formatdef_scalafmt = "'scalafmt --stdin'"
 let g:formatters_scala = ['scalafmt']
 
 " autocmd BufWritePre *.py execute ':Black'
+let g:black_virtualenv="~/.vim_black"
