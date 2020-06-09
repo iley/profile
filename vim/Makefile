@@ -10,8 +10,5 @@ $(HOME)/.vim: .
 $(HOME)/.vimrc: vimrc
 	ln -sf $(abspath $<) $@
 
-bundle/Vundle.vim:
-	git clone https://github.com/VundleVim/Vundle.vim.git bundle/Vundle.vim
-
-plugins: bundle/Vundle.vim
+plugins:
 	vim -c ':PlugInstall' -c ':qall'

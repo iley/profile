@@ -37,7 +37,7 @@ augroup misc
 
     " Do not highlight tabs and stuff for taskpaper and golang sources.
     au! BufNewFile,BufRead *.taskpaper setlocal nolist
-    au! BufNewFile,BufRead *.go setlocal nolist
+    au! BufNewFile,BufRead *.go setlocal nolist | setlocal ts=4 | setlocal sw=4
     au! BufNewFile,BufRead *.html setlocal ts=2 | setlocal sw=2
     au! BufNewFile,BufRead go.mod setlocal noexpandtab | setlocal nolist
 augroup end
