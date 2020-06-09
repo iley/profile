@@ -22,7 +22,6 @@ if [[ "$TERM" != 'screen-256color' ]]; then
 fi
 
 source "$PROFILE/alias.sh"
-source "$PROFILE/login.sh"
 if [[ $(uname -s) = 'Darwin' ]]; then
   source "$PROFILE/osx.sh"
 fi

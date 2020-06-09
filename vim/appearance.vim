@@ -1,14 +1,21 @@
-" language settings
+" Language settings.
 language en_US.UTF-8
 language messages en_US.UTF-8
 set fileencodings=utf-8,koi8-r,windows-1251,iso-8859-15
 
-syntax on
+set number
+set title
+set laststatus=2
+set ruler
+set wildmenu
+set colorcolumn=80,100,120
+set viminfo='0,:500,<0,@100,f0
+set list listchars=tab:>\ ,trail:_,extends:>
 
-" use more colors
+" Use more colors.
 set t_Co=256
 
-" fix background color erase (see https://sunaku.github.io/vim-256color-bce.html)
+" Fix background color erase (see https://sunaku.github.io/vim-256color-bce.html)
 set t_ut=
 
 function! HasColorscheme(name)
@@ -16,19 +23,7 @@ function! HasColorscheme(name)
     return !empty(globpath(&rtp, pat))
 endfunction
 
-if HasColorscheme("solarized")
-    let g:solarized_termcolors=256
+if HasColorscheme("solarized8")
     set background=dark
-    colorscheme solarized
+    colorscheme solarized8
 endif
-
-" GUI settings
-if has("gui_running")
-    set guioptions-=T " do not show toolbar
-    set guioptions-=t " do not show tearoffs in menu
-    set guifont=PragmataPro\ 12
-endif
-
-set number
-set title
-set ruler

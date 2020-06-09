@@ -1,66 +1,72 @@
+" General sensible options.
 set nocompatible
-
-" user commands
-command! -nargs=0 -bang WSudo :silent! w !sudo tee % &>/dev/null
-command! -nargs=0 Vimrc :tabnew $MYVIMRC
-
+filetype plugin indent on
+syntax enable
+set backspace=indent,eol,start
 set encoding=utf-8
 
-" workaround for fish shell
+" Workaround for fish shell.
 set shell=/bin/bash
 
-" workaround for deprecation warning in python
+" Workaround for deprecation warning in python
 if has('python3') && !has('patch-8.1.201')
   silent! python3 1
 endif
 
-" disable mouse
+" User commands.
+command! -nargs=0 -bang WSudo :silent! w !sudo tee % &>/dev/null
+command! -nargs=0 Vimrc :tabnew $MYVIMRC
+
+" Disable mouse.
 set mouse="
 
-" indentation settings
+" Indentation and formatting settings.
+set autoindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
+set smarttab
 set shiftround " remove extra spaces during indentation
-
 set nowrap
+set formatoptions+=j " deletes the comment character when joining lines
 
-" search and replace
-set ignorecase
-set smartcase
-set hlsearch
-
-set updatetime=120000
-set hidden
-
-" folding settings
-set foldlevelstart=20
-
-" move to next line at beginning/line of the current
-set whichwrap=h,l,<,>,[,]
-
-" turn off speaker
-set vb t_vb="
-
-set wildignore+=*.o,*.bak,*.pyc,*.jpg,*.png,*/.git/*,*/.hg/*,*/.svn/*
-
+" Custom indentation and highlighting settings per language.
 augroup misc
     au! BufNewFile,BufRead * setlocal vb t_vb="
 
-    " do not highlight tabs and stuff for taskpaper and golang sources
+    " Do not highlight tabs and stuff for taskpaper and golang sources.
     au! BufNewFile,BufRead *.taskpaper setlocal nolist
     au! BufNewFile,BufRead *.go setlocal nolist
     au! BufNewFile,BufRead *.html setlocal ts=2 | setlocal sw=2
     au! BufNewFile,BufRead go.mod setlocal noexpandtab | setlocal nolist
 augroup end
 
+" Search and replace.
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+" Misc. settings.
+set foldlevelstart=20
+set history=1000
+set autoread " Autoreload changed files.
+set whichwrap=h,l,<,>,[,] " move to next line at beginning/line of the current
+" turn off speaker
+set vb t_vb="
+set hidden
+set wildignore+=*.o,*.bak,*.pyc,*.jpg,*.png,*/.git/*,*/.hg/*,*/.svn/*
+
+" Undo settings.
 set undolevels=1000
 set undoreload=10000
 set undodir=~/.vim/undo
 set undofile
 
-" store swap files in a separate directory
+" Write to swap file every 2 minutes.
+set updatetime=120000
+" Store swap files in a separate directory
 set directory=~/.vim/swap
 
 " Suffixes that get lower priority when doing tab completion for filenames.
@@ -69,24 +75,19 @@ set suffixesadd=.pl,.pm,.yml,.yaml " for `gf' (open file under cursor)
 
 " Complete options (disable preview scratch window)
 set completeopt=menu,menuone,longest
-" Limit popup menu height
-set pumheight=15
+set complete-=i
+set pumheight=15 " Limit popup menu height
 
-set list listchars=tab:>\ ,trail:_,extends:>
+" Visual settings.
 
-set colorcolumn=80,100,120
-
-set viminfo='0,:500,<0,@100,f0
-
-call system("command -v docker-bazel >/dev/null 2>&1")
-if v:shell_error == 0
-    set makeprg=docker-bazel
-else
-    call system("command -v bazel >/dev/null 2>&1")
-    if v:shell_error == 0
-        set makeprg=bazel
-    endif
+if &tabpagemax < 50
+  set tabpagemax=50
 endif
+if !empty(&viminfo)
+  set viminfo^=!
+endif
+set sessionoptions-=options
+set viewoptions-=options
 
 source ~/.vim/plugins.vim
 

@@ -1,21 +1,16 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'altercation/vim-colors-solarized'
-Plug 'ekalinin/Dockerfile.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dense-analysis/ale'
+Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'gcmt/taboo.vim'
 Plug 'hashivim/vim-terraform'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'lifepillar/vim-solarized8'
+Plug 'psf/black'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'sickill/vim-pasta'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-sensible'
 Plug 'vim-airline/vim-airline'
-Plug 'dense-analysis/ale'
-Plug 'psf/black'
-Plug 'towolf/vim-helm'
-
-Plug 'fatih/vim-go', { 'for': 'go' }
 
 call plug#end()
 
