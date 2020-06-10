@@ -7,13 +7,13 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=~/profile/zsh_custom
 ZSH_THEME="iley"
 
-plugins=(ssh-agent docker golang kubectl autojump helm aws fzf nvm)
+plugins=(ssh-agent docker golang kubectl fasd helm aws fzf nvm)
 if [[ $(uname -s) != 'Darwin' ]]; then
   plugins+=(bgnotify)
 fi
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_rsa
+zstyle :omz:plugins:ssh-agent identities id_ed25519
 
 fpath=(~/.zsh/completion $fpath)
 
