@@ -21,11 +21,6 @@ if [[ "$TERM" != 'screen-256color' ]]; then
     export TERM=xterm-256color
 fi
 
-source "$PROFILE/alias.sh"
-if [[ $(uname -s) = 'Darwin' ]]; then
-  source "$PROFILE/osx.sh"
-fi
-
 # load machine-specific settings
 hostname="$(hostname | sed 's/\..*$//')"
 localrc="$PROFILE/local/$hostname"
@@ -34,4 +29,9 @@ if [ -e "$localrc" ]; then
 fi
 if [ -e "$localrc.secret" ]; then
     source "$localrc.secret"
+fi
+
+source "$PROFILE/alias.sh"
+if [[ $(uname -s) = 'Darwin' ]]; then
+  source "$PROFILE/osx.sh"
 fi

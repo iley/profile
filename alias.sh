@@ -1,7 +1,8 @@
-if [[ $(uname -s) = 'Linux' ]]; then
+if ls / --color=auto >/dev/null 2>/dev/null; then
+    # coreutils ls (Linux and MacOS with coreutils installed)
     alias ls='ls --color=auto'
-    alias open='xdg-open'
-elif [[ $(uname -s) = 'Darwin' ]]; then
+else
+    # BSD (plain MacOS)
     alias ls='ls -G'
 fi
 
