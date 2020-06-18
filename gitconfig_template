@@ -4,4 +4,4 @@ name = Ilya Strukov
 email = iley@iley.ru
 
 [include]
-path = ~/.gitconfig_global
+path = ~/profile/gitconfig_global
