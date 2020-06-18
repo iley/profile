@@ -6,7 +6,7 @@ Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'hashivim/vim-terraform'
 Plug 'leafgarland/typescript-vim'
 Plug 'lifepillar/vim-solarized8'
-Plug 'psf/black'
+" Plug 'psf/black'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
