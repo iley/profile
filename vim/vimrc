@@ -13,6 +13,9 @@ if has('python3') && !has('patch-8.1.201')
   silent! python3 1
 endif
 
+" Workaround for webpack auto-reloading issue, see https://webpack.js.org/guides/development/#adjusting-your-text-editor
+set backupcopy=yes
+
 " User commands.
 command! -nargs=0 -bang WSudo :silent! w !sudo tee % &>/dev/null
 command! -nargs=0 Vimrc :tabnew $MYVIMRC
@@ -40,6 +43,7 @@ augroup misc
     au! BufNewFile,BufRead *.go setlocal nolist | setlocal ts=4 | setlocal sw=4
     au! BufNewFile,BufRead *.html setlocal ts=2 | setlocal sw=2
     au! BufNewFile,BufRead go.mod setlocal noexpandtab | setlocal nolist
+    au! BufNewFile,BufRead *.tsx setlocal ts=2 | setlocal sw=2
 augroup end
 
 " Search and replace.
