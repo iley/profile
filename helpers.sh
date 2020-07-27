@@ -106,7 +106,7 @@ kubekick () {
 }
 
 _deployments () {
-    _values deployments $(kubectl get deployments -o name | sed 's/deployment.extensions\///')
+    _values deployments $(kubectl get deployments -o name | sed 's/deployment.(apps|extensions)\///')
 }
 
 kubeshell () {
@@ -126,6 +126,18 @@ _kube_contexts () {
     _values contexts $(kubectl config get-contexts -o name)
 }
 
+kns () {
+    if [[ -z "$1" ]]; then
+        kubectl get namespaces
+    else
+        kubectl config set-context --current --namespace="$1"
+    fi
+}
+
+_kube_namespaces() {
+    _values namespaces $(kubectl get namespaces -o name | sed 's/namespace\///')
+}
+
 _aws_environments () {
     _values aws_environments $(awsp -q)
 }
@@ -136,5 +148,6 @@ if [[ -n "$ZSH_VERSION" ]]; then
   compdef _parent_dirs up
   compdef _deployments kubekick
   compdef _kube_contexts kctx
+  compdef _kube_namespaces kns
   compdef _aws_environments awsp
 fi
