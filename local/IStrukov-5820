@@ -1,9 +1,6 @@
 export PATH=$PATH:/usr/local/go/bin
 source ~/.secrets
 
-alias vim=nvim
-alias vi=nvim
-
 export KOPS_STATE_STORE=s3://argod
 export AWS_SDK_LOAD_CONFIG=1
 
