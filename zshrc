@@ -7,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=~/profile/zsh_custom
 ZSH_THEME="iley"
 
-plugins=(ssh-agent docker golang kubectl helm aws fzf nvm autojump gcloud)
+plugins=(ssh-agent docker golang kubectl helm aws fzf nvm autojump)
 if [[ $(uname -s) != 'Darwin' ]]; then
   plugins+=(bgnotify)
 fi
