@@ -28,3 +28,4 @@ let g:black_virtualenv="~/.vim_black"
 let g:ale_linters = {'go': ['gometalinter', 'gofmt']}
 let g:ale_cpp_clang_options="-std=c++17 -Wall"
 let g:ale_cpp_gcc_options="-std=c++17 -Wall"
+let g:ale_linters = {'go': ['gometalinter', 'gofmt']}
