@@ -21,6 +21,7 @@ let NERDTreeIgnore=['\.o$', '\.pyc$', '\~$']
 
 " vim-go settings
 let g:go_template_autocreate = 0
+let g:go_fmt_command = "goimports"
 
 " autocmd BufWritePre *.py execute ':Black'
 let g:black_virtualenv="~/.vim_black"
