@@ -6,12 +6,15 @@ OHMYZSH=~/.oh-my-zsh
 
 all: links vimstuff ~/.gitconfig
 
-links: $(DST) $(OHMYZSH)
+links: $(DST) $(OHMYZSH) ~/.config/i3
 
 $(OHMYZSH):
 	git clone https://github.com/robbyrussell/oh-my-zsh.git $@
 
 $(DST): $(HOME)/.%: %
+	ln -sf $(abspath $<) $@
+
+~/.config/i3: i3
 	ln -sf $(abspath $<) $@
 
 ~/.gitconfig:
