@@ -7,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=~/profile/zsh_custom
 ZSH_THEME="iley"
 
-plugins=(ssh-agent docker kubectl autojump)
+plugins=(ssh-agent docker kubectl)
 if [[ $(uname -s) != 'Darwin' ]]; then
   plugins+=(bgnotify)
 fi
@@ -48,6 +48,11 @@ export FZF_DEFAULT_COMMAND="ag -l --nocolor"
 export FZF_CTRL_T_COMMAND="ag -l --nocolor"
 
 unalias '...'
+
+autojump_file=$(brew --prefix)/etc/profile.d/autojump.sh
+if [[ -e "$autojump_file" ]]; then
+    source "$autojump_file"
+fi
 
 source ~/profile/helpers.sh
 export PATH="/usr/local/opt/libpq/bin:$PATH"
