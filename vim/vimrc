@@ -51,6 +51,7 @@ set ignorecase
 set smartcase
 set hlsearch
 set incsearch
+set magic
 
 " Misc. settings.
 set foldlevelstart=20
