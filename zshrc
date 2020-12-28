@@ -37,7 +37,4 @@ setopt complete_aliases
 unalias '...' # It clashes with bazel syntax.
 
 source $HOME/profile/common.sh
-
-source ~/profile/helpers.sh
-export PATH="/usr/local/opt/libpq/bin:$PATH"
-export PATH="/usr/local/opt/libpq/bin:$PATH"
+source $HOME/profile/helpers.sh
