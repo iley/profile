@@ -3,8 +3,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dense-analysis/ale'
 Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'hashivim/vim-terraform' { 'for': 'terraform' }
-Plug 'leafgarland/typescript-vim' { 'for': 'typescript' }
+Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'lifepillar/vim-solarized8'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
