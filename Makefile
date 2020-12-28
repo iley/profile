@@ -4,7 +4,7 @@ OHMYZSH=~/.oh-my-zsh
 
 .PHONY: all links vimstuff
 
-all: links vimstuff ~/.gitconfig
+all: links vimstuff ~/.localrc ~/.gitconfig
 
 links: $(DST) $(OHMYZSH) ~/.config/i3
 
@@ -19,6 +19,10 @@ $(DST): $(HOME)/.%: %
 
 ~/.gitconfig:
 	cp gitconfig_template ~/.gitconfig
+
+~/.localrc:
+	ln -s $(HOME)/profile/local/$(shell hostname|cut -d. -f1) $(HOME)/.localrc
+
 
 vimstuff:
 	make -C vim
