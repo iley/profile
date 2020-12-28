@@ -5,14 +5,6 @@ syntax enable
 set backspace=indent,eol,start
 set encoding=utf-8
 
-" Workaround for fish shell.
-set shell=/bin/bash
-
-" Workaround for deprecation warning in python
-if has('python3') && !has('patch-8.1.201')
-  silent! python3 1
-endif
-
 " Workaround for webpack auto-reloading issue, see https://webpack.js.org/guides/development/#adjusting-your-text-editor
 set backupcopy=yes
 
@@ -46,7 +38,7 @@ augroup misc
     au! BufNewFile,BufRead *.tsx setlocal ts=2 | setlocal sw=2
 augroup end
 
-" Search and replace.
+" Search and replace settings.
 set ignorecase
 set smartcase
 set hlsearch
@@ -58,7 +50,7 @@ set foldlevelstart=20
 set history=1000
 set autoread " Autoreload changed files.
 set whichwrap=h,l,<,>,[,] " move to next line at beginning/line of the current
-" turn off speaker
+" Turn off the sounds.
 set vb t_vb="
 set hidden
 set wildignore+=*.o,*.bak,*.pyc,*.jpg,*.png,*/.git/*,*/.hg/*,*/.svn/*
@@ -95,9 +87,7 @@ set sessionoptions-=options
 set viewoptions-=options
 
 source ~/.vim/plugins.vim
-
 source ~/.vim/backup.vim
-source ~/.vim/ftdetect.vim
 source ~/.vim/keymap.vim
 source ~/.vim/appearance.vim
 

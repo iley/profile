@@ -3,8 +3,8 @@ function _prompt_char {
 }
 
 function _prompt_user {
-  local user=`whoami`
-  if [[ "$user" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+  local user=$(whoami)
+  if [[ ! ("$user" =~ 'ilya|iley|istrukov') || -n "$SSH_CLIENT" ]]; then
       echo "$user@"
   fi
 }

@@ -1,10 +1,12 @@
+# Settings that are common for zsh and bash.
+
 PROFILE=$HOME/profile
 
 export EDITOR=vim
 export PAGER=less
 export LESS="-iMSx4 -FXR"
 export ANSIBLE_NOCOWS=1
-export PYSPARK_PYTHON=python3
+export HOMEBREW_NO_ANALYTICS=1
 
 for extra_path in "$HOME/bin" "$HOME/.local/bin" "$HOME/.npm-packages/bin" "$HOME/go/bin" "$HOME/.local/bin"; do
     if [[ -e "$extra_path" ]]; then
@@ -12,26 +14,29 @@ for extra_path in "$HOME/bin" "$HOME/.local/bin" "$HOME/.npm-packages/bin" "$HOM
     fi
 done
 
-if [ -d "$HOME/go" ]; then
+if [[ -d "$HOME/go" ]]; then
     export GOPATH="$HOME/go"
 fi
 
-# set $TERM to make tmux work properly
+# Set $TERM to make tmux work properly.
 if [[ "$TERM" != 'screen-256color' ]]; then
     export TERM=xterm-256color
 fi
 
-# load machine-specific settings
-hostname="$(hostname | sed 's/\..*$//')"
-localrc="$PROFILE/local/$hostname"
-if [ -e "$localrc" ]; then
-    source "$localrc"
+# Load machine-specific settings.
+if [ -e "$HOME/.localrc" ]; then
+    source "$HOME/.localrc"
 fi
 if [ -e "$localrc.secret" ]; then
     source "$localrc.secret"
 fi
 
-source "$PROFILE/alias.sh"
-if [[ $(uname -s) = 'Darwin' ]]; then
-  source "$PROFILE/osx.sh"
+export FZF_DEFAULT_COMMAND="ag -l --nocolor"
+export FZF_CTRL_T_COMMAND="ag -l --nocolor"
+
+autojump_file=$(brew --prefix)/etc/profile.d/autojump.sh
+if [[ -e "$autojump_file" ]]; then
+    source "$autojump_file"
 fi
+
+source "$PROFILE/alias.sh"
