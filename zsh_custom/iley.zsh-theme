@@ -10,11 +10,13 @@ function _prompt_user {
 }
 
 function _prompt_host {
-  local host=`hostname`
-  if [[ "$host" =~ '^([^\.]+)\..+' ]]; then
-    echo $match[1]
-  else
-    echo $host
+  if [[ -n "$SSH_CLIENT" ]]; then
+    local host=`hostname`
+    if [[ "$host" =~ '^([^\.]+)\..+' ]]; then
+        echo $match[1]
+    else
+        echo $host
+    fi
   fi
 }
 
