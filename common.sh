@@ -34,9 +34,4 @@ fi
 export FZF_DEFAULT_COMMAND="ag -l --nocolor"
 export FZF_CTRL_T_COMMAND="ag -l --nocolor"
 
-autojump_file=$(brew --prefix)/etc/profile.d/autojump.sh
-if [[ -e "$autojump_file" ]]; then
-    source "$autojump_file"
-fi
-
 source "$PROFILE/alias.sh"

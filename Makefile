@@ -1,4 +1,4 @@
-SRC=bashrc gitconfig_global gitignore_global tmux.conf zshrc gdbinit zprofile
+SRC=bashrc gitconfig_global gitignore_global tmux.conf zshrc gdbinit
 DST=$(addprefix $(HOME)/.,$(SRC))
 OHMYZSH=~/.oh-my-zsh
 
