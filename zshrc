@@ -1,6 +1,8 @@
 # Uncomment for profiling
 # zmodload zsh/zprof
 
+source $HOME/profile/common.sh
+
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=~/profile/zsh_custom
 ZSH_THEME="iley"
@@ -35,6 +37,4 @@ fi
 setopt complete_aliases
 
 unalias '...' # It clashes with bazel syntax.
-
-source $HOME/profile/common.sh
 source $HOME/profile/helpers.sh
