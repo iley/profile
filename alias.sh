@@ -26,3 +26,10 @@ alias tf=terraform
 alias tfa='terraform apply'
 alias tfp='terraform plan'
 alias tfi='terraform init'
+
+alias ga='git add'
+alias gc='git commit'
+alias gca='git commit --amend'
+alias gst='git status'
+alias gps='git push'
+alias gpl='git pull --ff-only'
