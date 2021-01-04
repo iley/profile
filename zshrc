@@ -50,3 +50,5 @@ export FZF_CTRL_T_COMMAND="ag -l --nocolor"
 unalias '...'
 
 source ~/profile/helpers.sh
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="/usr/local/opt/libpq/bin:$PATH"
