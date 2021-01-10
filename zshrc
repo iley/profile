@@ -36,5 +36,5 @@ if command -v kubectl 2>&1 >/dev/null; then
 fi
 setopt complete_aliases
 
-unalias '...' # It clashes with bazel syntax.
+source $HOME/profile/alias.sh
 source $HOME/profile/helpers.sh

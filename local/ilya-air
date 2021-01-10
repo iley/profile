@@ -1,5 +1,6 @@
 export LC_ALL=en_US.UTF-8
-export PATH="$HOME/Toolchains/msp430-gcc/bin:$HOME/Toolchains/z88dk/bin:/opt/homebrew/opt/coreutils/libexec/gnubin:/opt/homebrew/bin:$PATH"
+eval $(/opt/homebrew/bin/brew shellenv)
+export PATH="$HOME/Toolchains/msp430-gcc/bin:$HOME/Toolchains/z88dk/bin:/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 export ZCCCFG="$HOME/z88dk/lib/config"
 
 autojump_file=$(brew --prefix)/etc/profile.d/autojump.sh

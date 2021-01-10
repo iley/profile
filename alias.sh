@@ -33,3 +33,5 @@ alias gca='git commit --amend'
 alias gst='git status'
 alias gps='git push'
 alias gpl='git pull --ff-only'
+
+unalias '...' # It clashes with bazel syntax.

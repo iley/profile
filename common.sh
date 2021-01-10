@@ -1,6 +1,9 @@
 # Settings that are common for zsh and bash.
 
-PROFILE=$HOME/profile
+# Load machine-specific settings.
+if [ -e "$HOME/.localrc" ]; then
+    source "$HOME/.localrc"
+fi
 
 export EDITOR=vim
 export PAGER=less
@@ -23,15 +26,5 @@ if [[ "$TERM" != 'screen-256color' ]]; then
     export TERM=xterm-256color
 fi
 
-# Load machine-specific settings.
-if [ -e "$HOME/.localrc" ]; then
-    source "$HOME/.localrc"
-fi
-if [ -e "$localrc.secret" ]; then
-    source "$localrc.secret"
-fi
-
 export FZF_DEFAULT_COMMAND="ag -l --nocolor"
 export FZF_CTRL_T_COMMAND="ag -l --nocolor"
-
-source "$PROFILE/alias.sh"
