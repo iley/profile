@@ -14,7 +14,8 @@ $(OHMYZSH):
 $(DST): $(HOME)/.%: %
 	ln -sf $(abspath $<) $@
 
-~/.config/i3: i3
+~/.config/i3: ~/.config i3
+	mkdir -p ~/.config
 	ln -sf $(abspath $<) $@
 
 ~/.gitconfig:
