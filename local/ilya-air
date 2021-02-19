@@ -1,9 +1,12 @@
 export LC_ALL=en_US.UTF-8
 eval $(/opt/homebrew/bin/brew shellenv)
-export PATH="$HOME/Toolchains/msp430-gcc/bin:$HOME/Toolchains/z88dk/bin:/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-export ZCCCFG="$HOME/z88dk/lib/config"
+
+export ZCCCFG="$HOME/Toolchains/z88dk/lib/config"
+export PICO_SDK_PATH="$HOME/Toolchains/pico-sdk"
 
 autojump_file=$(brew --prefix)/etc/profile.d/autojump.sh
 if [[ -e "$autojump_file" ]]; then
     source "$autojump_file"
 fi
+
+export PATH="/opt/homebrew/opt/qt/bin:$HOME/Toolchains/msp430-gcc/bin:$HOME/Toolchains/z88dk/bin:/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
