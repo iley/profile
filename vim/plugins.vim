@@ -10,7 +10,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-" Plug 'psf/black' { 'for': 'python' }
+Plug 'psf/black', { 'for': 'python' }
 
 call plug#end()
 
