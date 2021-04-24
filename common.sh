@@ -5,7 +5,7 @@ if [ -e "$HOME/.localrc" ]; then
     source "$HOME/.localrc"
 fi
 
-export EDITOR=vim
+export EDITOR=nvim
 export PAGER=less
 export LESS="-iMSx4 -FXR"
 export ANSIBLE_NOCOWS=1

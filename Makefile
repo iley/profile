@@ -1,21 +1,25 @@
-SRC=bashrc gitconfig_global gitignore_global tmux.conf zshrc gdbinit
-DST=$(addprefix $(HOME)/.,$(SRC))
+HOME_SRC=bashrc gitconfig_global gitignore_global tmux.conf zshrc gdbinit
+HOME_DST=$(addprefix $(HOME)/.,$(HOME_SRC))
+
+CONFIG_SRC=i3 nvim
+CONFIG_DST=$(addprefix $(HOME)/.config/,$(CONFIG_SRC))
+
 OHMYZSH=~/.oh-my-zsh
 
-.PHONY: all links vimstuff
+.PHONY: all links vim
 
-all: links vimstuff ~/.localrc ~/.gitconfig
+all: links vim ~/.localrc ~/.gitconfig
 
-links: $(DST) $(OHMYZSH) ~/.config/i3
+links: $(HOME_DST) $(CONFIG_DST) $(OHMYZSH)
 
 $(OHMYZSH):
 	git clone https://github.com/robbyrussell/oh-my-zsh.git $@
 
-$(DST): $(HOME)/.%: %
+$(HOME_DST): $(HOME)/.%: %
 	ln -sf $(abspath $<) $@
 
-~/.config/i3: ~/.config i3
-	mkdir -p ~/.config
+$(CONFIG_DST): $(HOME)/.config/%: %
+	mkdir -p $(HOME)/.config
 	ln -sf $(abspath $<) $@
 
 ~/.gitconfig:
@@ -24,6 +28,5 @@ $(DST): $(HOME)/.%: %
 ~/.localrc:
 	ln -s $(HOME)/profile/local/$(shell hostname|cut -d. -f1) $(HOME)/.localrc
 
-
-vimstuff:
+vim:
 	make -C vim

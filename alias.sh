@@ -10,8 +10,9 @@ if command -v ack-grep >/dev/null 2>&1; then
     alias ack='ack-grep'
 fi
 
-alias vi='vim'
-alias e='vim'
+alias vim='nvim'
+alias vi='nvim'
+alias e='nvim'
 
 alias xc='xclip -i -selection clipboard'
 alias xp='xclip -o -selection clipboard'
