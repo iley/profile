@@ -33,8 +33,10 @@ noremap ; :
 " Plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'fatih/vim-go', { 'for': 'go' }
+"Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'lifepillar/vim-solarized8'
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
 Plug 'psf/black', { 'for': 'python' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
@@ -58,8 +60,28 @@ let NERDTreeIgnore=['\.o$', '\.pyc$', '\~$']
 let g:go_template_autocreate = 0
 let g:go_fmt_command = "goimports"
 
-" Telescope settings
+" Telescope key bindings
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Go language server
+lua require('lspconfig').gopls.setup{on_attach=require'completion'.on_attach}
+
+" LSP key bindings
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gh     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+
+" Completion settings
+set completeopt=menuone,noinsert,noselect
+
+" Use Tab/S-Tab for navigating in popup menu
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
