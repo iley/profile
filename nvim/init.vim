@@ -33,11 +33,16 @@ noremap ; :
 " Plugins
 call plug#begin('~/.vim/plugged')
 
-"Plug 'fatih/vim-go', { 'for': 'go' }
+" nvim-go deps
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-lua/popup.nvim'
+" nvim-go
+Plug 'crispgm/nvim-go'
+
 Plug 'lifepillar/vim-solarized8'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-Plug 'psf/black', { 'for': 'python' }
+Plug 'a-vrma/black-nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -56,9 +61,8 @@ endif
 " NERDTree settings
 let NERDTreeIgnore=['\.o$', '\.pyc$', '\~$']
 
-" vim-go settings
-let g:go_template_autocreate = 0
-let g:go_fmt_command = "goimports"
+set pastetoggle=<F2>
+noremap <F4> :NERDTreeToggle<CR>
 
 " Telescope key bindings
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
@@ -66,8 +70,8 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-" Go language server
-lua require('lspconfig').gopls.setup{on_attach=require'completion'.on_attach}
+" Language Servers
+lua require('languages')
 
 " LSP key bindings
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
@@ -85,3 +89,9 @@ set completeopt=menuone,noinsert,noselect
 " Use Tab/S-Tab for navigating in popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Escape in terminal mode
+:tnoremap <Esc> <C-\><C-n>
+
+" Python Black
+command Black :call Black()<cr>

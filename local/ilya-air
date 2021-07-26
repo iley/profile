@@ -9,4 +9,6 @@ if [[ -e "$autojump_file" ]]; then
     source "$autojump_file"
 fi
 
-export PATH="/opt/homebrew/opt/openjdk/bin:/opt/homebrew/opt/qt/bin:/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+export JAVA_HOME=/opt/homebrew/opt/openjdk
+
+export PATH="/opt/homebrew/opt/llvm/bin:$JAVA_HOME/bin:/opt/homebrew/opt/qt/bin:/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
