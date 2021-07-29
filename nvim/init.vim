@@ -95,3 +95,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Python Black
 command Black :call Black()<cr>
+
+" Backup settings
+set backup
+set backupcopy=yes
+set backupdir=~/.config/nvim/backup//
+set directory=~/.config/nvim/swap//
