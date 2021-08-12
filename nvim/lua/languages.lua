@@ -3,10 +3,14 @@ require('go').setup{} -- setup nvim-go
 local lspconfig = require('lspconfig')
 local completion = require('completion')
 
-lspconfig.gopls.setup{on_attach=completion.on_attach}    -- Go
-lspconfig.tsserver.setup{on_attach=completion.on_attach} -- TypeScript
-lspconfig.pyright.setup{on_attach=completion.on_attach}  -- Python
-lspconfig.clangd.setup{on_attach=completion.on_attach}   -- C & C++
+lspconfig.gopls.setup{on_attach=completion.on_attach}      -- Go
+lspconfig.tsserver.setup{on_attach=completion.on_attach}   -- TypeScript
+lspconfig.pyright.setup{on_attach=completion.on_attach}    -- Python
+lspconfig.clangd.setup{on_attach=completion.on_attach}     -- C & C++
+
+-- Ruby
+-- Install Solargraph with gem install --user-install solargraph
+lspconfig.solargraph.setup{on_attach=completion.on_attach}
 
 -- To use the Java language server
 -- 1. Download JDT LS at https://github.com/eclipse/eclipse.jdt.ls
