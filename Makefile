@@ -6,9 +6,9 @@ CONFIG_DST=$(addprefix $(HOME)/.config/,$(CONFIG_SRC))
 
 OHMYZSH=~/.oh-my-zsh
 
-.PHONY: all links vim
+.PHONY: all links
 
-all: links vim ~/.localrc ~/.gitconfig
+all: links ~/.localrc ~/.gitconfig
 
 links: $(HOME_DST) $(CONFIG_DST) $(OHMYZSH)
 
@@ -27,6 +27,3 @@ $(CONFIG_DST): $(HOME)/.config/%: %
 
 ~/.localrc:
 	ln -s $(HOME)/profile/local/$(shell hostname|cut -d. -f1) $(HOME)/.localrc
-
-vim:
-	make -C vim

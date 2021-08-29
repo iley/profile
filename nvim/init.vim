@@ -101,3 +101,6 @@ set backup
 set backupcopy=yes
 set backupdir=~/.config/nvim/backup//
 set directory=~/.config/nvim/swap//
+
+" Highlight trailing spaces.
+set list listchars=trail:_,extends:>
