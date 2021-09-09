@@ -31,6 +31,13 @@ bindkey '^Xe' edit-command-line
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 if command -v kubectl 2>&1 >/dev/null; then
     compdef k=kubectl
 fi
