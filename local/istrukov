@@ -1,2 +1,0 @@
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/libpq/bin:$PATH"
-source ~/.secrets
