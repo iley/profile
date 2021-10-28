@@ -13,6 +13,7 @@ fi
 alias vim='nvim'
 alias vi='nvim'
 alias e='nvim'
+alias vimdiff='nvim -d'
 
 alias xc='xclip -i -selection clipboard'
 alias xp='xclip -o -selection clipboard'
