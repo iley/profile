@@ -58,6 +58,11 @@ if has#colorscheme('solarized8')
     colorscheme solarized8
 endif
 
+augroup custom_ft
+    au!
+    autocmd BufNewFile,BufRead *.sky set syntax=python
+augroup END
+
 " NERDTree settings
 let NERDTreeIgnore=['\.o$', '\.pyc$', '\~$']
 
@@ -101,6 +106,10 @@ set backup
 set backupcopy=yes
 set backupdir=~/.config/nvim/backup//
 set directory=~/.config/nvim/swap//
+
+" Undo settings
+set undofile
+set undodir=~/.config/nvim/undo//
 
 " Highlight trailing spaces.
 "set list listchars=trail:_,extends:>
