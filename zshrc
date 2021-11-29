@@ -7,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=~/profile/zsh_custom
 ZSH_THEME="iley"
 
-plugins=(ssh-agent docker kubectl autojump nvm asdf)
+plugins=(ssh-agent docker kubectl autojump nvm asdf sdk)
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent identities id_ed25519
