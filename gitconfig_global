@@ -9,6 +9,7 @@ lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s
 purr = pull --rebase
 puff = pull --ff-only
 please = push --force-with-lease
+canoe = commit --amend --no-edit
 
 [color]
 diff = auto
