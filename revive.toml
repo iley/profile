@@ -1,0 +1,3 @@
+[rule.exported]
+    # Disable the annoying "exported X should have comment or be unexported" warning
+    Disabled = true
