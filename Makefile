@@ -3,7 +3,7 @@ HOME_DST=$(addprefix $(HOME)/.,$(HOME_SRC))
 NODOT_SRC=revive.toml
 NODOT_DST=$(addprefix $(HOME)/,$(NODOT_SRC))
 
-CONFIG_SRC=i3 nvim
+CONFIG_SRC=i3 i3status nvim
 CONFIG_DST=$(addprefix $(HOME)/.config/,$(CONFIG_SRC))
 
 OHMYZSH=~/.oh-my-zsh
@@ -31,4 +31,4 @@ $(CONFIG_DST): $(HOME)/.config/%: %
 	cp gitconfig_template ~/.gitconfig
 
 ~/.localrc:
-	ln -s $(HOME)/profile/local/$(shell hostname|cut -d. -f1) $(HOME)/.localrc
+	ln -sf $(HOME)/profile/local/$(shell hostname|cut -d. -f1) $(HOME)/.localrc
