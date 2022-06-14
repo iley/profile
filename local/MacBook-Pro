@@ -1,0 +1,6 @@
+function openpr () {
+    GIT_URL=`git remote -v | awk '/fetch/{print $2}' | sed -Ee 's#(git@|git://)#https://#' -e 's@com:@com/@' -e 's%\.git$%%'`
+    BRANCH=`git symbolic-ref HEAD | cut -d"/" -f 3-`
+    URL="https://"$GIT_URL"/pull/"${BRANCH}
+    open ${URL}
+}
