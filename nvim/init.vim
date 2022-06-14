@@ -43,9 +43,15 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
 Plug 'a-vrma/black-nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/nerdcommenter'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
+Plug 'hashivim/vim-terraform'
+Plug 'ngmy/vim-rubocop'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'tpope/vim-surround'
+Plug 'morhetz/gruvbox'
 
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -53,9 +59,17 @@ Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
-if has#colorscheme('solarized8')
+if (has("termguicolors"))
+    set termguicolors
+endif
+
+if has#colorscheme('gruvbox')
+    colorscheme gruvbox
+elseif has#colorscheme('solarized8')
     set background=dark
     colorscheme solarized8
+else
+   colors pablo
 endif
 
 augroup custom_ft
@@ -67,7 +81,10 @@ augroup END
 let NERDTreeIgnore=['\.o$', '\.pyc$', '\~$']
 
 set pastetoggle=<F2>
-noremap <F4> :NERDTreeToggle<CR>
+noremap <F4> :NERDTreeToggle<cr>
+noremap <leader>tt <cmd>NERDTreeToggle<cr>
+noremap <leader>tc <cmd>NERDTreeCWD<cr>
+noremap <leader>tf <cmd>NERDTreeFocus<cr>
 
 " Telescope key bindings
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
