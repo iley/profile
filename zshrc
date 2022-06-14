@@ -2,19 +2,20 @@
 # zmodload zsh/zprof
 
 source $HOME/profile/common.sh
+source $HOME/.bash_profile
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=~/profile/zsh_custom
 ZSH_THEME="iley"
 
-plugins=(ssh-agent docker kubectl autojump nvm asdf sdk fzf)
+plugins=(ssh-agent docker kubectl autojump nvm asdf fzf)
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-zstyle :omz:plugins:ssh-agent identities id_ed25519
 
 fpath=(~/.zsh/completion $fpath)
 
 DISABLE_AUTO_UPDATE=true
+DISABLE_UNTRACKED_FILES_DIRTY=true
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,6 +43,8 @@ if command -v kubectl 2>&1 >/dev/null; then
     compdef k=kubectl
 fi
 setopt complete_aliases
+
+compdef _git stripe-git=git
 
 source $HOME/profile/alias.sh
 source $HOME/profile/helpers.sh
