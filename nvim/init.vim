@@ -39,19 +39,21 @@ Plug 'nvim-lua/popup.nvim'
 " nvim-go
 Plug 'crispgm/nvim-go'
 
-Plug 'lifepillar/vim-solarized8'
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
 Plug 'a-vrma/black-nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'preservim/nerdcommenter'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
 Plug 'hashivim/vim-terraform'
+Plug 'neovim/nvim-lspconfig'
 Plug 'ngmy/vim-rubocop'
+Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+
+" Colors
 Plug 'morhetz/gruvbox'
+" Plug 'lifepillar/vim-solarized8'
 
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -76,6 +78,9 @@ augroup custom_ft
     au!
     autocmd BufNewFile,BufRead *.sky set syntax=python
 augroup END
+
+" Airline settings
+let g:airline_powerline_fonts = 1
 
 " NERDTree settings
 let NERDTreeIgnore=['\.o$', '\.pyc$', '\~$']
