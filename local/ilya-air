@@ -10,3 +10,5 @@ if [[ -e "$autojump_file" ]]; then
 fi
 
 export PATH="/opt/homebrew/opt/llvm/bin:/opt/homebrew/opt/qt/bin:/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+
+export PICO_SDK_PATH="/Users/ilya/sdk/pico"
