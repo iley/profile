@@ -1,7 +1,7 @@
 # vim: ft=gitconfig
 [user]
 name = Ilya Strukov
-email = iley@iley.ru
+email = ilya@istrukov.com
 
 [include]
 path = ~/profile/gitconfig_global
