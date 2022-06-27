@@ -50,6 +50,7 @@ Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-obsession'
 
 " Colors
 Plug 'morhetz/gruvbox'
