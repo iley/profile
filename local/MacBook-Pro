@@ -4,3 +4,5 @@ function openpr () {
     URL="https://"$GIT_URL"/pull/"${BRANCH}
     open ${URL}
 }
+
+eval "$(nodenv init -)"
