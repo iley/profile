@@ -6,7 +6,8 @@ source $HOME/.bash_profile
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=~/profile/zsh_custom
-ZSH_THEME="iley"
+# ZSH_THEME="iley"
+ZSH_THEME="" # Disabled for pure.
 
 plugins=(ssh-agent docker kubectl autojump nvm asdf fzf)
 
@@ -15,9 +16,14 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 fpath=(~/.zsh/completion $fpath)
 
 DISABLE_AUTO_UPDATE=true
-DISABLE_UNTRACKED_FILES_DIRTY=true
+# DISABLE_UNTRACKED_FILES_DIRTY=true
 
 source $ZSH/oh-my-zsh.sh
+
+# pure shell prompt (https://github.com/sindresorhus/pure)
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+autoload -U promptinit; promptinit
+prompt pure
 
 setopt hist_ignore_dups share_history inc_append_history extended_history no_beep
 unsetopt autopushd autonamedirs correct_all
