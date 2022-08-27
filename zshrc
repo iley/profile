@@ -9,7 +9,7 @@ ZSH_CUSTOM=~/profile/zsh_custom
 # ZSH_THEME="iley"
 ZSH_THEME="" # Disabled for pure.
 
-plugins=(ssh-agent docker kubectl autojump nvm asdf fzf)
+plugins=(ssh-agent docker kubectl autojump nvm asdf fzf sdk)
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 

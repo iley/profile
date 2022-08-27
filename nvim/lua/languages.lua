@@ -2,6 +2,7 @@ require('go').setup{} -- setup nvim-go
 
 local lspconfig = require('lspconfig')
 local completion = require('completion')
+local nullls = require('null-ls')
 
 require('go').setup({
     auto_format = true,
@@ -33,8 +34,10 @@ require('go').setup({
     quick_type_flags = {'--just-types'},
 })
 
--- lspconfig.clangd.setup{on_attach=completion.on_attach}        -- C & C++
+lspconfig.clangd.setup{on_attach=completion.on_attach}        -- C & C++
 lspconfig.gopls.setup{on_attach=completion.on_attach}         -- Go
 lspconfig.pyright.setup{on_attach=completion.on_attach}       -- Python
 lspconfig.rust_analyzer.setup{on_attach=completion.on_attach} -- Rust
 lspconfig.tsserver.setup{on_attach=completion.on_attach}      -- TypeScript
+
+nullls.setup({ sources = { nullls.builtins.diagnostics.vale } })

@@ -21,6 +21,9 @@ set hlsearch
 set incsearch
 set magic
 
+" C autoindent options
+set cinoptions=l1 " switch case indents
+
 if maparg('<C-L>', 'n') ==# ''
 nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 endif
@@ -41,6 +44,7 @@ Plug 'crispgm/nvim-go'
 
 Plug 'a-vrma/black-nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'hashivim/vim-terraform'
+Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'ngmy/vim-rubocop'
 Plug 'nvim-lua/completion-nvim'
@@ -51,6 +55,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-obsession'
+Plug 'vim-scripts/a.vim'
 
 " Colors
 Plug 'morhetz/gruvbox'
@@ -97,6 +102,9 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" a.vim
+nnoremap <leader>a <cmd>A<cr>
 
 " Language Servers
 lua require('languages')
