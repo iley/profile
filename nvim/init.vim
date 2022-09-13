@@ -60,6 +60,8 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+Plug 'nathanmsmith/livegrep.nvim'
+
 call plug#end()
 
 if (has("termguicolors"))
@@ -92,14 +94,17 @@ noremap <leader>tt <cmd>NERDTreeToggle<cr>
 noremap <leader>tc <cmd>NERDTreeCWD<cr>
 noremap <leader>tf <cmd>NERDTreeFocus<cr>
 
-" Telescope key bindings
+" Telescope key bindings.
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
-" Language Servers
+" Language servers.
 lua require('languages')
+
+" Livegrep settings.
+lua require('livegrep')
 
 " LSP key bindings
 nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
