@@ -1,0 +1,17 @@
+set ignorecase
+set hlsearch
+
+map <C-l> :noh<CR>
+map ; :
+
+nnoremap <leader>e :e ~/.ideavimrc<CR>
+nnoremap <leader>r :action IdeaVim.ReloadVimRc.reload<CR>
+nnoremap <leader>s :action Blaze.PartialSync<cr>
+
+" Debugging shortcuts
+nnoremap ,r :action ContextRun<CR>
+nnoremap ,d :action ContextDebug<CR>
+nnoremap ,c :action RunClass<CR>
+nnoremap ,b :action ToggleLineBreakpoint<CR>
+nnoremap ,s :action StepInto<CR>
+nnoremap ,n :action StepOver<CR>
