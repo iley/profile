@@ -1,4 +1,4 @@
-HOME_SRC=bashrc gitconfig_global gitignore_global tmux.conf zshrc gdbinit
+HOME_SRC=bashrc gitconfig_global gitignore_global tmux.conf zshrc gdbinit ideavimrc
 HOME_DST=$(addprefix $(HOME)/.,$(HOME_SRC))
 NODOT_SRC=revive.toml
 NODOT_DST=$(addprefix $(HOME)/,$(NODOT_SRC))
