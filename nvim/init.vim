@@ -42,12 +42,21 @@ Plug 'nvim-lua/popup.nvim'
 " nvim-go
 Plug 'crispgm/nvim-go'
 
-Plug 'a-vrma/black-nvim', {'do': ':UpdateRemotePlugins'}
+" LSP and completion
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+" Snippets
+Plug 'dcampos/nvim-snippy'
+Plug 'dcampos/cmp-snippy'
+
 Plug 'hashivim/vim-terraform'
 Plug 'jose-elias-alvarez/null-ls.nvim'
-Plug 'neovim/nvim-lspconfig'
 Plug 'ngmy/vim-rubocop'
-Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'preservim/nerdcommenter'
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -106,7 +115,7 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " a.vim
 nnoremap <leader>a <cmd>A<cr>
 
-" Language Servers
+" Language Servers & completion
 lua require('languages')
 
 " LSP key bindings
@@ -120,7 +129,7 @@ nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 
 " Completion settings
-set completeopt=menuone,noinsert,noselect
+set completeopt=menu,menuone,noselect
 
 " Use Tab/S-Tab for navigating in popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
