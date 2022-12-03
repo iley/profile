@@ -2,7 +2,6 @@ export LC_ALL=en_US.UTF-8
 eval $(/opt/homebrew/bin/brew shellenv)
 
 export ZCCCFG="$HOME/Toolchains/z88dk/lib/config"
-export PICO_SDK_PATH="$HOME/Toolchains/pico-sdk"
 
 autojump_file=$(brew --prefix)/etc/profile.d/autojump.sh
 if [[ -e "$autojump_file" ]]; then
@@ -11,4 +10,4 @@ fi
 
 export PATH="/opt/homebrew/opt/llvm/bin:/opt/homebrew/opt/qt/bin:/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
 
-export PICO_SDK_PATH="/Users/ilya/sdk/pico"
+export PICO_SDK_PATH="$HOME/pico/pico-sdk"
