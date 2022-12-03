@@ -91,5 +91,6 @@ lspconfig.gopls.setup{capabilities=capabilities}
 lspconfig.pyright.setup{capabilities=capabilities}
 lspconfig.rust_analyzer.setup{capabilities=capabilities}
 lspconfig.tsserver.setup{capabilities=capabilities}
+lspconfig.clojure_lsp.setup{capabilities=capabilities}
 
 nullls.setup({ sources = { nullls.builtins.diagnostics.vale } })
