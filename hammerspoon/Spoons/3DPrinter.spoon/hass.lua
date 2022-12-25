@@ -1,6 +1,6 @@
 local module = {}
 
-function module.new(baseUrl, apiToken, entityId)
+function module.new(baseUrl, apiToken)
   local obj = {}
 
   local function httpPost(path, data)
@@ -13,7 +13,7 @@ function module.new(baseUrl, apiToken, entityId)
     return hs.http.post(url, dataStr, headers)
   end
 
-  function obj:turnOn()
+  function obj:turnOn(entityId)
     local data = { ["entity_id"] = entityId }
     local path = "/api/services/switch/turn_on"
     local code, body, headers = httpPost(path, data)
@@ -24,7 +24,7 @@ function module.new(baseUrl, apiToken, entityId)
     return true
   end
 
-  function obj:turnOff()
+  function obj:turnOff(entityId)
     local data = { ["entity_id"] = entityId }
     local path = "/api/services/switch/turn_off"
     local code, body, headers = httpPost(path, data)

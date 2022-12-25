@@ -26,6 +26,7 @@ local state = {
   config = nil,
   octoprint = nil,
   hass = nil,
+  switchEntityId = nil,
 }
 
 local function handleConnect()
@@ -42,7 +43,7 @@ local function handleConnect()
     end
   end
 
-  local hassSuccess = state.hass.turnOn()
+  local hassSuccess = state.hass:turnOn(state.switchEntityId)
   if not hassSuccess then
     hs.notify.new({title="3D Printer Error", informativeText="Home Assistant turn on attempt failed"}):send()
     state.connectionStatus = CONN_DISCONNECTED
@@ -62,7 +63,7 @@ local function handleDisconnect()
     hs.notify.new({title="3D Printer Error", informativeText="Octoprint connection attempt failed"}):send()
   end
 
-  local hassSuccess = state.hass.turnOff()
+  local hassSuccess = state.hass:turnOff(state.switchEntityId)
   if not hassSuccess then
     hs.notify.new({title="3D Printer Error", informativeText="Home Assistant turn off attempt failed"}):send()
   end
@@ -106,15 +107,17 @@ end
 function spoon:init()
   local menuBar = hs.menubar.new():setIcon(icons.nozzle):setMenu(getMenuItems)
 
-  state.config = config:load()
-  if state.config == nil then
+  local settings = config:load()
+  if settings == nil then
     hs.notify.new({title="Config error", informativeText="Could not load config for the 3D Printer Spoon"}):send()
   end
 
-  state.octoprint = octoprint.new(state.config.octoprint_url, state.config.octoprint_api_key)
-  state.hass = hass.new(state.config.hass_url, state.config.hass_access_token, state.config.hass_switch_entity_id)
+  state.octoprint = octoprint.new(settings.octoprint_url, settings.octoprint_api_key)
+  state.hass = hass.new(settings.hass_url, settings.hass_access_token)
+  state.switchEntityId = settings.hass_switch_entity_id
 
-  statusUpdater = hs.timer.new(5, pollPrinterStatus)
+  -- TODO: figure out to how auto-disable polling when not on home network
+  statusUpdater = hs.timer.new(60, pollPrinterStatus)
   statusUpdater:start()
 
   pollPrinterStatus()
