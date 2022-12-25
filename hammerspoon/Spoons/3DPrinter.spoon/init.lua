@@ -116,9 +116,9 @@ function spoon:init()
   state.hass = hass.new(settings.hass_url, settings.hass_access_token)
   state.switchEntityId = settings.hass_switch_entity_id
 
-  -- TODO: figure out to how auto-disable polling when not on home network
-  statusUpdater = hs.timer.new(60, pollPrinterStatus)
-  statusUpdater:start()
+  -- TODO: Do I need a periodic poll here?
+  -- statusUpdater = hs.timer.new(60, pollPrinterStatus)
+  -- statusUpdater:start()
 
   pollPrinterStatus()
 end
