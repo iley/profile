@@ -40,7 +40,7 @@ function module.new(baseUrl, apiKey)
     local data = {command = "connect"}
     local code, body, headers = httpPost("/api/connection", data)
     if code ~= 204 then
-      print("Octoprint connect request failed with code " .. code .. ": " .. body)
+      print("Octoprint connect request failed with code " .. code .. ": " .. (body or ""))
       return false
     end
     return true
@@ -50,7 +50,7 @@ function module.new(baseUrl, apiKey)
     local data = {command = "disconnect"}
     local code, body, headers = httpPost("/api/connection", data)
     if code ~= 204 then
-      print("Octoprint disconnect request failed with code " .. code .. ": " .. body)
+      print("Octoprint disconnect request failed with code " .. code .. ": " .. (body or ""))
       return false
     end
     return true

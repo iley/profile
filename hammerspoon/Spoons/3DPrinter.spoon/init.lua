@@ -13,6 +13,7 @@ end
 local icons = dofile(scriptPath() .. "/icons.lua")
 local config = dofile(scriptPath() .. "/config.lua")
 local octoprint = dofile(scriptPath() .. "/octoprint.lua")
+local hass = dofile(scriptPath() .. "/hass.lua")
 
 
 local CONN_DISCONNECTED = "disconnected"
@@ -24,27 +25,50 @@ local state = {
   connectionStatus = CONN_DISCONNECTED,
   config = nil,
   octoprint = nil,
+  hass = nil,
 }
 
 local function handleConnect()
   state.connectionStatus = CONN_CONNECTING
-  local success = state.octoprint:connect()
-  if success then
-    hs.notify.new({title="3D Printer Status", informativeText="3D printer was successfully turned on and connected"}):send()
-    state.connectionStatus = CONN_CONNECTED
-  else
-    hs.notify.new({title="3D Printer Error", informativeText="Octoprint connection attempt was failed"}):send()
-    state.connectionStatus = CONN_DISCONNECTED
+
+  local function continue()
+    local success = state.octoprint:connect()
+    if success then
+      hs.notify.new({title="3D Printer Status", informativeText="3D printer was successfully turned on and connected"}):send()
+      state.connectionStatus = CONN_CONNECTED
+    else
+      hs.notify.new({title="3D Printer Error", informativeText="Octoprint connection attempt failed"}):send()
+      state.connectionStatus = CONN_DISCONNECTED
+    end
   end
+
+  local hassSuccess = state.hass.turnOn()
+  if not hassSuccess then
+    hs.notify.new({title="3D Printer Error", informativeText="Home Assistant turn on attempt failed"}):send()
+    state.connectionStatus = CONN_DISCONNECTED
+    return
+  end
+
+  -- Wait 10 seconds to let the 3D printer power on before atttempting connection.
+  local delay = hs.timer.delayed.new(10, continue)
+  delay:start()
 end
 
 local function handleDisconnect()
   state.connectionStatus = CONN_DISCONNECTING
-  local success = state.octoprint:disconnect()
-  if success then
+
+  local octoprintSuccess = state.octoprint:disconnect()
+  if not octoprintSuccess then
+    hs.notify.new({title="3D Printer Error", informativeText="Octoprint connection attempt failed"}):send()
+  end
+
+  local hassSuccess = state.hass.turnOff()
+  if not hassSuccess then
+    hs.notify.new({title="3D Printer Error", informativeText="Home Assistant turn off attempt failed"}):send()
+  end
+
+  if hassSuccess and octoprintSuccess then
     hs.notify.new({title="3D Printer Status", informativeText="3D printer was successfully disconnected"}):send()
-  else
-    hs.notify.new({title="3D Printer Error", informativeText="Octoprint connection attempt was failed"}):send()
   end
   state.connectionStatus = CONN_DISCONNECTED
 end
@@ -88,6 +112,7 @@ function spoon:init()
   end
 
   state.octoprint = octoprint.new(state.config.octoprint_url, state.config.octoprint_api_key)
+  state.hass = hass.new(state.config.hass_url, state.config.hass_access_token, state.config.hass_switch_entity_id)
 
   statusUpdater = hs.timer.new(5, pollPrinterStatus)
   statusUpdater:start()
