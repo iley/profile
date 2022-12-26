@@ -21,13 +21,41 @@ local CONN_CONNECTED = "connected"
 local CONN_CONNECTING = "connecting"
 local CONN_DISCONNECTING = "disconnecting"
 
+local WATCH_INTERVAL_SECONDS = 60
+local PRINTER_START_DELAY_SECONDS = 10
+
+-- put all global state here
 local state = {
+  menuBar = nil,
   connectionStatus = CONN_DISCONNECTED,
-  config = nil,
   octoprint = nil,
   hass = nil,
   switchEntityId = nil,
+  wifiWatcher = nil,
 }
+
+local function formatEta(etaSeconds)
+  return etaSeconds
+end
+
+local function pollPrinterStatus()
+  if state.connectionStatus == CONN_CONNECTING then
+    -- Skip polling if we're in the process of connecting
+    return
+  end
+
+  local status = state.octoprint.pollStatus()
+  if status.connected then
+    state.connectionStatus = CONN_CONNECTED
+    if status.printing then
+      state.menuBar:setTitle(formatEta(status.eta) .. "R")
+    else
+      state.menuBar:setTitle("idle")
+    end
+  else
+    state.connectionStatus = CONN_DISCONNECTED
+  end
+end
 
 local function handleConnect()
   state.connectionStatus = CONN_CONNECTING
@@ -37,6 +65,7 @@ local function handleConnect()
     if success then
       hs.notify.new({title="3D Printer Status", informativeText="3D printer was successfully turned on and connected"}):send()
       state.connectionStatus = CONN_CONNECTED
+      pollPrinterStatus()
     else
       hs.notify.new({title="3D Printer Error", informativeText="Octoprint connection attempt failed"}):send()
       state.connectionStatus = CONN_DISCONNECTED
@@ -50,8 +79,8 @@ local function handleConnect()
     return
   end
 
-  -- Wait 10 seconds to let the 3D printer power on before atttempting connection.
-  local delay = hs.timer.delayed.new(10, continue)
+  -- Let the 3D printer power on before atttempting connection.
+  local delay = hs.timer.delayed.new(PRINTER_START_DELAY_SECONDS, continue)
   delay:start()
 end
 
@@ -90,22 +119,22 @@ local function getMenuItems()
   return menuItems
 end
 
-local function pollPrinterStatus()
-  if state.connectionStatus == CONN_CONNECTING then
-    -- Skip polling if we're in the process of connecting
+local function handleWifiChange(watcher, message, interface)
+  if message ~= "SSIDChange" then
     return
   end
-
-  local status = state.octoprint.pollStatus()
-  if status.connected then
-    state.connectionStatus = CONN_CONNECTED
+  ssid = hs.wifi.currentNetwork()
+  if ssid == state.homeSSID then
+    state.statusUpdater:start()
   else
-    state.connectionStatus = CONN_DISCONNECTED
+    state.statusUpdater:stop()
+    -- clear up the title in case something was displayed there before
+    state.menuBar:setTitle(nil)
   end
 end
 
 function spoon:init()
-  local menuBar = hs.menubar.new():setIcon(icons.nozzle):setMenu(getMenuItems)
+  state.menuBar = hs.menubar.new():setIcon(icons.nozzle):setMenu(getMenuItems)
 
   local settings = config:load()
   if settings == nil then
@@ -115,12 +144,19 @@ function spoon:init()
   state.octoprint = octoprint.new(settings.octoprint_url, settings.octoprint_api_key)
   state.hass = hass.new(settings.hass_url, settings.hass_access_token)
   state.switchEntityId = settings.hass_switch_entity_id
+  state.homeSSID = settings.home_ssid
 
-  -- TODO: Do I need a periodic poll here?
-  -- statusUpdater = hs.timer.new(60, pollPrinterStatus)
-  -- statusUpdater:start()
+  state.statusUpdater = hs.timer.new(WATCH_INTERVAL_SECONDS, pollPrinterStatus)
 
-  pollPrinterStatus()
+  -- start the watcher manually once before the wifi watcher below kicks in
+  if hs.wifi.currentNetwork() == state.homeSSID then
+    state.statusUpdater:start()
+    pollPrinterStatus()
+  end
+
+  -- register a callback on SSID change to only poll when on the right network
+  state.wifiWatcher = hs.wifi.watcher.new(handleWifiChange)
+  state.wifiWatcher:start()
 end
 
 return spoon
