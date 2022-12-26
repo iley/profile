@@ -35,7 +35,11 @@ local state = {
 }
 
 local function formatEta(etaSeconds)
-  return etaSeconds
+  minutes = etaSeconds / 60
+  if minutes < 0 then
+    minutes = 0
+  end
+  return string.format("%02d:%02d", math.floor(minutes / 60), math.floor(minutes % 60))
 end
 
 local function pollPrinterStatus()
