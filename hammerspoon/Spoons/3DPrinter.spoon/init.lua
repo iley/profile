@@ -18,8 +18,6 @@ local hass = dofile(scriptPath() .. "/hass.lua")
 
 local CONN_DISCONNECTED = "disconnected"
 local CONN_CONNECTED = "connected"
-local CONN_CONNECTING = "connecting"
-local CONN_DISCONNECTING = "disconnecting"
 
 local WATCH_INTERVAL_SECONDS = 60
 local PRINTER_START_DELAY_SECONDS = 10
@@ -43,43 +41,51 @@ local function formatEta(etaSeconds)
 end
 
 local function pollPrinterStatus()
-  if state.connectionStatus == CONN_CONNECTING then
-    -- Skip polling if we're in the process of connecting
-    return
-  end
-
   local status = state.octoprint.pollStatus()
   if status.connected then
     state.connectionStatus = CONN_CONNECTED
     if status.printing then
-      state.menuBar:setTitle(formatEta(status.eta) .. "R")
+      etaString = formatEta(status.eta)
+      tooltip = string.format("Printing with %s remaining")
+      state.menuBar:setTitle(etaString .. "R"):setTooltip(tooltip)
     else
-      state.menuBar:setTitle("idle")
+      state.menuBar:setTitle("idle"):setTooltip("Printer is connected and ready to print")
     end
   else
+    state.menuBar:setTitle(nil):setTooltip("Printer is disconnected")
     state.connectionStatus = CONN_DISCONNECTED
   end
 end
 
-local function handleConnect()
-  state.connectionStatus = CONN_CONNECTING
+local function waitForStatus(expectedStatus)
+  local attemptsLeft = 20 -- circuit breaker
 
+  local function check()
+    -- quit if we tried too many times
+    if attemptsLeft <= 0 then
+      return true
+    end
+
+    return state.connectionStatus == expectedStatus
+  end
+
+  hs.timer.doUntil(check, pollPrinterStatus) -- poll every second until check succeeds (or gives up)
+end
+
+local function handleConnect()
   local function continue()
     local success = state.octoprint:connect()
     if success then
       hs.notify.new({title="3D Printer Status", informativeText="3D printer was successfully turned on and connected"}):send()
-      state.connectionStatus = CONN_CONNECTED
-      pollPrinterStatus()
+      waitForStatus(CONN_CONNECTED)
     else
       hs.notify.new({title="3D Printer Error", informativeText="Octoprint connection attempt failed"}):send()
-      state.connectionStatus = CONN_DISCONNECTED
     end
   end
 
   local hassSuccess = state.hass:turnOn(state.switchEntityId)
   if not hassSuccess then
     hs.notify.new({title="3D Printer Error", informativeText="Home Assistant turn on attempt failed"}):send()
-    state.connectionStatus = CONN_DISCONNECTED
     return
   end
 
@@ -89,8 +95,6 @@ local function handleConnect()
 end
 
 local function handleDisconnect()
-  state.connectionStatus = CONN_DISCONNECTING
-
   local octoprintSuccess = state.octoprint:disconnect()
   if not octoprintSuccess then
     hs.notify.new({title="3D Printer Error", informativeText="Octoprint connection attempt failed"}):send()
@@ -103,8 +107,8 @@ local function handleDisconnect()
 
   if hassSuccess and octoprintSuccess then
     hs.notify.new({title="3D Printer Status", informativeText="3D printer was successfully disconnected"}):send()
+    waitForStatus(CONN_DISCONNECTED)
   end
-  state.connectionStatus = CONN_DISCONNECTED
 end
 
 local function getMenuItems()
