@@ -46,7 +46,7 @@ local function pollPrinterStatus()
     state.connectionStatus = CONN_CONNECTED
     if status.printing then
       etaString = formatEta(status.eta)
-      tooltip = string.format("Printing with %s remaining")
+      tooltip = string.format("Printing with %s remaining", etaString)
       state.menuBar:setTitle(etaString .. "R"):setTooltip(tooltip)
     else
       state.menuBar:setTitle("idle"):setTooltip("Printer is connected and ready to print")
