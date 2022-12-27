@@ -90,8 +90,7 @@ local function handleConnect()
   end
 
   -- Let the 3D printer power on before atttempting connection.
-  local delay = hs.timer.delayed.new(PRINTER_START_DELAY_SECONDS, continue)
-  delay:start()
+  hs.timer.doAfter(PRINTER_START_DELAY_SECONDS, continue)
 end
 
 local function handleDisconnect()
