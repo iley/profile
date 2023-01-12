@@ -13,8 +13,10 @@ end
 local icons = dofile(scriptPath() .. "/icons.lua")
 
 local EXPECTED_DEVICE_NAME = "SparkFun Pro Micro"
-local CHANNEL_LEDS = 0
-local CHANNEL_BUZZER = 1
+local CHANNEL_BUTTONS = 0
+local CHANNEL_LEDS = 1
+local CHANNEL_BUZZER = 2
+
 local NOTE_TO_PLAYER = {
   [24] = 0, [25] = 1, [26] = 2, [27] = 3,
   [28] = 4, [29] = 5, [30] = 6, [31] = 7,
@@ -127,7 +129,7 @@ local function handlePushUp(player)
 end
 
 local function handleMidiEvent(object, deviceName, commandType, description, metadata)
-  if commandType == "noteOn" then
+  if commandType == "noteOn" and metadata.channel == CHANNEL_BUTTONS then
     note = metadata.note
     player = NOTE_TO_PLAYER[note]
     if player ~= nil then
