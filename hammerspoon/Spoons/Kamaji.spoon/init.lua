@@ -17,6 +17,8 @@ local CHANNEL_BUTTONS = 0
 local CHANNEL_LEDS = 1
 local CHANNEL_BUZZER = 2
 
+local BUZZER_NOTE = 60
+
 local NOTE_TO_PLAYER = {
   [24] = 0, [25] = 1, [26] = 2, [27] = 3,
   [28] = 4, [29] = 5, [30] = 6, [31] = 7,
@@ -36,6 +38,26 @@ local state = {
   blinkOnPress = true,
 }
 
+local function playNote(channel, note, velocity, durationSec)
+  local metadata = {
+    channel = channel,
+    note = note,
+    velocity = velocity,
+  }
+  state.device:sendCommand("noteOn", metadata)
+
+  local function sendNoteOff()
+    local metadata = {
+      channel = channel,
+      note = note,
+      velocity = 0,
+    }
+    state.device:sendCommand("noteOff", metadata)
+  end
+
+  hs.timer.doAfter(durationSec, sendNoteOff)
+end
+
 local function blinkLED(player, durationSec)
   if state.device == nil then
     return
@@ -46,23 +68,7 @@ local function blinkLED(player, durationSec)
     return
   end
 
-  local metadata = {
-    channel = CHANNEL_LEDS,
-    note = note,
-    velocity = MAX_VELOCITY,
-  }
-  state.device:sendCommand("noteOn", metadata)
-
-  local function sendNoteOff()
-    local metadata = {
-      channel = CHANNEL_LEDS,
-      note = note,
-      velocity = 0,
-    }
-    state.device:sendCommand("noteOff", metadata)
-  end
-
-  hs.timer.doAfter(durationSec, sendNoteOff)
+  playNote(CHANNEL_LEDS, note, MAX_VELOCITY, durationSec)
 end
 
 local function showAlert(message)
@@ -73,6 +79,10 @@ end
 
 local function handleMute()
   state.alertsMuted = not state.alertsMuted
+end
+
+local function handlePlaySound()
+  playNote(CHANNEL_BUZZER, BUZZER_NOTE, MAX_VELOCITY, 1)
 end
 
 local function handleBlinkOnPress()
@@ -89,6 +99,10 @@ local function getMenuItems()
       title = "Mute alerts",
       fn = handleMute,
       checked = state.alertsMuted,
+    },
+    {
+      title = "Play sound",
+      fn = handlePlaySound,
     },
     {
       title = "Blink on button press",
