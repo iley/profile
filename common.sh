@@ -11,7 +11,7 @@ export LESS="-iMSx4 -FXR"
 export ANSIBLE_NOCOWS=1
 export HOMEBREW_NO_ANALYTICS=1
 
-for extra_path in "$HOME/bin" "$HOME/.local/bin" "$HOME/.npm-packages/bin" "$HOME/go/bin" "$HOME/.local/bin" "$HOME/.cargo/bin"; do
+for extra_path in "$HOME/bin" "$HOME/.local/bin" "$HOME/.npm-packages/bin" "$HOME/go/bin" "$HOME/.local/bin" "$HOME/.cargo/bin" "$HOME/flutter/bin"; do
     if [[ -e "$extra_path" ]]; then
         export PATH=$PATH:$extra_path
     fi
