@@ -6,8 +6,13 @@ source $HOME/.bash_profile
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=~/profile/zsh_custom
-# ZSH_THEME="iley"
-ZSH_THEME="" # Disabled for pure.
+
+if [[ "$(uname)" == "Darwin" ]]; then
+  # On MacOS Pure is used.
+  ZSH_THEME=""
+else
+  ZSH_THEME="iley"
+fi
 
 plugins=(ssh-agent docker kubectl autojump nvm asdf fzf sdk)
 
@@ -20,10 +25,12 @@ DISABLE_AUTO_UPDATE=true
 
 source $ZSH/oh-my-zsh.sh
 
-# pure shell prompt (https://github.com/sindresorhus/pure)
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
-autoload -U promptinit; promptinit
-prompt pure
+if [[ "$(uname)" == "Darwin" ]]; then
+  # pure shell prompt (https://github.com/sindresorhus/pure)
+  fpath+=("$(brew --prefix)/share/zsh/site-functions")
+  autoload -U promptinit; promptinit
+  prompt pure
+fi
 
 setopt hist_ignore_dups share_history inc_append_history extended_history no_beep
 unsetopt autopushd autonamedirs correct_all
