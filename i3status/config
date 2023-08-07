@@ -7,13 +7,14 @@
 # If the above line is not correctly displayed, fix your editor first!
 
 general {
-        colors = false
-        interval = 1
+  colors = false
+  interval = 1
 }
 
 # order += "ipv6"
 # order += "wireless _first_"
 # order += "ethernet _first_"
+order += "volume default"
 order += "battery all"
 # order += "disk /"
 order += "load"
@@ -21,33 +22,37 @@ order += "load"
 order += "tztime local"
 
 wireless _first_ {
-        format_up = "W: (%quality at %essid) %ip"
-        format_down = "W: down"
+  format_up = "W: (%quality at %essid) %ip"
+  format_down = "W: down"
 }
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
-        format_down = "E: down"
+  format_up = "E: %ip (%speed)"
+  format_down = "E: down"
 }
 
 battery all {
-        format = "%status %percentage %remaining"
+  format = "%status %percentage %remaining"
+}
+
+volume default {
+  format = "VOL %volume"
 }
 
 disk "/" {
-        format = "%avail"
+  format = "%avail"
 }
 
 load {
-        format = "LOAD %1min"
+  format = "LOAD %1min"
 }
 
 memory {
-        format = "%used | %available"
-        threshold_degraded = "1G"
-        format_degraded = "MEMORY < %available"
+  format = "%used | %available"
+  threshold_degraded = "1G"
+  format_degraded = "MEMORY < %available"
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+  format = "%Y-%m-%d %H:%M:%S"
 }
