@@ -39,8 +39,6 @@ call plug#begin('~/.vim/plugged')
 " nvim-go deps
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
-" nvim-go
-Plug 'crispgm/nvim-go'
 
 " LSP and completion
 Plug 'neovim/nvim-lspconfig'
@@ -73,6 +71,10 @@ Plug 'morhetz/gruvbox'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+
+" Go
+Plug 'ray-x/go.nvim'
+Plug 'ray-x/guihua.lua'
 
 call plug#end()
 
