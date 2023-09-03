@@ -63,6 +63,7 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-obsession'
 Plug 'vim-scripts/a.vim'
+Plug 'sbdchd/neoformat'
 
 " Colors
 Plug 'morhetz/gruvbox'
