@@ -36,10 +36,6 @@ noremap ; :
 " Plugins
 call plug#begin('~/.vim/plugged')
 
-" nvim-go deps
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-lua/popup.nvim'
-
 " LSP and completion
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -79,7 +75,7 @@ Plug 'ray-x/guihua.lua'
 
 call plug#end()
 
-if (has("termguicolors"))
+if (has("termguicolors") && getenv('TERM_PROGRAM') != 'Apple_Terminal')
     set termguicolors
 endif
 
@@ -153,6 +149,13 @@ set directory=~/.config/nvim/swap//
 " Undo settings
 set undofile
 set undodir=~/.config/nvim/undo//
+
+" Format on save
+augroup fmt
+  autocmd!
+  autocmd BufWritePre *.h undojoin | Neoformat
+  autocmd BufWritePre *.cc undojoin | Neoformat
+augroup END
 
 " Highlight trailing spaces.
 "set list listchars=trail:_,extends:>

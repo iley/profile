@@ -93,5 +93,6 @@ lspconfig.rust_analyzer.setup{capabilities=capabilities}
 lspconfig.tsserver.setup{capabilities=capabilities}
 lspconfig.clojure_lsp.setup{capabilities=capabilities}
 lspconfig.metals.setup{capabilities=capabilities} -- Scala
+lspconfig.ocamllsp.setup{capabilities=capabilities}
 
 nullls.setup({ sources = { nullls.builtins.diagnostics.vale } })
