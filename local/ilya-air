@@ -12,3 +12,6 @@ export PATH="/opt/homebrew/opt/llvm/bin:/opt/homebrew/opt/qt/bin:/opt/homebrew/o
 export PATH="$PATH:$HOME/Library/Application Support/Coursier/bin"
 
 export PICO_SDK_PATH="$HOME/pico/pico-sdk"
+
+# opam configuration
+[[ ! -r /Users/ilya/.opam/opam-init/init.zsh ]] || source /Users/ilya/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
