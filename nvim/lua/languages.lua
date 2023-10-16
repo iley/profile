@@ -86,13 +86,24 @@ cmp.setup.cmdline(':', {
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-lspconfig.clangd.setup{capabilities=capabilities}
-lspconfig.gopls.setup{capabilities=capabilities}
-lspconfig.pyright.setup{capabilities=capabilities}
-lspconfig.rust_analyzer.setup{capabilities=capabilities}
-lspconfig.tsserver.setup{capabilities=capabilities}
-lspconfig.clojure_lsp.setup{capabilities=capabilities}
-lspconfig.metals.setup{capabilities=capabilities} -- Scala
-lspconfig.ocamllsp.setup{capabilities=capabilities}
+local on_attach = function(client, bufnr)
+  -- Format on save
+  if client.server_capabilities.documentFormattingProvider then
+      vim.api.nvim_create_autocmd("BufWritePre", {
+          group = vim.api.nvim_create_augroup("Format", { clear = true }),
+          buffer = bufnr,
+          callback = function() vim.lsp.buf.format() end
+      })
+  end
+end
+
+lspconfig.clangd.setup{capabilities=capabilities, on_attach=on_attach}
+lspconfig.gopls.setup{capabilities=capabilities, on_attach=on_attach}
+lspconfig.pyright.setup{capabilities=capabilities, on_attach=on_attach}
+lspconfig.rust_analyzer.setup{capabilities=capabilities, on_attach=on_attach}
+lspconfig.tsserver.setup{capabilities=capabilities, on_attach=on_attach}
+lspconfig.clojure_lsp.setup{capabilities=capabilities, on_attach=on_attach}
+lspconfig.metals.setup{capabilities=capabilities, on_attach=on_attach} -- Scala
+lspconfig.ocamllsp.setup{capabilities=capabilities, on_attach=on_attach}
 
 nullls.setup({ sources = { nullls.builtins.diagnostics.vale } })
