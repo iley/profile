@@ -74,6 +74,8 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'ray-x/go.nvim'
 Plug 'ray-x/guihua.lua'
 
+Plug 'github/copilot.vim'
+
 call plug#end()
 
 if (has("termguicolors") && getenv('TERM_PROGRAM') != 'Apple_Terminal')
