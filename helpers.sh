@@ -142,6 +142,17 @@ _aws_environments () {
     _values aws_environments $(awsp -q)
 }
 
+tg() {
+  local token=$(cat ~/.tg | grep "token=" | cut -d "=" -f 2)
+  local chat_id=$(cat ~/.tg | grep "chat_id=" | cut -d "=" -f 2)
+  local message="$1"
+  if [[ -z "$message" ]]; then
+    echo "Usage: tg MESSAGE" >&2
+    return
+  fi
+  curl -s -X POST https://api.telegram.org/bot$token/sendMessage -d chat_id=$chat_id -d text="$message" > /dev/null
+}
+
 if [[ -n "$ZSH_VERSION" ]]; then
   compdef _virtualenvs workon
   compdef _virtualenvs rmvirtualenv
