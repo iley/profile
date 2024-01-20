@@ -1,5 +1,9 @@
 if status --is-login
-  set -gx PATH $PATH ~/bin /opt/homebrew/bin
+  set -gx PATH $PATH ~/bin
+  if test -d /opt/homebrew/bin
+    set -gx PATH $PATH /opt/homebrew/bin
+  end
+
   set -gx EDITOR nvim
 end
 
