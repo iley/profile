@@ -10,7 +10,7 @@ OHMYZSH=~/.oh-my-zsh
 
 .PHONY: all links
 
-all: links ~/.localrc ~/.gitconfig
+all: links ~/.localrc ~/.gitconfig ~/.local.fish
 
 links: $(HOME_DST) $(NODOT_DST) $(CONFIG_DST) $(OHMYZSH)
 
@@ -32,3 +32,6 @@ $(CONFIG_DST): $(HOME)/.config/%: %
 
 ~/.localrc:
 	ln -sf $(HOME)/profile/local/$(shell hostname|cut -d. -f1) $(HOME)/.localrc
+
+~/.local.fish:
+	ln -sf $(HOME)/profile/local/$(shell hostname|cut -d. -f1).fish $(HOME)/.local.fish

@@ -12,3 +12,5 @@ if status is-interactive
 end
 
 set -g fish_greeting ''
+
+source ~/.local.fish
