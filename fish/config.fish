@@ -14,3 +14,7 @@ end
 set -g fish_greeting ''
 
 source ~/.local.fish
+
+if test -d ~/.opam
+  source ~/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+end
