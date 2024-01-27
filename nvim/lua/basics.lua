@@ -24,3 +24,11 @@ o.magic = true
 
 -- C autoindent
 o.cinoptions = "l1" -- switch case indents
+
+local configpath = vim.fn.stdpath("config")
+o.directory = configpath .. "/swap"
+o.backupdir = configpath .. "/backup"
+o.undodir = configpath .. "/undo"
+o.swapfile = true
+o.backup = true
+o.undofile = true
