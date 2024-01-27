@@ -1,38 +1,3 @@
-syntax on
-set number
-set ruler
-set modeline
-
-" Basic editing
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set smartindent
-set smarttab
-set shiftround " remove extra spaces during indentation
-set nowrap
-set formatoptions+=j " deletes the comment character when joining lines
-set nojoinspaces
-
-" Search and replace
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
-set magic
-
-" C autoindent options
-set cinoptions=l1 " switch case indents
-
-if maparg('<C-L>', 'n') ==# ''
-nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
-endif
-
-" Disable mouse
-set mouse=
-
-noremap ; :
-
 " Plugins
 call plug#begin('~/.vim/plugged')
 
