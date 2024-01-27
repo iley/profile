@@ -12,6 +12,5 @@ return {
     end
   },
   {"github/copilot.vim"},
-  {"vim-scripts/a.vim"},
   {"sbdchd/neoformat"},
 }
