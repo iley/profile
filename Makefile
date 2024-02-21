@@ -1,6 +1,6 @@
 HOME_SRC=bashrc gitconfig_global gitignore_global tmux.conf zshrc gdbinit ideavimrc npmrc hammerspoon
 HOME_DST=$(addprefix $(HOME)/.,$(HOME_SRC))
-NODOT_SRC=revive.toml
+NODOT_SRC=
 NODOT_DST=$(addprefix $(HOME)/,$(NODOT_SRC))
 
 CONFIG_SRC=alacritty i3 i3status nvim fish
