@@ -36,7 +36,7 @@ battery all {
 }
 
 volume default {
-  format = "VOL %volume"
+  format = "vol %volume"
 }
 
 disk "/" {
@@ -44,7 +44,7 @@ disk "/" {
 }
 
 load {
-  format = "LOAD %1min"
+  format = "load %1min"
 }
 
 memory {
