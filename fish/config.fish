@@ -4,6 +4,10 @@ if status --is-login
     set -gx PATH $PATH /opt/homebrew/bin
   end
 
+  if test -d $HOME/.cargo/bin
+    set -gx PATH $PATH $HOME/.cargo/bin
+  end
+
   set -gx EDITOR nvim
 end
 
