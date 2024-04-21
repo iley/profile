@@ -17,6 +17,8 @@ local function config()
   lspconfig.gopls.setup{capabilities=capabilities, on_attach=on_attach}
   lspconfig.pyright.setup{capabilities=capabilities, on_attach=on_attach}
   lspconfig.ocamllsp.setup{capabilities=capabilities, on_attach=on_attach}
+  lspconfig.terraformls.setup{capabilities=capabilities, on_attach=on_attach}
+  lspconfig.rust_analyzer.setup{capabilities=capabilities, on_attach=on_attach}
 end
 
 return {
