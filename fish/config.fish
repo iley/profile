@@ -8,6 +8,10 @@ if status --is-login
     set -gx PATH $PATH $HOME/.cargo/bin
   end
 
+  if test -d $HOME/.rvm/bin
+    set -gx PATH $HOME/.rvm/bin $PATH
+  end
+
   set -gx EDITOR nvim
 end
 
@@ -21,4 +25,10 @@ source ~/.local.fish
 
 if test -d ~/.opam
   source ~/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+end
+
+[ -f /usr/share/autojump/autojump.fish ]; and source /usr/share/autojump/autojump.fish
+
+if type -q rvm
+  rvm default
 end
