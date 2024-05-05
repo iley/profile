@@ -1,15 +1,11 @@
 if status --is-login
-  set -gx PATH $PATH ~/bin
-  if test -d /opt/homebrew/bin
-    set -gx PATH $PATH /opt/homebrew/bin
-  end
+  set -l bindirs $HOME/bin /opt/homebrew/bin $HOME/.cargo/bin $HOME/.rvm/bin $HOME/go/bin
 
-  if test -d $HOME/.cargo/bin
-    set -gx PATH $PATH $HOME/.cargo/bin
-  end
-
-  if test -d $HOME/.rvm/bin
-    set -gx PATH $HOME/.rvm/bin $PATH
+  for dir in $bindirs
+      if test -d $dir
+          set -q PATH; or set PATH $dir
+          set -q PATH $dir; or set -a PATH $dir
+      end
   end
 
   set -gx EDITOR nvim
