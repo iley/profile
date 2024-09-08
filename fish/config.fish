@@ -1,5 +1,5 @@
 if status --is-login
-  set -l bindirs $HOME/bin /opt/homebrew/bin $HOME/.cargo/bin $HOME/.rvm/bin $HOME/go/bin
+  set -l bindirs $HOME/bin /opt/homebrew/bin $HOME/.cargo/bin $HOME/.rvm/bin $HOME/go/bin $HOME/zig
 
   for dir in $bindirs
       if test -d $dir
