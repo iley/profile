@@ -6,8 +6,8 @@ import = [
 size = 12.0
 
 [font.normal]
-family = "PragmataPro Nerd Font"
-#family = "PragmataPro"
+#family = "PragmataPro Nerd Font"
+family = "PragmataPro"
 #family = "monospace"
 
 [scrolling]
