@@ -3,7 +3,7 @@ HOME_DST=$(addprefix $(HOME)/.,$(HOME_SRC))
 NODOT_SRC=
 NODOT_DST=$(addprefix $(HOME)/,$(NODOT_SRC))
 
-CONFIG_SRC=alacritty i3status nvim fish sway
+CONFIG_SRC=alacritty i3status nvim fish sway hypr
 CONFIG_DST=$(addprefix $(HOME)/.config/,$(CONFIG_SRC))
 
 OHMYZSH=$(HOME)/.oh-my-zsh
