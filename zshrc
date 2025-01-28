@@ -2,7 +2,9 @@
 # zmodload zsh/zprof
 
 source $HOME/profile/common.sh
-source $HOME/.bash_profile
+if [[ -e $HOME/.bash_profile ]]; then
+  source $HOME/.bash_profile
+fi
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=~/profile/zsh_custom
