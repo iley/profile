@@ -1,7 +1,7 @@
 local o = vim.opt
 
 -- basic editing
--- o.number = true
+o.number = true
 o.relativenumber = true
 o.ruler = true
 o.modeline = true
