@@ -11,6 +11,5 @@ return {
       vim.g.airline_powerline_fonts = 1
     end
   },
-  {"github/copilot.vim"},
   {"sbdchd/neoformat"},
 }
