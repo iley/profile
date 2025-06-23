@@ -47,6 +47,10 @@ input type:pointer {
     natural_scroll enabled
 }
 
+### Appearance
+    # Font for window titles.
+    font pango:Sans 8
+
 ### Key bindings
 #
 # Basics:
