@@ -41,6 +41,8 @@ set $menu fuzzel
 input type:touchpad {
     tap enabled
     natural_scroll enabled
+    # Disable touchpad while typing.
+    dwt enabled
 }
 
 input type:pointer {
