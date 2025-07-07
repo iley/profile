@@ -31,3 +31,26 @@ vim.keymap.set('n', '<Leader>ds', function()
   local widgets = require('dap.ui.widgets')
   widgets.centered_float(widgets.scopes)
 end)
+
+-- Copy the current file and line/range for pasting to an AI agent.
+-- Normal‐mode: copy “filename:line”
+vim.keymap.set('n', '<leader>cl', function()
+  local file = vim.fn.expand('%:t')
+  local line = vim.fn.line('.')
+  local text = string.format("%s:%d", file, line)
+  vim.fn.setreg('+', text)
+  print('Copied: ' .. text)
+end, { noremap = true, silent = true, desc = 'Copy filename and line' })
+
+-- Visual‐mode: copy “filename:start–end”
+vim.keymap.set('x', '<leader>cl', function()
+  local file = vim.fn.expand('%:t')
+  local start_line = vim.fn.line("'<")
+  local end_line   = vim.fn.line("'>")
+  if start_line > end_line then
+    start_line, end_line = end_line, start_line
+  end
+  local text = string.format("%s:%d-%d", file, start_line, end_line)
+  vim.fn.setreg('+', text)
+  print('Copied: ' .. text)
+end, { noremap = true, silent = true, desc = 'Copy filename and line range' })
