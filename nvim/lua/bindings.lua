@@ -35,7 +35,7 @@ end)
 -- Copy the current file and line/range for pasting to an AI agent.
 -- Normal‐mode: copy “filename:line”
 vim.keymap.set('n', '<leader>cl', function()
-  local file = vim.fn.expand('%:t')
+  local file = vim.fn.fnamemodify(vim.fn.expand('%'), ':.')
   local line = vim.fn.line('.')
   local text = string.format("%s:%d", file, line)
   vim.fn.setreg('+', text)
@@ -44,7 +44,7 @@ end, { noremap = true, silent = true, desc = 'Copy filename and line' })
 
 -- visual-mode: copy “filename:start-end”, clear selection, then notify
 vim.keymap.set('x', '<leader>cl', function()
-  local file = vim.fn.expand('%:t')
+  local file = vim.fn.fnamemodify(vim.fn.expand('%'), ':.')
   -- leave visual mode so '< and '> are updated
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<Esc>', true, false, true), 'n', true)
 
