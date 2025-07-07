@@ -26,5 +26,5 @@ if [[ "$TERM" != 'screen-256color' ]]; then
     export TERM=xterm-256color
 fi
 
-export FZF_DEFAULT_COMMAND="ag -l --nocolor"
-export FZF_CTRL_T_COMMAND="ag -l --nocolor"
+#export FZF_DEFAULT_COMMAND="ag -l --nocolor"
+#export FZF_CTRL_T_COMMAND="ag -l --nocolor"
