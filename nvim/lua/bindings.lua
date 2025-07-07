@@ -42,17 +42,21 @@ vim.keymap.set('n', '<leader>cl', function()
   print('Copied: ' .. text)
 end, { noremap = true, silent = true, desc = 'Copy filename and line' })
 
--- Visual‐mode: copy “filename:start–end” and clear selection
+-- visual-mode: copy “filename:start-end”, clear selection, then notify
 vim.keymap.set('x', '<leader>cl', function()
   local file = vim.fn.expand('%:t')
-  local start_line = vim.fn.line("'<")
-  local end_line   = vim.fn.line("'>")
-  if start_line > end_line then
-    start_line, end_line = end_line, start_line
-  end
-  local text = string.format("%s:%d-%d", file, start_line, end_line)
-  vim.fn.setreg('+', text)
-  -- properly exit visual mode without inserting characters
+  -- leave visual mode so '< and '> are updated
   vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes('<Esc>', true, false, true), 'n', true)
-  print('Copied: ' .. text)
+
+  vim.schedule(function()
+    local start_line = vim.fn.line("'<")
+    local end_line   = vim.fn.line("'>")
+    if start_line > end_line then
+      start_line, end_line = end_line, start_line
+    end
+    local text = string.format('%s:%d-%d', file, start_line, end_line)
+    vim.fn.setreg('+', text)
+    vim.notify('Copied: ' .. text, vim.log.levels.INFO)
+  end)
 end, { noremap = true, silent = true, desc = 'Copy filename and line range' })
+
