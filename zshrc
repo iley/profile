@@ -61,5 +61,9 @@ setopt complete_aliases
 
 compdef _git stripe-git=git
 
+if command opam >/dev/null; then
+  eval $(opam env)
+fi
+
 source $HOME/profile/alias.sh
 source $HOME/profile/helpers.sh
