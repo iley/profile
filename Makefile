@@ -1,9 +1,9 @@
-HOME_SRC=bashrc gitconfig_global gitignore_global tmux.conf zshrc gdbinit ideavimrc npmrc hammerspoon
+HOME_SRC=bashrc gitconfig_global gitignore_global tmux.conf zshrc
 HOME_DST=$(addprefix $(HOME)/.,$(HOME_SRC))
 NODOT_SRC=
 NODOT_DST=$(addprefix $(HOME)/,$(NODOT_SRC))
 
-CONFIG_SRC=alacritty i3status nvim fish sway waybar
+CONFIG_SRC=alacritty i3status nvim sway waybar
 CONFIG_DST=$(addprefix $(HOME)/.config/,$(CONFIG_SRC))
 
 OHMYZSH=$(HOME)/.oh-my-zsh
