@@ -54,16 +54,7 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-if command -v kubectl 2>&1 >/dev/null; then
-    compdef k=kubectl
-fi
 setopt complete_aliases
-
-compdef _git stripe-git=git
-
-if command opam >/dev/null; then
-  eval $(opam env)
-fi
 
 source $HOME/profile/alias.sh
 source $HOME/profile/helpers.sh
