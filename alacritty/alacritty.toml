@@ -7,6 +7,9 @@ family = "PragmataPro Nerd Font"
 #family = "PragmataPro"
 #family = "monospace"
 
+[font.bold]
+style = "Regular"
+
 [scrolling]
 history = 10000
 
