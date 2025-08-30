@@ -84,8 +84,8 @@ input type:pointer {
     bindsym XF86AudioLowerVolume exec "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
     bindsym XF86AudioMute exec "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
-    bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
-    bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
+    bindsym XF86MonBrightnessUp exec "brightnessctl set 10%+"
+    bindsym XF86MonBrightnessDown exec "brightnessctl set 10%-"
 
     bindsym $mod+p exec sway_toggle_output
 
@@ -226,5 +226,12 @@ input "type:keyboard" {
     xkb_layout us,ru
     xkb_options grp:alt_shift_toggle
 }
+
+#
+# Autostart
+#
+exec pipewire
+exec wireplumber
+exec pipewire-pulse
 
 include etc/sway/config.d/*
