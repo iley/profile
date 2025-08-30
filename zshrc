@@ -9,8 +9,14 @@ fi
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=~/profile/zsh_custom
 
-if [[ "$(uname)" == "Darwin" ]]; then
-  # On MacOS Pure is used.
+# Set USE_PURE when on macOS or when ~/.zsh/pure exists
+USE_PURE=false
+if [[ "$(uname)" == "Darwin" ]] || [[ -d "$HOME/.zsh/pure" ]]; then
+  USE_PURE=true
+fi
+
+if [[ "$USE_PURE" == "true" ]]; then
+  # Pure is used.
   ZSH_THEME=""
 else
   ZSH_THEME="iley"
@@ -27,9 +33,13 @@ DISABLE_AUTO_UPDATE=true
 
 source $ZSH/oh-my-zsh.sh
 
-if [[ "$(uname)" == "Darwin" ]]; then
+if [[ "$USE_PURE" == "true" ]]; then
   # pure shell prompt (https://github.com/sindresorhus/pure)
-  fpath+=("$(brew --prefix)/share/zsh/site-functions")
+  if [[ "$(uname)" == "Darwin" ]]; then
+    fpath+=("$(brew --prefix)/share/zsh/site-functions")
+  else
+    fpath+=("$HOME/.zsh/pure")
+  fi
   autoload -U promptinit; promptinit
   prompt pure
 fi
