@@ -1,1 +1,2 @@
 export PATH=$PATH:$HOME/projects/pirx
+export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
