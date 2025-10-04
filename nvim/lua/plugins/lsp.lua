@@ -1,5 +1,4 @@
 local function config()
-  local lspconfig = require('lspconfig')
   local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
   local on_attach = function(client, bufnr)
@@ -13,13 +12,15 @@ local function config()
     end
   end
 
-  lspconfig.clangd.setup{capabilities=capabilities, on_attach=on_attach}
-  lspconfig.gopls.setup{capabilities=capabilities, on_attach=on_attach}
-  lspconfig.pyright.setup{capabilities=capabilities, on_attach=on_attach}
-  lspconfig.ocamllsp.setup{capabilities=capabilities, on_attach=on_attach}
-  lspconfig.terraformls.setup{capabilities=capabilities, on_attach=on_attach}
-  lspconfig.rust_analyzer.setup{capabilities=capabilities, on_attach=on_attach}
-  lspconfig.templ.setup{capabilities=capabilities, on_attach=on_attach}
+  vim.lsp.config.clangd = {capabilities=capabilities, on_attach=on_attach}
+  vim.lsp.config.gopls = {capabilities=capabilities, on_attach=on_attach}
+  vim.lsp.config.pyright = {capabilities=capabilities, on_attach=on_attach}
+  vim.lsp.config.ocamllsp = {capabilities=capabilities, on_attach=on_attach}
+  vim.lsp.config.terraformls = {capabilities=capabilities, on_attach=on_attach}
+  vim.lsp.config.rust_analyzer = {capabilities=capabilities, on_attach=on_attach}
+  vim.lsp.config.templ = {capabilities=capabilities, on_attach=on_attach}
+
+  vim.lsp.enable({'clangd', 'gopls', 'pyright', 'ocamllsp', 'terraformls', 'rust_analyzer', 'templ'})
 end
 
 return {
