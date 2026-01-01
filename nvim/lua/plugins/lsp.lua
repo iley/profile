@@ -14,7 +14,21 @@ local function config()
 
   vim.lsp.config.clangd = {capabilities=capabilities, on_attach=on_attach}
   vim.lsp.config.gopls = {capabilities=capabilities, on_attach=on_attach}
-  vim.lsp.config.pyright = {capabilities=capabilities, on_attach=on_attach}
+  vim.lsp.config.pyright = {
+    capabilities=capabilities,
+    on_attach=on_attach,
+    settings = {
+      python = {
+        analysis = {
+          typeCheckingMode = "basic",  -- "off", "basic", or "strict"
+          autoSearchPaths = true,
+          useLibraryCodeForTypes = true,
+          diagnosticMode = "workspace",  -- "openFilesOnly" or "workspace"
+          stubPath = vim.fn.stdpath("data") .. "/lazy/python-type-stubs",
+        },
+      },
+    },
+  }
   vim.lsp.config.ocamllsp = {capabilities=capabilities, on_attach=on_attach}
   vim.lsp.config.terraformls = {capabilities=capabilities, on_attach=on_attach}
   vim.lsp.config.rust_analyzer = {capabilities=capabilities, on_attach=on_attach}
