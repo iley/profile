@@ -39,3 +39,5 @@ alias gpl='git pull --ff-only'
 unalias '...' # It clashes with bazel syntax.
 
 alias isodate='date "+%Y%M%d"'
+
+alias claude-yolo='claude --dangerously-skip-permissions'
