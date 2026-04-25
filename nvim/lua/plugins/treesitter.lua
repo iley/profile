@@ -1,15 +1,13 @@
-local function config()
-  require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
-}
-end
-
 return {{
   "nvim-treesitter/nvim-treesitter",
+  branch = "main",
   build = ":TSUpdate",
-  event = { "BufReadPost", "BufNewFile" },
-  config = config,
+  lazy = false,
+  init = function()
+    vim.api.nvim_create_autocmd("FileType", {
+      callback = function()
+        pcall(vim.treesitter.start)
+      end,
+    })
+  end,
 }}
