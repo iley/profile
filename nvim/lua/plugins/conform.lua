@@ -16,6 +16,8 @@ return {
     formatters_by_ft = {
       go = { "goimports", "gofmt" },
       python = { "isort", "black" },
+      ocaml = { "ocamlformat" },
+      ocamlinterface = { "ocamlformat" },
     },
     default_format_opts = {
       lsp_fallback = true,
