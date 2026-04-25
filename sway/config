@@ -213,7 +213,8 @@ bar {
     # The default just shows the current date and time.
     status_command i3status
 
-    font "Source Code Pro 10"
+    # font "Source Code Pro Nerd Font 10"
+    font "Pragmata Pro Nerd Font 10"
 
     colors {
         statusline #ffffff
