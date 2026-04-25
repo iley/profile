@@ -30,7 +30,7 @@ function _prompt_pwd {
   echo $dir
 }
 
-PROMPT='%(1j.* .)%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}$(_prompt_user))$(_prompt_host) %{$fg_bold[blue]%}$(_prompt_pwd) $(git_prompt_info)%_$(_prompt_char)%{$reset_color%} '
+PROMPT='%(1j.* .)%(!.%{$fg_bold[red]%}.%{$fg_bold[green]%}$(_prompt_user))$(_prompt_host) %{$fg_bold[blue]%}$(_prompt_pwd) $(git_prompt_info)$(_prompt_char)%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="("
 ZSH_THEME_GIT_PROMPT_SUFFIX=") "
